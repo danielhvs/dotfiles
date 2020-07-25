@@ -79,3 +79,6 @@ map <leader>x :x<cr>
 " car especial
 map <leader>c :set list<cr>
 filetype on
+
+" ctrl space == autocomplete
+inoremap <C-@> <C-n>
