@@ -2,17 +2,21 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/tpope/vim-surround'
-"Plug 'mcchrish/nnn.vim'
-" Loaded when clojure file is opened
+Plug 'https://github.com/morhetz/gruvbox'
+Plug 'https://github.com/rafi/awesome-vim-colorschemes'
 call plug#end()
 
-:set number
+colorscheme challenger_deep
+"set termguicolors colocando achei feio
+set nonumber
 set iskeyword+=-
-"ignore case
-:set ic
+set ignorecase
+" When searching try to be smart about cases: se procurar com letra maiuscula
+" considera smart!
+set smartcase
 
 "relativenumber
-:set rnu 
+set rnu 
 
 set path+=**
 nnoremap ,alm :read ~/.gitmessage<cr>2j
@@ -39,8 +43,6 @@ nmap <leader>p  :CtrlP<cr>
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" When searching try to be smart about cases 
-set smartcase
 
 " Makes search act like search in modern browsers
 set incsearch 
@@ -82,3 +84,13 @@ filetype on
 
 " ctrl space == autocomplete
 inoremap <C-@> <C-n>
+
+
+" testando: centrando ao entrar em inser mode
+autocmd InsertEnter * norm zz
+
+" autocompletar melhor em command mode 
+set wildmode=longest,list,full
+
+" cor azul numeros 
+highlight LineNr ctermfg=blue
