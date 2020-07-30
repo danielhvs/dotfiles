@@ -63,6 +63,7 @@ set noswapfile
 
 " Be smart when using tabs ;)
 set smarttab
+set expandtab
 
 " 1 tab == 2 spaces
 set shiftwidth=2
@@ -80,6 +81,7 @@ map <leader>x :x<cr>
 
 " car especial
 map <leader>c :set list<cr>
+map <leader>C :set nolist<cr>
 filetype on
 
 " ctrl space == autocomplete
