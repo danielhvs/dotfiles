@@ -27,6 +27,9 @@ nnoremap ,jdbc :r /home/danielhabib/workspace_eco/eco-batch/src/test/resources/c
 let @i='d/@Tabledt"f"eDIreturn A;Oprotected String nomeTable€kb€kbela() {2jO}o/classeeaComwcwextendswcwATestaTabela?Comyiwopublic pa(String filtro) {super(filtro);}ggO@Overrided35jpggipacke€kbage br.go.€kbv.dataprev.eco.testes.util;10j0'
 let @c='d/Columndf"f"D0^€khdw'
 let @m="magg/Comyiw'aIpublic pa A(Object esperado) [€kb{String coluna =  €kb=€kbnew Object(){}.getClass().getEnclosingMethod().getName(*)€kb€kb)(€kb; add(esperado, coluna); return this;}j0"
+let @f='yi"OpIsrc/main/java/AV:s/\.\/€kb€kb/\//gA.java:w'
+noremap <F3> @fkmBgf
+noremap <F2> 'Bdd
 
 "removendo setas
 noremap <Up> <Nop>
@@ -89,7 +92,7 @@ inoremap <C-@> <C-n>
 
 
 " testando: centrando ao entrar em inser mode
-autocmd InsertEnter * norm zz
+"autocmd InsertEnter * norm zz
 
 " autocompletar melhor em command mode 
 set wildmode=longest,list,full
