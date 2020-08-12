@@ -99,3 +99,6 @@ set wildmode=longest,list,full
 
 " cor azul numeros 
 highlight LineNr ctermfg=blue
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs'
+let g:ctrlp_max_files=0 
