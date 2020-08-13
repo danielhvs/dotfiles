@@ -40,12 +40,15 @@ noremap <F2> 'B
 " like <leader>w saves the current file
 let mapleader = ","
 
-" identar
 nmap <leader>p  :CtrlP<cr>
-
-" Fast saving
+map <leader>ss :setlocal spell!<cr>
+nmap <leader>d :bd!<cr>
+map <leader>q :q!<cr>
 nmap <leader>w :w!<cr>
-
+map <leader>x :x<cr>
+map <leader>l :ls<cr>
+map <leader>c :set list<cr>
+map <leader>C :set nolist<cr>
 
 " Makes search act like search in modern browsers
 set incsearch 
@@ -76,15 +79,6 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-" Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
-map <leader>q :q!<cr>
-map <leader>l :ls<cr>
-map <leader>x :x<cr>
-
-" car especial
-map <leader>c :set list<cr>
-map <leader>C :set nolist<cr>
 filetype on
 
 " ctrl space == autocomplete
