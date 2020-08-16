@@ -1,11 +1,16 @@
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
+" https://github.com/vim-scripts/ReplaceWithRegister/ -> uso: gr+motion
+" exemplo: griw
+Plug 'christoomey/vim-system-copy' " cp+motion or cv+motion (cV) (cP)
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/morhetz/gruvbox'
 Plug 'https://github.com/rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-commentary' " gc + motion
 Plug 'tpope/vim-repeat' 
+Plug 'christoomey/vim-sort-motion'
+" Plug 'https://github.com/kana/vim-textobj-entire'
 call plug#end()
 
 colorscheme challenger_deep
@@ -102,3 +107,5 @@ let g:ctrlp_max_files=0
 " Copiar ate o fim da linha
 map Y y$
 
+" system.copy plugin https://github.com/christoomey/vim-system-copy
+" let g:system_copy_silent = 1
