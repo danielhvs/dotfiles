@@ -1,8 +1,7 @@
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
-" https://github.com/vim-scripts/ReplaceWithRegister/ -> uso: gr+motion
-" exemplo: griw
+" https://github.com/vim-scripts/ReplaceWithRegister/ -> uso: gr+motion exemplo: griw
 Plug 'christoomey/vim-system-copy' " cp+motion or cv+motion (cV) (cP)
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/morhetz/gruvbox'
@@ -90,9 +89,6 @@ filetype on
 
 " ctrl space == autocomplete
 inoremap <C-@> <C-n>
-
-" testando: centrando ao entrar em inser mode
-"autocmd InsertEnter * norm zz
 
 " autocompletar melhor em command mode 
 set wildmode=longest,list,full
