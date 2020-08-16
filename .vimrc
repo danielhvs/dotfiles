@@ -4,6 +4,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/morhetz/gruvbox'
 Plug 'https://github.com/rafi/awesome-vim-colorschemes'
+Plug 'tpope/vim-commentary' " gc + motion
+Plug 'tpope/vim-repeat' 
 call plug#end()
 
 colorscheme challenger_deep
@@ -84,7 +86,6 @@ filetype on
 " ctrl space == autocomplete
 inoremap <C-@> <C-n>
 
-
 " testando: centrando ao entrar em inser mode
 "autocmd InsertEnter * norm zz
 
@@ -94,5 +95,10 @@ set wildmode=longest,list,full
 " cor azul numeros 
 highlight LineNr ctermfg=blue
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs'
+" config ctrlP
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target'
 let g:ctrlp_max_files=0 
+
+" Copiar ate o fim da linha
+map Y y$
+
