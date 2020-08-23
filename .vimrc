@@ -125,4 +125,3 @@ map Y y$
 " let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
 " let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
 
-let python_highlight_all = 1
