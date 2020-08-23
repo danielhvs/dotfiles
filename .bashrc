@@ -162,7 +162,9 @@ alias s="cd ~/workspace_eco/eco-servico"
 alias we="cd ~/workspace_eco"
 alias bb="cd ~/workspace_eco/eco-batch/scripts && ./build.sh"
 alias ed="cd ~/workspace_eco/eco-docs"
+alias ep="cd ~/workspace_eco/eco-if-portal"
 alias hl="heroku logs -a fidati-back --tail"
+alias hlc="heroku logs -a carga-fidati --tail"
 
 export MW_HOME="/home/danielhabib/Oracle/Middleware/Oracle_Home/"
 export MW_DOMAIN_NAME="eco"
@@ -180,3 +182,5 @@ export VISUAL=vim
 
 # hack
 xset r rate 250 25
+#alsamixer
+#pavucontrol 
