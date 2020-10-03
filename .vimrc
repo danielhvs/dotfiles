@@ -92,8 +92,8 @@ set smarttab
 set expandtab
 
 " 1 tab == 2 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 set ai "Auto indent
 set si "Smart indent
@@ -125,3 +125,5 @@ map Y y$
 " let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
 " let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
 
+
+set showmatch
