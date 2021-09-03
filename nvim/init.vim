@@ -1,3 +1,5 @@
+let mapleader = ","
+
 " set runtimepath^=~/.vim/bundle/ctrlp.vim
 " /home/danielhabib/.config/nvim/autoload/ReplaceWithRegister.vim e o abaixo
 " sao 2 arquivos diferentes!
@@ -12,16 +14,16 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " plugin configs...
 let g:airline_theme='tomorrow'
 colorscheme gruvbox
 let g:airline#extensions#tabline#enabled = 1
+" fim plugin configs
 
 set background=dark
-let mapleader = ","
-
 " testando... 
 set scrolloff=8
 set hidden
