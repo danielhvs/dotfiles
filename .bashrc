@@ -158,6 +158,7 @@ alias pp="cd *pom/"
 alias vv="vim *pom/pom.xml"
 alias t="cd ~/workspace_eco/eco-testes"
 alias ti="cd ~/workspace_eco/eco-testes/eco-testes-integrados"
+alias cs="cd ~/workspace_eco/gestao-projeto/consultas"
 alias s="cd ~/workspace_eco/eco-servico"
 alias we="cd ~/workspace_eco"
 alias bb="cd ~/workspace_eco/eco-batch/scripts && ./build.sh"
@@ -173,7 +174,8 @@ export MW_DOMAIN_HOME="eco"
 #fidati
 alias fb="cd ~/workspace/fidati-back/"
 alias ff="cd ~/workspace/fidati-front/"
-alias fc="cd ~/workspace/carga-fidati/"
+alias fc="cd ~/workspace/fidati-carga/"
+alias cf="cd ~/workspace/carga-fidati/"
 
 #set -o vi
 # vim default

@@ -7,6 +7,7 @@ Plug 'https://github.com/tpope/vim-surround'
 Plug 'https://github.com/morhetz/gruvbox'
 Plug 'https://github.com/rafi/awesome-vim-colorschemes'
 Plug 'tpope/vim-commentary' " gc + motion
+Plug 'tomlion/vim-solidity'
 Plug 'tpope/vim-repeat' 
 Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-sort-motion'
@@ -28,11 +29,9 @@ set rnu
 set path+=**
 nnoremap ,alm :read ~/.gitmessage<cr>2j
 nnoremap ,jdbc :r /home/danielhabib/workspace_eco/eco-batch/src/test/resources/config/jdbc.xml<cr>
-:imap jk <Esc>
-:imap kj <Esc>
 let @f='/br\.gov\.dataprev\.ecoyi"OpI~/workspace_eco/eco-batch/src/main/java/AV:s/\.\/€kb€kb/\//gA.javadd'
-noremap <F3> @fmB:e!<C-r>"<left><delete>
-noremap <F2> 'B
+noremap <F3> @fmC:e!<C-r>"<left><delete>
+noremap <F2> 'C
 
 "removendo setas
 noremap <Up> <Nop>
@@ -42,6 +41,9 @@ noremap <Right> <Nop>
 
 " like <leader>w saves the current file
 let mapleader = ","
+
+nmap <leader>json :%!jq .<cr>
+nmap <leader>html :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 
 nmap <leader>p  :CtrlP<cr>
 map <leader>ss :setlocal spell!<cr>
@@ -65,10 +67,12 @@ map <leader>gp :Gpush<cr>
 map <leader>gg :Gstatus<cr>:wincmd o<cr>
 
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
-map <leader>gj :diffget //3<cr>:diffupdate<cr>
+map <leader>gh :diffget //3<cr>:diffupdate<cr>
 
 map <leader>gd :Gvdiffsplit<cr>
 map <leader>gD :Gvdiffsplit!<cr>
+
+nmap <leader>l :bNext<cr>
 
 " Makes search act like search in modern browsers
 set incsearch 
@@ -111,8 +115,10 @@ set wildmode=longest,list,full
 highlight LineNr ctermfg=blue
 
 " config ctrlP
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
 let g:ctrlp_max_files=0 
+" https://stackoverflow.com/questions/11873736/vim-ctrlp-plugin-manually-set-root-search-directory
+let g:ctrlp_working_path_mode = 'c'
 
 " Copiar ate o fim da linha
 map Y y$
@@ -125,5 +131,20 @@ map Y y$
 " let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
 " let &t_EI = "\<esc>[ q"  " default cursor (usually blinking block) otherwise
 
-
 set showmatch
+set hlsearch
+nnoremap ,m ddp
+nnoremap ,. kddpk
+" copia tudo para ctrl v
+nmap <leader>Y ggcpG
+
+" manter centralizado
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+nnoremap # #zzzv
+nnoremap * *zzzv
+
+" novas coisas
+set wildmenu
+" set laststatus=2
