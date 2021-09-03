@@ -1,17 +1,16 @@
 " /home/danielhabib/.config/nvim/autoload/ReplaceWithRegister.vim e o abaixo
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
-call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload/plug.vim')
+call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'christoomey/vim-system-copy' " cp+motion or cv+motion (cV) (cP)
-  Plug 'https://github.com/tpope/vim-surround'
-  Plug 'https://github.com/morhetz/gruvbox'
-  Plug 'https://github.com/rafi/awesome-vim-colorschemes'
+  Plug 'tpope/vim-surround'
+  Plug 'morhetz/gruvbox'
   Plug 'tpope/vim-commentary' " gc + motion
-  Plug 'tomlion/vim-solidity'
   Plug 'tpope/vim-repeat' 
   Plug 'tpope/vim-fugitive'
 call plug#end()
 
+colorscheme gruvbox
 let mapleader = ","
 
 " testando... 
