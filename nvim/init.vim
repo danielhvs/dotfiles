@@ -18,7 +18,7 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
 call plug#end()
 
 " plugin configs...
-let g:airline_theme='tomorrow'
+let g:airline_theme='gruvbox'
 colorscheme gruvbox
 let g:airline#extensions#tabline#enabled = 1
 " fim plugin configs
