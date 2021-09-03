@@ -105,7 +105,7 @@ map <leader>gU :Git reset %<cr><cr>:Gread<cr>
 map <leader>ga :Gwrite<cr>
 map <leader>gc :Git commit -v<cr>
 map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
-map <leader>gp :Gpush<cr>
+map <leader>gp :Git push<cr>
 map <leader>gg :Gstatus<cr>:wincmd o<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
