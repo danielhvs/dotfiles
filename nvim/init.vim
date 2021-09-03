@@ -1,3 +1,5 @@
+" comandinhos: 
+" :scriptnames
 let mapleader = ","
 set termguicolors
 
@@ -101,7 +103,7 @@ nmap <leader>l :bNext<cr>
 map <leader>gu :Gread<cr>
 map <leader>gU :Git reset %<cr><cr>:Gread<cr>
 map <leader>ga :Gwrite<cr>
-map <leader>gc :Gcommit -v<cr>
+map <leader>gc :Git commit -v<cr>
 map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
 map <leader>gp :Gpush<cr>
 map <leader>gg :Gstatus<cr>:wincmd o<cr>
