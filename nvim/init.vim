@@ -1,7 +1,7 @@
 let mapleader = ","
+set termguicolors
 
 " set runtimepath^=~/.vim/bundle/ctrlp.vim
-" /home/danielhabib/.config/nvim/autoload/ReplaceWithRegister.vim e o abaixo
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
 call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
@@ -19,6 +19,7 @@ call plug#end()
 
 " plugin configs...
 let g:airline_theme='gruvbox'
+let g:gruvbox_italic=1 
 colorscheme gruvbox
 let g:airline#extensions#tabline#enabled = 1
 " fim plugin configs
@@ -109,9 +110,6 @@ map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gd :Gvdiffsplit<cr>
 map <leader>gD :Gvdiffsplit!<cr>
 
-" cor azul numeros 
-highlight LineNr ctermfg=blue
-
 " config ctrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
 let g:ctrlp_max_files=0 
@@ -130,7 +128,3 @@ nnoremap N Nzzzv
 nnoremap J mzJ`z
 nnoremap # #zzzv
 nnoremap * *zzzv
-
-" Don't redraw while executing macros (good performance config)
-"set lazyredraw 
-"
