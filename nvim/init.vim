@@ -53,9 +53,6 @@ set autoindent "Auto indent
 set smartindent "Smart indent
 set wrap "Wrap lines
 
-" ctrl space == autocomplete
-inoremap <C-@> <C-n>
-
 " autocompletar melhor em command mode 
 set wildmode=longest,list,full
 
@@ -78,6 +75,9 @@ nnoremap ,jdbc :r /home/danielhabib/workspace_eco/eco-batch/src/test/resources/c
 let @f='/br\.gov\.dataprev\.ecoyi"OpI~/workspace_eco/eco-batch/src/main/java/AV:s/\.\/€kb€kb/\//gA.javadd'
 noremap <F3> @fmC:e!<C-r>"<left><delete>
 noremap <F2> 'C
+
+" ctrl space == autocomplete
+inoremap <C-Space> <C-n>
 
 " removendo setas
 noremap <Up> <Nop>
@@ -106,7 +106,7 @@ map <leader>ga :Gwrite<cr>
 map <leader>gc :Git commit -v<cr>
 map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
 map <leader>gp :Git push<cr>
-map <leader>gg :Gstatus<cr>:wincmd o<cr>
+map <leader>gg :Git<cr>:wincmd o<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gd :Gvdiffsplit<cr>
