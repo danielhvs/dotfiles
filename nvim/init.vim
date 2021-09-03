@@ -17,12 +17,14 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'sheerun/vim-polyglot'
+  Plug 'joshdick/onedark.vim', { 'branch': 'main' }
 call plug#end()
 
 " plugin configs...
-let g:airline_theme='gruvbox'
-let g:gruvbox_italic=1 
-colorscheme gruvbox
+let g:airline_theme='onedark'
+" colorscheme gruvbox
+colorscheme onedark
+set background=dark
 let g:airline#extensions#tabline#enabled = 1
 " fim plugin configs
 
