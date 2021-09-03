@@ -1,3 +1,4 @@
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 " /home/danielhabib/.config/nvim/autoload/ReplaceWithRegister.vim e o abaixo
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
@@ -8,9 +9,16 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'tpope/vim-commentary' " gc + motion
   Plug 'tpope/vim-repeat' 
   Plug 'tpope/vim-fugitive'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
+" plugin configs...
+let g:airline_theme='tomorrow'
 colorscheme gruvbox
+let g:airline#extensions#tabline#enabled = 1
+
+set background=dark
 let mapleader = ","
 
 " testando... 
