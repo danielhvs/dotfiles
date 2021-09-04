@@ -15,6 +15,7 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'sheerun/vim-polyglot'
   Plug 'joshdick/onedark.vim', { 'branch': 'main' }
   Plug 'ap/vim-buftabline'
+  Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 " plugin configs...
