@@ -80,7 +80,7 @@ noremap <Right> <Nop>
 " custom leader commands
 nmap <leader>json :%!jq .<cr>
 nmap <leader>html :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
-nmap <leader>p  :CtrlP<cr>
+nmap <leader>p :CtrlP<cr>
 map <leader>ss :setlocal spell!<cr>
 nmap <leader>d :bd!<cr>
 map <leader>q :q!<cr>
@@ -93,12 +93,11 @@ nmap <leader>l :bNext<cr>
 
 " git nao uso muito...
 map <leader>gu :Gread<cr>
-map <leader>gU :Git reset %<cr><cr>:Gread<cr>
 map <leader>ga :Gwrite<cr>
-map <leader>gc :Git commit -v<cr>
+map <leader>gc :vertical Git commit -v<cr>
 map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
 map <leader>gp :Git push<cr>
-map <leader>gg :Git<cr>:wincmd o<cr>
+map <leader>gg :vertical Git<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gd :Gvdiffsplit<cr>
