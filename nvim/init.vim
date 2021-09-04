@@ -55,8 +55,6 @@ set wrap "Wrap lines
 
 " autocompletar melhor em command mode 
 set wildmode=longest,list,full
-
-map Y y$
 set noerrorbells
 set novisualbell
 set incsearch 
@@ -130,3 +128,5 @@ nnoremap N Nzzzv
 nnoremap J mzJ`z
 nnoremap # #zzzv
 nnoremap * *zzzv
+nnoremap Y y$
+nnoremap D dd
