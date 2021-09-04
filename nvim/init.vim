@@ -9,26 +9,24 @@ set termguicolors
 call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'christoomey/vim-system-copy' " cp+motion or cv+motion (cV) (cP)
   Plug 'tpope/vim-surround'
-  Plug 'morhetz/gruvbox'
   Plug 'tpope/vim-commentary' " gc + motion
   Plug 'tpope/vim-repeat' 
   Plug 'tpope/vim-fugitive'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'joshdick/onedark.vim', { 'branch': 'main' }
+  Plug 'ap/vim-buftabline'
 call plug#end()
 
 " plugin configs...
-let g:airline_theme='onedark'
-" colorscheme gruvbox
+" buftabline
+let g:buftabline_numbers    = 0
+let g:buftabline_indicators = 1
+let g:buftabline_separators = 1
 colorscheme onedark
 set background=dark
-let g:airline#extensions#tabline#enabled = 1
 " fim plugin configs
 
-set background=dark
 " testando... 
 set scrolloff=8
 set hidden
