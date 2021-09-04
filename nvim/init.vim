@@ -125,4 +125,3 @@ nnoremap J mzJ`z
 nnoremap # #zzzv
 nnoremap * *zzzv
 nnoremap Y y$
-nnoremap D dd
