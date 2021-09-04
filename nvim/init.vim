@@ -33,10 +33,6 @@ set guicursor=
 " antes usava set hlsearch 
 set nohlsearch
 
-" Enable syntax highlighting
-filetype on
-syntax enable 
-
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
 set nowritebackup
@@ -125,3 +121,17 @@ nnoremap J mzJ`z
 nnoremap # #zzzv
 nnoremap * *zzzv
 nnoremap Y y$
+nnoremap <C-d> dd
+
+" tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
+set autoread
+syntax enable
+
+if has('autocmd')
+  filetype plugin indent on
+endif
+
+if has('path_extra')
+  setglobal tags-=./tags tags-=./tags; tags^=./tags;
+endif
+" fim tim pope sensible
