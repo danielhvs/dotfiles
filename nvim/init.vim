@@ -3,7 +3,6 @@
 let mapleader = ","
 set termguicolors
 
-" set runtimepath^=~/.vim/bundle/ctrlp.vim
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
 call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
@@ -30,7 +29,6 @@ set background=dark
 " testando... 
 set scrolloff=8
 set hidden
-" deixa block para nvim
 set guicursor=
 " antes usava set hlsearch 
 set nohlsearch
@@ -66,7 +64,6 @@ set smartcase
 set relativenumber
 set nu
 
-" daniel custom leader
 set path+=**
 nnoremap ,alm :read ~/.gitmessage<cr>2j
 nnoremap ,jdbc :r /home/danielhabib/workspace_eco/eco-batch/src/test/resources/config/jdbc.xml<cr>
@@ -113,8 +110,7 @@ map <leader>gD :Gvdiffsplit!<cr>
 " config ctrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
 let g:ctrlp_max_files=0 
-" https://stackoverflow.com/questions/11873736/vim-ctrlp-plugin-manually-set-root-search-directory
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_by_filename = 0
 
 set showmatch
 nnoremap ,m ddp
