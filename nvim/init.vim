@@ -107,7 +107,7 @@ map <leader>gl :0Gclog<cr>
 " config ctrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
 let g:ctrlp_max_files=0 
-let g:ctrlp_by_filename = 0
+let g:ctrlp_by_filename = 1
 
 set showmatch
 nnoremap ,m ddp
