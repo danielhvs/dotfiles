@@ -107,6 +107,7 @@ map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gd :Gvdiffsplit<cr>
 map <leader>gD :Gvdiffsplit!<cr>
 map <leader>gl :0Gclog<cr>
+map <leader>gco :Git checkout %<cr>
 
 " config ctrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
