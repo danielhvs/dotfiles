@@ -16,6 +16,7 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'joshdick/onedark.vim', { 'branch': 'main' }
   Plug 'ap/vim-buftabline'
   Plug 'tpope/vim-unimpaired'
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " plugin configs...
