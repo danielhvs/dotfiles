@@ -118,8 +118,11 @@ fi
 alias gg="git status"
 alias gd="git diff"
 alias gp="git pull"
-alias glg="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short"
-alias gla="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short --all"
+alias gps="git push"
+alias gpst="git push --tags"
+alias gpss='git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`'
+alias glg="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso"
+alias gla="git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso --all"
 alias gca="git commit -a -v"
 alias gc="git commit -v"
 alias gco="git checkout"
@@ -136,9 +139,9 @@ alias lfg='lein figwheel'
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[\033[01;34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] "
+# export PS1="\[\033[01;34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] "
+# export PS1="\[\033[34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] "
 
-export JAVA_HOME="/home/danielhabib/dev/jdk/jdk1.8.0_241"
 
 alias gs="git show"
 alias gg="git status"
@@ -152,6 +155,8 @@ alias s="cd ~/workspace_eco/eco-servico"
 alias is="cd ~/workspace_eco/eco-inss-servico"
 alias n="cd ~/workspace_eco/eco-negocio"
 alias v="cd ~/workspace_eco/eco-visao"
+alias vc="grep eco-comum -A1 pom.xml |head -n2"
+alias d="cd /home/danielhabib/sibe/demandas/DM.094553-tbbnb"
 alias ews="cd ~/workspace_eco/eco-ws"
 alias eiws="cd ~/workspace_eco/eco-inss-ws"
 alias pp="cd *pom/"
@@ -161,21 +166,47 @@ alias ti="cd ~/workspace_eco/eco-testes/eco-testes-integrados"
 alias cs="cd ~/workspace_eco/gestao-projeto/consultas"
 alias s="cd ~/workspace_eco/eco-servico"
 alias we="cd ~/workspace_eco"
+alias ws="cd ~/weblogic-sibe"
 alias bb="cd ~/workspace_eco/eco-batch/scripts && ./build.sh"
 alias ed="cd ~/workspace_eco/eco-docs"
 alias ep="cd ~/workspace_eco/eco-if-portal"
-alias hl="heroku logs -a fidati-back --tail"
-alias hlc="heroku logs -a carga-fidati --tail"
+alias sb="cd ~/workspace_eco/sibe-pu-repo/"
+alias sb4="cd ~/workspace_eco/sibe"
+alias dn="cd ~/workspace_eco/dec-negocio/"
+alias ds="cd ~/workspace_eco/dec-service/"
+alias ggrep='echo "git grep <WUT> \$(git rev-list --all)"'
+alias hc="cd /home/danielhabib/workspace_eco/sibe-pu-repo/negocio/sibehiscre/SIBEHiscreEjb"
+alias mcb="cd /home/danielhabib/workspace_eco/sibe-pu-repo/negocio/mcb/McbEjb/"
 
-export MW_HOME="/home/danielhabib/Oracle/Middleware/Oracle_Home/"
+# Config para ECO
+# export MW_HOME="/home/danielhabib/Oracle/Middleware/Oracle_Home/"
+export JAVA_HOME="/home/danielhabib/dev/jdk/jdk1.8.0_241"
+# Config para DEC
+# export MW_HOME="/home/danielhabib/Oracle/Middleware12.1/Oracle_Home"
+# Config para SIBE
+export MW_HOME="/home/danielhabib/sibe/wls12212"
+# export JAVA_HOME="/home/danielhabib/dev/jdk/jdk1.6.0_45"
+export jdkhome="/home/danielhabib/dev/jdk/jdk1.6.0_45"
+
+# wl novo
 export MW_DOMAIN_NAME="eco"
-export MW_DOMAIN_HOME="eco"
+# export MW_DOMAIN_HOME="eco"
+
+# wl velho
+# export MW_DOMAIN_NAME="eco"
+# export MW_DOMAIN_HOME="/home/danielhabib/Oracle/Middleware12.1/Oracle_Home/user_projects/domains"
+# Sibe
+export MW_DOMAIN_HOME="/home/danielhabib/sibe/wls12212/user_projects/domains/d350958"
 
 #fidati
 alias fb="cd ~/workspace/fidati-back/"
 alias ff="cd ~/workspace/fidati-front/"
 alias fc="cd ~/workspace/fidati-carga/"
 alias cf="cd ~/workspace/carga-fidati/"
+alias hl="heroku logs -a fidati-back --tail"
+alias hlc="heroku logs -a carga-fidati --tail"
+alias j="cd /home/danielhabib/juju/niver"
+alias sdc="tail -n1000 /home/danielhabib/bin/saida.*"
 
 #set -o vi
 # vim default
@@ -186,3 +217,37 @@ export VISUAL=vim
 xset r rate 250 25
 #alsamixer
 #pavucontrol 
+
+export GITHUB_TOKEN="c3d950f9ebca6ca634582017d4448910f31e2ed7"
+# PROD
+# export MONGO_URI="mongodb+srv://fidati-user:F1d4t1@cluster0.mm4i5.mongodb.net/fidati?retryWrites=true&w=majority"
+# HOMOLOG
+export MONGO_URI="mongodb+srv://fidati-user:F1d4t1@cluster0.ltilg.mongodb.net/fidati?retryWrites=true&w=majority"
+export SERVIDOR="http://localhost:3000"
+# export SERVIDOR=https://fidati-homolog-back.herokuapp.com
+
+# vi mode!
+# set -o vi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export LD_LIBRARY_PATH=/home/danielhabib/jprofiler12/bin/linux-x64
+
+# xmodmap -e "clear lock" #disable caps lock switch
+# xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+export SCRIPT_DIR=/home/danielhabib/.config/i3blocks
+
+# abre o ultimo arquivo no vim
+alias vvv='vim `ls -tr .| tail -n1`'
+alias 4linux='cd ~/curso/devsecops/527'
+
+export SIBE_DIR="/home/danielhabib/workspace_eco/sibe-pu-repo"
+export SIBE_SKIP_TEST="-Dmaven.test.skip=true"
+export SIBE_OPT="-o"
+
+alias vi=nvim
+alias vim=nvim
+alias lvim="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && /home/danielhabib/.local/bin/lvim"
+
