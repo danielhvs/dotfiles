@@ -17,9 +17,16 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'ap/vim-buftabline'
   Plug 'tpope/vim-unimpaired'
   Plug 'airblade/vim-gitgutter'
+  Plug 'mfussenegger/nvim-jdtls'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " plugin configs...
+
+" coc
+source $HOME/.config/nvim/plug-config/coc.vim
+
 " gruvbox
 let g:gruvbox_contrast_dark="hard"
 
@@ -73,7 +80,7 @@ noremap <F3> @fmC:e!<C-r>"<left><delete>
 noremap <F2> 'C
 
 " ctrl space == autocomplete
-inoremap <C-Space> <C-n>
+" inoremap <C-Space> <C-n>
 
 " removendo setas
 noremap <Up> <Nop>
@@ -85,7 +92,7 @@ noremap <Right> <Nop>
 nmap <leader>json :%!jq .<cr>
 nmap <leader>html :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 nmap <leader>p :CtrlP<cr>
-map <leader>ss :setlocal spell!<cr>
+nmap <leader>o :CtrlPBuffer<cr>
 nmap <leader>d :bd!<cr>
 map <leader>q :q!<cr>
 nmap <leader>w :w!<cr>
@@ -141,3 +148,11 @@ if has('path_extra')
   setglobal tags-=./tags tags-=./tags; tags^=./tags;
 endif
 " fim tim pope sensible
+
+if has('nvim-0.5')
+  augroup lsp
+    au!
+    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
+  augroup end
+endif
+
