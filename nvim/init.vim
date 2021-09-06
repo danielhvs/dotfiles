@@ -13,18 +13,21 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'tpope/vim-fugitive'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'sheerun/vim-polyglot'
-  Plug 'joshdick/onedark.vim', { 'branch': 'main' }
+  Plug 'morhetz/gruvbox'
   Plug 'ap/vim-buftabline'
   Plug 'tpope/vim-unimpaired'
   Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " plugin configs...
+" gruvbox
+let g:gruvbox_contrast_dark="hard"
+
 " buftabline
 let g:buftabline_numbers    = 0
 let g:buftabline_indicators = 1
 let g:buftabline_separators = 1
-colorscheme onedark
+colorscheme gruvbox
 set background=dark
 " fim plugin configs
 
