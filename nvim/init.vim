@@ -75,9 +75,7 @@ set nu
 set path+=**
 nnoremap ,alm :read ~/.gitmessage<cr>2j
 nnoremap ,jdbc :r /home/danielhabib/workspace_eco/eco-batch/src/test/resources/config/jdbc.xml<cr>
-let @f='/br\.gov\.dataprev\.ecoyi"OpI~/workspace_eco/eco-batch/src/main/java/AV:s/\.\/€kb€kb/\//gA.javadd'
-noremap <F3> @fmC:e!<C-r>"<left><delete>
-noremap <F2> 'C
+nnoremap <F2> <C-o>
 
 " ctrl space == autocomplete
 " inoremap <C-Space> <C-n>
