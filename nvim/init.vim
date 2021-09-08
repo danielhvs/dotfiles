@@ -186,7 +186,7 @@ endif
 nnoremap <leader>ca <Cmd>lua require('jdtls').code_action()<CR>
 vnoremap <leader>ca <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
 nnoremap <leader>r <Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>
-nnoremap <leader>oi <Cmd>lua require'jdtls'.organize_imports()<CR>
+nnoremap <leader>i <Cmd>lua require'jdtls'.organize_imports()<CR>
 nnoremap <F2> <C-o>
 
 " LSP config (the mappings used in the default file don't quite work right)
