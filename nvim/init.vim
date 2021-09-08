@@ -105,8 +105,6 @@ map <leader>C :set nolist<cr>
 nmap <leader>l :bNext<cr>
 
 " git nao uso muito...
-map <leader>gu :Gread<cr>
-map <leader>ga :Gwrite<cr>
 map <leader>gc :vertical Git commit -v<cr>
 map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
 map <leader>gp :Git push<cr>
@@ -117,6 +115,7 @@ map <leader>gd :Gvdiffsplit<cr>
 map <leader>gD :Gvdiffsplit!<cr>
 map <leader>gl :0Gclog<cr>
 map <leader>gco :Git checkout %<cr>
+map <leader>ga :Git add %<cr>
 
 " config ctrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
