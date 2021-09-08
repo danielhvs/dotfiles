@@ -1,31 +1,27 @@
 " comandinhos: 
 " :scriptnames
+let maplocalleader = " "
 let mapleader = ","
 set termguicolors
 
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
 call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
-  Plug 'christoomey/vim-system-copy' " cp+motion or cv+motion (cV) (cP)
-  Plug 'tpope/vim-surround' " ds'
-  Plug 'tpope/vim-commentary' " gc + motion
-  Plug 'tpope/vim-repeat' " melhora .
-  Plug 'tpope/vim-fugitive' " git
-  Plug 'ctrlpvim/ctrlp.vim' 
-  Plug 'sheerun/vim-polyglot'
-  Plug 'morhetz/gruvbox'
-  Plug 'ap/vim-buftabline'
-  Plug 'tpope/vim-unimpaired'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'mfussenegger/nvim-jdtls'
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-  " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'nvim-lua/completion-nvim'
-  Plug 'nvim-treesitter/completion-treesitter'
-  Plug 'steelsojka/completion-buffers'
-  Plug 'Olical/conjure', {'tag': 'v4.23.0'} "clojure
-  Plug 'Olical/aniseed'
+   Plug 'christoomey/vim-system-copy' " cp+motion or cv+motion (cV) (cP)
+   Plug 'tpope/vim-surround' " ds'
+   Plug 'tpope/vim-commentary' " gc + motion
+   Plug 'tpope/vim-repeat' " melhora .
+   Plug 'tpope/vim-fugitive' " git
+   Plug 'ctrlpvim/ctrlp.vim' 
+   Plug 'sheerun/vim-polyglot'
+   Plug 'morhetz/gruvbox'
+   Plug 'ap/vim-buftabline'
+   Plug 'tpope/vim-unimpaired'
+   Plug 'airblade/vim-gitgutter'
+  " Plug 'mfussenegger/nvim-jdtls'
+  " " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'neovim/nvim-lspconfig'
+  " Plug 'hrsh7th/nvim-cmp'
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
@@ -37,12 +33,12 @@ call plug#end()
 
 " gruvbox
 let g:gruvbox_contrast_dark="hard"
+colorscheme gruvbox
 
 " buftabline
 let g:buftabline_numbers    = 0
 let g:buftabline_indicators = 1
 let g:buftabline_separators = 1
-colorscheme gruvbox
 " colorscheme deeper-blue (emacs)
 set background=dark
 " fim plugin configs
@@ -113,11 +109,12 @@ map <leader>gp :Git push<cr>
 map <leader>gg :vertical Git<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
-map <leader>gd :Gvdiffsplit<cr>
-map <leader>gD :Gvdiffsplit!<cr>
 map <leader>gl :0Gclog<cr>
 map <leader>gco :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
+
+" conjure
+" map <leader>e :ConjureEval<cr>
 
 " config ctrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
@@ -156,83 +153,87 @@ if has('path_extra')
 endif
 " fim tim pope sensible
 
-" treesitter
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ignore_install = { "javascript" }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
+" " treesitter
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+"   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+"   ignore_install = { "javascript" }, -- List of parsers to ignore installing
+"   highlight = {
+"     enable = true,              -- false will disable the whole extension
+"     disable = { "c", "rust" },  -- list of language that will be disabled
+"     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+"     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+"     -- Using this option may slow down your editor, and you may see some duplicate highlights.
+"     -- Instead of true it can also be a list of languages
+"     additional_vim_regex_highlighting = false,
+"   },
+" }
+" EOF
+
+
+" " LSP nativo inicio
+" if has('nvim-0.5')
+"   augroup lsp
+"     au!
+"     au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
+"   augroup end
+" endif
+
+
+" " -- `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
+" " -- use this mapping also with other language servers
+" nnoremap <leader>ca <Cmd>lua require('jdtls').code_action()<CR>
+" vnoremap <leader>ca <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
+" nnoremap <leader>r <Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>
+" nnoremap <leader>i <Cmd>lua require'jdtls'.organize_imports()<CR>
+" nnoremap <F2> <C-o>
+
+" " LSP config (the mappings used in the default file don't quite work right)
+" nnoremap <silent> <F3> <cmd>lua vim.lsp.buf.definition()<CR>
+" nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+" nnoremap <silent> <C-A-h> <cmd>lua vim.lsp.buf.references()<CR>
+" nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+" nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+" nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+" nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+" nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+" " LSP nativo fim
+
+" " completion-nvim inicio
+" " lua require'lspconfig'.jdtls.setup{on_attach=require'completion'.on_attach}
+" autocmd BufEnter * lua require'completion'.on_attach()
+
+" " Use <Tab> and <S-Tab> to navigate through popup menu
+" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" " Set completeopt to have a better completion experience
+" set completeopt=menuone,noinsert,noselect
+" " Avoid showing message extra message when using completion
+" set shortmess+=c
+" " possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
+" let g:completion_enable_snippet = v:null
+" let g:completion_enable_auto_paren = 1
+" imap <tab> <Plug>(completion_smart_tab)
+" imap <s-tab> <Plug>(completion_smart_s_tab)
+" " completion-nvim fim
+" let g:completion_chain_complete_list = {
+" 			\'default' : {
+" 			\	'default' : [
+" 			\		{'complete_items' : ['lsp', 'buffer']},
+" 			\		{'mode' : 'file'}
+" 			\	],
+" 			\	'comment' : [],
+" 			\	'string' : []
+" 			\	},
+" 			\'python' : [
+" 			\	{'complete_items': ['ts']}
+" 			\	],
+" 			\'lua' : [
+" 			\	{'complete_items': ['ts']}
+" 			\	],
+" 			\}
+
+lua << EOF
+  require'init'
 EOF
-
-
-" LSP nativo inicio
-if has('nvim-0.5')
-  augroup lsp
-    au!
-    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
-  augroup end
-endif
-
-
-" -- `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
-" -- use this mapping also with other language servers
-nnoremap <leader>ca <Cmd>lua require('jdtls').code_action()<CR>
-vnoremap <leader>ca <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
-nnoremap <leader>r <Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>
-nnoremap <leader>i <Cmd>lua require'jdtls'.organize_imports()<CR>
-nnoremap <F2> <C-o>
-
-" LSP config (the mappings used in the default file don't quite work right)
-nnoremap <silent> <F3> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> <C-A-h> <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-" LSP nativo fim
-
-" completion-nvim inicio
-" lua require'lspconfig'.jdtls.setup{on_attach=require'completion'.on_attach}
-autocmd BufEnter * lua require'completion'.on_attach()
-
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
-" Avoid showing message extra message when using completion
-set shortmess+=c
-" possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
-let g:completion_enable_snippet = v:null
-let g:completion_enable_auto_paren = 1
-imap <tab> <Plug>(completion_smart_tab)
-imap <s-tab> <Plug>(completion_smart_s_tab)
-" completion-nvim fim
-let g:completion_chain_complete_list = {
-			\'default' : {
-			\	'default' : [
-			\		{'complete_items' : ['lsp', 'buffer']},
-			\		{'mode' : 'file'}
-			\	],
-			\	'comment' : [],
-			\	'string' : []
-			\	},
-			\'python' : [
-			\	{'complete_items': ['ts']}
-			\	],
-			\'lua' : [
-			\	{'complete_items': ['ts']}
-			\	],
-			\}
