@@ -100,7 +100,7 @@ map <leader>x :x<cr>
 map <leader>wq :wq!<cr>
 map <leader>c :set list<cr>
 map <leader>C :set nolist<cr>
-nmap <leader>l :bNext<cr>
+nmap <leader>- :bNext<cr>
 
 " git nao uso muito...
 map <leader>gc :vertical Git commit -v<cr>
