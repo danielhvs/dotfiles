@@ -210,7 +210,6 @@ autocmd BufEnter * lua require'completion'.on_attach()
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 " Avoid showing message extra message when using completion
@@ -224,19 +223,12 @@ imap <s-tab> <Plug>(completion_smart_s_tab)
 let g:completion_chain_complete_list = {
 			\'default' : {
 			\	'default' : [
-			\		{'complete_items' : ['lsp', 'snippet', 'buffer']},
+			\		{'complete_items' : ['lsp', 'buffer']},
 			\		{'mode' : 'file'}
 			\	],
 			\	'comment' : [],
 			\	'string' : []
 			\	},
-			\'vim' : [
-			\	{'complete_items': ['snippet']},
-			\	{'mode' : 'cmd'}
-			\	],
-			\'java' : [
-			\	{'complete_items': ['ts']}
-			\	],
 			\'python' : [
 			\	{'complete_items': ['ts']}
 			\	],
