@@ -250,4 +250,5 @@ export SIBE_OPT="-o"
 alias vi=nvim
 alias vim=nvim
 alias lvim="export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && /home/danielhabib/.local/bin/lvim"
+alias nn="cd /home/danielhabib/.local/share/nvim/site/autoload"
 

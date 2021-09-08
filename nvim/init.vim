@@ -20,8 +20,8 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   Plug 'mfussenegger/nvim-jdtls'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
   " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'hrsh7th/nvim-compe'
   Plug 'neovim/nvim-lspconfig'
+  Plug 'nvim-lua/completion-nvim'
 call plug#end()
 
 " plugin configs...
@@ -37,6 +37,7 @@ let g:buftabline_numbers    = 0
 let g:buftabline_indicators = 1
 let g:buftabline_separators = 1
 colorscheme gruvbox
+" colorscheme deeper-blue (emacs)
 set background=dark
 " fim plugin configs
 
@@ -78,9 +79,6 @@ set path+=**
 nnoremap ,alm :read ~/.gitmessage<cr>2j
 nnoremap ,jdbc :r /home/danielhabib/workspace_eco/eco-batch/src/test/resources/config/jdbc.xml<cr>
 nnoremap <F2> <C-o>
-
-" ctrl space == autocomplete
-" inoremap <C-Space> <C-n>
 
 " removendo setas
 noremap <Up> <Nop>
@@ -136,6 +134,10 @@ nnoremap * *zzzv
 nnoremap Y y$
 nnoremap <C-d> dd
 
+" ctrlp
+let g:ctrlp_map = ',p'
+" ctrlp fim
+
 " tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
 set autoread
 syntax enable
@@ -166,6 +168,8 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+
+" LSP nativo inicio
 if has('nvim-0.5')
   augroup lsp
     au!
@@ -176,27 +180,39 @@ endif
 
 " -- `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
 " -- use this mapping also with other language servers
-nnoremap <C-1> <Cmd>lua require('jdtls').code_action()<CR>
-vnoremap <C-1> <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
+nnoremap <leader>ca <Cmd>lua require('jdtls').code_action()<CR>
+vnoremap <leader>ca <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
 nnoremap <leader>r <Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>
-nnoremap <A-S-r> <Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>
-
-nnoremap <A-o> <Cmd>lua require'jdtls'.organize_imports()<CR>
-nnoremap <C-S-o> <Cmd>lua require'jdtls'.organize_imports()<CR>
-nnoremap crv <Cmd>lua require('jdtls').extract_variable()<CR>
-vnoremap crv <Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>
-nnoremap crc <Cmd>lua require('jdtls').extract_constant()<CR>
-vnoremap crc <Esc><Cmd>lua require('jdtls').extract_constant(true)<CR>
-vnoremap crm <Esc><Cmd>lua require('jdtls').extract_method(true)<CR>
-
+nnoremap <leader>oi <Cmd>lua require'jdtls'.organize_imports()<CR>
 nnoremap <F2> <C-o>
 
 " LSP config (the mappings used in the default file don't quite work right)
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> <F3> <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> <F3> <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> <C-A-h> <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+" LSP nativo fim
+
+" completion-nvim inicio
+" lua require'lspconfig'.jdtls.setup{on_attach=require'completion'.on_attach}
+autocmd BufEnter * lua require'completion'.on_attach()
+
+" Use <Tab> and <S-Tab> to navigate through popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <C-space> <C-n>
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+" Avoid showing message extra message when using completion
+set shortmess+=c
+" possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
+let g:completion_enable_snippet = v:null
+let g:completion_enable_auto_paren = 1
+imap <tab> <Plug>(completion_smart_tab)
+imap <s-tab> <Plug>(completion_smart_s_tab)
+" completion-nvim fim
