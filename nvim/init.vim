@@ -22,7 +22,11 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   " Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
+  Plug 'Olical/conjure', {'tag': 'v4.23.0'} "clojure
+  Plug 'Olical/aniseed'
 call plug#end()
+
+" TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
 
 " plugin configs...
 
