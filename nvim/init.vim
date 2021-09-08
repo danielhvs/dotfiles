@@ -22,6 +22,8 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   " Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'neovim/nvim-lspconfig'
   Plug 'nvim-lua/completion-nvim'
+  Plug 'nvim-treesitter/completion-treesitter'
+  Plug 'steelsojka/completion-buffers'
   Plug 'Olical/conjure', {'tag': 'v4.23.0'} "clojure
   Plug 'Olical/aniseed'
 call plug#end()
@@ -219,3 +221,26 @@ let g:completion_enable_auto_paren = 1
 imap <tab> <Plug>(completion_smart_tab)
 imap <s-tab> <Plug>(completion_smart_s_tab)
 " completion-nvim fim
+let g:completion_chain_complete_list = {
+			\'default' : {
+			\	'default' : [
+			\		{'complete_items' : ['lsp', 'snippet', 'buffer']},
+			\		{'mode' : 'file'}
+			\	],
+			\	'comment' : [],
+			\	'string' : []
+			\	},
+			\'vim' : [
+			\	{'complete_items': ['snippet']},
+			\	{'mode' : 'cmd'}
+			\	],
+			\'java' : [
+			\	{'complete_items': ['ts']}
+			\	],
+			\'python' : [
+			\	{'complete_items': ['ts']}
+			\	],
+			\'lua' : [
+			\	{'complete_items': ['ts']}
+			\	],
+			\}
