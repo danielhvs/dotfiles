@@ -103,10 +103,10 @@ map <leader>C :set nolist<cr>
 nmap <leader>- :bNext<cr>
 
 " git nao uso muito...
-map <leader>gc :Git commit -v<cr>:wincmd o<cr>
+map <leader>gc :vertical Git commit -v<cr>
 map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
 map <leader>gp :Git push<cr>
-map <leader>gg :Git<cr>:wincmd o<cr>
+map <leader>gg :vertical Git<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gl :0Gclog<cr>
@@ -122,8 +122,6 @@ let g:ctrlp_max_files=0
 let g:ctrlp_by_filename = 1
 
 set showmatch
-nnoremap ,m ddp
-nnoremap ,. kddpk
 " copia tudo para ctrl v
 nmap <leader>Y mkggcpG'k
 
@@ -135,6 +133,10 @@ nnoremap # #zzzv
 nnoremap * *zzzv
 nnoremap Y y$
 nnoremap <C-d> dd
+
+" mover linhas
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " ctrlp
 let g:ctrlp_map = ',p'
