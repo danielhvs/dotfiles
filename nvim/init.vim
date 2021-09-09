@@ -14,15 +14,15 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
    Plug 'tpope/vim-fugitive' " git
    Plug 'ctrlpvim/ctrlp.vim' 
    Plug 'sheerun/vim-polyglot'
-   " Plug 'morhetz/gruvbox'
    Plug 'gruvbox-community/gruvbox/'
    Plug 'ap/vim-buftabline'
    Plug 'tpope/vim-unimpaired'
    Plug 'airblade/vim-gitgutter'
   " Plug 'mfussenegger/nvim-jdtls'
-  " " Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Plug 'neovim/nvim-lspconfig'
   " Plug 'hrsh7th/nvim-cmp'
+  Plug 'guns/vim-sexp'
+  Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
