@@ -139,6 +139,10 @@ vnoremap K :m '<-2<CR>gv=gv
 let g:ctrlp_map = ',p'
 " ctrlp fim
 
+" daniel autocmds
+" tira whitespaces
+nnoremap <leader><space> :%s/\s\+$//e<cr>
+
 " tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
 set autoread
 syntax enable
