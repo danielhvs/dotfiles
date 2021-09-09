@@ -1,6 +1,6 @@
 " comandinhos: 
 " :scriptnames
-let maplocalleader = " "
+let maplocalleader = "-"
 let mapleader = ","
 set termguicolors
 
@@ -14,7 +14,8 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
    Plug 'tpope/vim-fugitive' " git
    Plug 'ctrlpvim/ctrlp.vim' 
    Plug 'sheerun/vim-polyglot'
-   Plug 'morhetz/gruvbox'
+   " Plug 'morhetz/gruvbox'
+   Plug 'gruvbox-community/gruvbox/'
    Plug 'ap/vim-buftabline'
    Plug 'tpope/vim-unimpaired'
    Plug 'airblade/vim-gitgutter'
@@ -39,7 +40,6 @@ colorscheme gruvbox
 let g:buftabline_numbers    = 0
 let g:buftabline_indicators = 1
 let g:buftabline_separators = 1
-" colorscheme deeper-blue (emacs)
 set background=dark
 " fim plugin configs
 
@@ -103,10 +103,10 @@ map <leader>C :set nolist<cr>
 nmap <leader>- :bNext<cr>
 
 " git nao uso muito...
-map <leader>gc :vertical Git commit -v<cr>
+map <leader>gc :Git commit -v<cr>:wincmd o<cr>
 map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
 map <leader>gp :Git push<cr>
-map <leader>gg :vertical Git<cr>
+map <leader>gg :Git<cr>:wincmd o<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gl :0Gclog<cr>
