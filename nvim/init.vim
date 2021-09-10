@@ -18,8 +18,7 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
    Plug 'ap/vim-buftabline'
    Plug 'tpope/vim-unimpaired'
    Plug 'airblade/vim-gitgutter'
-  " Plug 'mfussenegger/nvim-jdtls'
-  " Plug 'neovim/nvim-lspconfig'
+  Plug 'mfussenegger/nvim-jdtls'
   " Plug 'hrsh7th/nvim-cmp'
   Plug 'guns/vim-sexp'
   Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
@@ -79,8 +78,6 @@ set nu
 
 set path+=**
 nnoremap ,alm :read ~/.gitmessage<cr>2j
-nnoremap ,jdbc :r /home/danielhabib/workspace_eco/eco-batch/src/test/resources/config/jdbc.xml<cr>
-nnoremap <F2> <C-o>
 
 " removendo setas
 noremap <Up> <Nop>
@@ -123,11 +120,11 @@ set showmatch
 nmap <leader>Y mkggcpG'k
 
 " manter centralizado
-nnoremap n nzzzv
-nnoremap N Nzzzv
-nnoremap J mzJ`z
-nnoremap # #zzzv
-nnoremap * *zzzv
+" nnoremap n nzzzv
+" nnoremap N Nzzzv
+" nnoremap J mzJ`z
+" nnoremap # #zzzv
+" nnoremap * *zzzv
 nnoremap Y y$
 nnoremap <C-d> dd
 
@@ -174,22 +171,36 @@ endif
 " EOF
 
 
-" " LSP nativo inicio
-" if has('nvim-0.5')
-"   augroup lsp
-"     au!
-"     au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
-"   augroup end
-" endif
-
+" LSP nativo inicio
+if has('nvim-0.5')
+  augroup lsp
+    au!
+    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
+  augroup end
+endif
 
 " " -- `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
 " " -- use this mapping also with other language servers
-" nnoremap <leader>ca <Cmd>lua require('jdtls').code_action()<CR>
-" vnoremap <leader>ca <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
-" nnoremap <leader>r <Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>
-" nnoremap <leader>i <Cmd>lua require'jdtls'.organize_imports()<CR>
-" nnoremap <F2> <C-o>
+
+" obtido do clojure nvim-fennel-lsp-conjure-as-clojure-ide
+nnoremap <leader>ca <Cmd>lua require('jdtls').code_action(true)<CR>
+vnoremap <leader>ca <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
+nnoremap gd <Cmd>lua vim.lsp.buf.definition()<CR> 
+nnoremap K <Cmd>lua vim.lsp.buf.hover()<CR> 
+nnoremap <leader>ld <Cmd>lua vim.lsp.buf.declaration()<CR> 
+nnoremap <leader>lt <cmd>lua vim.lsp.buf.type_definition()<CR> 
+nnoremap <leader>lh <cmd>lua vim.lsp.buf.signature_help()<CR> 
+nnoremap <leader>ln <cmd>lua vim.lsp.buf.rename()<CR> 
+nnoremap <leader>le <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR> 
+nnoremap <leader>lq <cmd>lua vim.lsp.diagnostic.set_loclist()<CR> 
+nnoremap <leader>lf <cmd>lua vim.lsp.buf.formatting()<CR> 
+nnoremap <leader>lj <cmd>lua vim.lsp.diagnostic.goto_next()<CR> 
+nnoremap <leader>lk <cmd>lua vim.lsp.diagnostic.goto_prev()<CR> 
+nnoremap <leader>la :lua require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor())<cr> 
+vnoremap <leader>la :lua require('telescope.builtin').lsp_range_code_actions(require('telescope.themes').get_cursor())<cr> 
+nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics()<cr> 
+nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<cr> 
+nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<cr> 
 
 " " LSP config (the mappings used in the default file don't quite work right)
 " nnoremap <silent> <F3> <cmd>lua vim.lsp.buf.definition()<CR>
@@ -201,41 +212,6 @@ endif
 " nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 " nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " " LSP nativo fim
-
-" " completion-nvim inicio
-" " lua require'lspconfig'.jdtls.setup{on_attach=require'completion'.on_attach}
-" autocmd BufEnter * lua require'completion'.on_attach()
-
-" " Use <Tab> and <S-Tab> to navigate through popup menu
-" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" " Set completeopt to have a better completion experience
-" set completeopt=menuone,noinsert,noselect
-" " Avoid showing message extra message when using completion
-" set shortmess+=c
-" " possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
-" let g:completion_enable_snippet = v:null
-" let g:completion_enable_auto_paren = 1
-" imap <tab> <Plug>(completion_smart_tab)
-" imap <s-tab> <Plug>(completion_smart_s_tab)
-" " completion-nvim fim
-" let g:completion_chain_complete_list = {
-" 			\'default' : {
-" 			\	'default' : [
-" 			\		{'complete_items' : ['lsp', 'buffer']},
-" 			\		{'mode' : 'file'}
-" 			\	],
-" 			\	'comment' : [],
-" 			\	'string' : []
-" 			\	},
-" 			\'python' : [
-" 			\	{'complete_items': ['ts']}
-" 			\	],
-" 			\'lua' : [
-" 			\	{'complete_items': ['ts']}
-" 			\	],
-" 			\}
 
 lua << EOF
   require'init'
