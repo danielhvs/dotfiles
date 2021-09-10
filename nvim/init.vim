@@ -102,6 +102,8 @@ map <leader>c :set list<cr>
 map <leader>C :set nolist<cr>
 nmap <leader>- :bNext<cr>
 noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+" terminal
+tnoremap <Esc> <C-\><C-n>
 
 " git 
 map <leader>gc :vertical Git commit % -v<cr>
