@@ -48,6 +48,7 @@ set hidden
 set guicursor=
 " antes usava set hlsearch 
 set nohlsearch
+set lazyredraw
 
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
@@ -99,7 +100,7 @@ map <leader>c :set list<cr>
 map <leader>C :set nolist<cr>
 nmap <leader>- :bNext<cr>
 
-" git nao uso muito...
+" git 
 map <leader>gc :vertical Git commit -v<cr>
 map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
 map <leader>gp :Git push<cr>
