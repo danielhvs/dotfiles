@@ -22,6 +22,7 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
   " Plug 'hrsh7th/nvim-cmp'
   Plug 'guns/vim-sexp'
   Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
+  Plug 'wellle/targets.vim'
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
