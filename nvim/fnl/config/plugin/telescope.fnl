@@ -3,8 +3,8 @@
              telescope telescope}})
 
 (telescope.setup {:defaults {:file_ignore_patterns ["node_modules"]
-                             :layout_config {:vertical 0.9}
-                             :borderchars [" " " " " " " " " " " " " " " "]}
+                             :layout_config {:horizontal {:width 0.95}
+                                             :vertical {:width 0.95}}}
                   :pickers {:find_files {:find_command ["rg" "--files" "--iglob" "!.git" "--hidden"]}}})
 
 (nvim.set_keymap :n :<leader>ff ":lua require('telescope.builtin').find_files()<CR>" {:noremap true})
