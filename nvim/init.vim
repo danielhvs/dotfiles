@@ -7,22 +7,22 @@ set termguicolors
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
 call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
-   Plug 'christoomey/vim-system-copy' " cp+motion or cv+motion (cV) (cP)
-   Plug 'tpope/vim-surround' " ds'
-   Plug 'tpope/vim-commentary' " gc + motion
-   Plug 'tpope/vim-repeat' " melhora .
-   Plug 'tpope/vim-fugitive' " git
-   Plug 'ctrlpvim/ctrlp.vim' 
-   Plug 'sheerun/vim-polyglot'
-   Plug 'gruvbox-community/gruvbox/'
-   Plug 'ap/vim-buftabline'
-   Plug 'tpope/vim-unimpaired'
-   Plug 'airblade/vim-gitgutter'
-  Plug 'mfussenegger/nvim-jdtls'
-  " Plug 'hrsh7th/nvim-cmp'
-  Plug 'guns/vim-sexp'
-  Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
-  Plug 'wellle/targets.vim'
+Plug 'christoomey/vim-system-copy' " cp+motion or cv+motion (cV) (cP)
+Plug 'tpope/vim-surround' " ds'
+Plug 'tpope/vim-commentary' " gc + motion
+Plug 'tpope/vim-repeat' " melhora .
+Plug 'tpope/vim-fugitive' " git
+Plug 'ctrlpvim/ctrlp.vim' 
+Plug 'sheerun/vim-polyglot'
+Plug 'gruvbox-community/gruvbox/'
+Plug 'ap/vim-buftabline'
+Plug 'tpope/vim-unimpaired'
+Plug 'airblade/vim-gitgutter'
+Plug 'mfussenegger/nvim-jdtls'
+" Plug 'hrsh7th/nvim-cmp'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
+Plug 'wellle/targets.vim'
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
@@ -103,8 +103,7 @@ nmap <leader>- :bNext<cr>
 noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " git 
-map <leader>gc :vertical Git commit -v<cr>
-map <leader>gC :Gwrite<cr>:Gcommit -v<cr>
+map <leader>gc :vertical Git commit % -v<cr>
 map <leader>gp :Git push<cr>
 map <leader>gg :vertical Git<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
