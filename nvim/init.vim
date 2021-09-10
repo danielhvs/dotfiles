@@ -23,6 +23,7 @@ Plug 'mfussenegger/nvim-jdtls'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
 Plug 'wellle/targets.vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
