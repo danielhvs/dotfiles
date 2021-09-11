@@ -24,6 +24,7 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
 Plug 'wellle/targets.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'dmac/vim-cljfmt'
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
@@ -157,24 +158,6 @@ if has('path_extra')
   setglobal tags-=./tags tags-=./tags; tags^=./tags;
 endif
 " fim tim pope sensible
-
-" " treesitter
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-"   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-"   ignore_install = { "javascript" }, -- List of parsers to ignore installing
-"   highlight = {
-"     enable = true,              -- false will disable the whole extension
-"     disable = { "c", "rust" },  -- list of language that will be disabled
-"     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-"     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-"     -- Using this option may slow down your editor, and you may see some duplicate highlights.
-"     -- Instead of true it can also be a list of languages
-"     additional_vim_regex_highlighting = false,
-"   },
-" }
-" EOF
-
 
 " LSP nativo inicio
 if has('nvim-0.5')
