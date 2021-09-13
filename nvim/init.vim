@@ -53,6 +53,8 @@ set guicursor=
 " antes usava set hlsearch 
 set nohlsearch
 set lazyredraw
+set splitright
+set splitbelow
 
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
