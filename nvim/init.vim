@@ -25,6 +25,7 @@ Plug 'wellle/targets.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dmac/vim-cljfmt'
 Plug 'junegunn/gv.vim'
+Plug 'christoomey/vim-sort-motion'
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
