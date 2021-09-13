@@ -3,6 +3,7 @@
              telescope telescope}})
 
 (telescope.setup {:defaults {:file_ignore_patterns ["node_modules"]
+                             :borderchars [" " " " " " " " " " " " " " " "]
                              :layout_config {:horizontal {:width 0.95}
                                              :vertical {:width 0.95}}}
                   :pickers {:find_files {:find_command ["rg" "--files" "--iglob" "!.git" "--hidden"]}}})
