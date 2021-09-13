@@ -135,7 +135,6 @@ nmap <leader>Y mkggcpG'k
 " nnoremap # #zzzv
 " nnoremap * *zzzv
 nnoremap Y y$
-nnoremap <C-d> dd
 
 " mover linhas
 vnoremap J :m '>+1<CR>gv=gv
