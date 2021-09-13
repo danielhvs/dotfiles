@@ -17,4 +17,4 @@
 (nvim.set_keymap :n :<leader>tg ":lua require('telescope.builtin').live_grep()<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>o ":lua require('telescope.builtin').buffers()<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>th ":lua require('telescope.builtin').help_tags()<CR>" {:noremap true})
-(nvim.set_keymap :n :<leader>tg ":lua require('telescope.builtin').git_commits()<CR>" {:noremap true})
+(nvim.set_keymap :n :<leader>tc ":lua require('telescope.builtin').git_commits()<CR>" {:noremap true})
