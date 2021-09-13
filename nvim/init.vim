@@ -12,7 +12,6 @@ Plug 'tpope/vim-surround' " ds'
 Plug 'tpope/vim-commentary' " gc + motion
 Plug 'tpope/vim-repeat' " melhora .
 Plug 'tpope/vim-fugitive' " git
-Plug 'ctrlpvim/ctrlp.vim' 
 Plug 'sheerun/vim-polyglot'
 Plug 'gruvbox-community/gruvbox/'
 Plug 'ap/vim-buftabline'
@@ -95,8 +94,6 @@ noremap <Right> <Nop>
 " custom leader commands
 nmap <leader>json :%!jq .<cr>
 nmap <leader>html :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
-nmap <leader>p :CtrlP<cr>
-nmap <leader>o :CtrlPBuffer<cr>
 nmap <leader>d :bd!<cr>
 map <leader>q :q!<cr>
 nmap <leader>w :w!<cr>
@@ -119,11 +116,6 @@ map <leader>gl :0Gclog<cr>
 map <leader>gco :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
 
-" config ctrlP
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
-let g:ctrlp_max_files=0 
-let g:ctrlp_by_filename = 1
-
 set showmatch
 " copia tudo para ctrl v
 nmap <leader>Y mkggcpG'k
@@ -141,10 +133,6 @@ nnoremap <C-u> <C-u>zz
 " mover linhas
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-" ctrlp
-let g:ctrlp_map = ',p'
-" ctrlp fim
 
 " daniel autocmds
 " tira whitespaces
