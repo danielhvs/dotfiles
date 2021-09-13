@@ -181,3 +181,6 @@ command X set splitright | vnew | set filetype=sh | read !sh #
 lua << EOF
   require'init'
 EOF
+
+" clojure custom
+nnoremap <leader>log :ConjureLogVSplit<cr> :set wrap<cr>
