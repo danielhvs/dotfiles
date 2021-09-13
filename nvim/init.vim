@@ -117,16 +117,8 @@ map <leader>gl :0Gclog<cr>
 map <leader>gco :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
 
-set showmatch
 " copia tudo para ctrl v
 nmap <leader>Y mkggcpG'k
-
-" manter centralizado
-" nnoremap n nzzzv
-" nnoremap N Nzzzv
-" nnoremap J mzJ`z
-" nnoremap # #zzzv
-" nnoremap * *zzzv
 nnoremap Y y$
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
