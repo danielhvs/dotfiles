@@ -8,7 +8,7 @@
                                                     "eco-docs" 
                                                     "target" 
                                                     "log"]
-                             :borderchars [" " " " " " " " " " " " " " " "]
+                             :borderchars [ "─" "│" "─" "│" "╭" "╮" "╯" "╰"]
                              :layout_config {:horizontal {:width 0.95}
                                              :vertical {:width 0.95}}}
                   :pickers {:find_files {:find_command ["rg" "--files" "--iglob" "!.git" "--hidden"]}}})
