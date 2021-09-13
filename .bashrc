@@ -250,6 +250,7 @@ export SIBE_OPT="-o"
 alias vi=nvim
 alias vim=nvim
 alias nn="cd /home/danielhabib/.local/share/nvim/site/autoload"
+alias k="cd ~/workspace/karel"
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin/go/bin:$PATH"
 fi
