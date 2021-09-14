@@ -5,11 +5,13 @@
 (def- cmp-src-menu-items
   {:buffer "buff"
    :conjure "conj"
+   :path "path"
    :nvim_lsp "lsp"})
 
 (def- cmp-srcs
   [{:name :nvim_lsp}
    {:name :conjure}
+   {:name :path}
    {:name :buffer}])
 
 ;; Setup cmp with desired settings
