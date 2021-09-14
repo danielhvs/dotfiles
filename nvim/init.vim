@@ -17,7 +17,6 @@ Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
 Plug 'mfussenegger/nvim-jdtls'
-" Plug 'hrsh7th/nvim-cmp'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
 Plug 'wellle/targets.vim'
@@ -32,9 +31,6 @@ call plug#end()
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
 
 " plugin configs...
-
-" coc
-" source $HOME/.config/nvim/plug-config/coc.vim
 
 " gruvbox
 let g:gruvbox_contrast_dark="hard"
@@ -127,10 +123,8 @@ nnoremap <C-u> <C-u>zz
 " mover linhas
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-" daniel autocmds
-" tira whitespaces
-nnoremap <leader><space> :%s/\s\+$//e<cr>
+" autocompletar path
+inoremap <C-space> <C-x><C-f>
 
 " tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
 set autoread
