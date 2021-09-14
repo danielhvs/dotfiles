@@ -26,6 +26,7 @@ Plug 'dmac/vim-cljfmt'
 Plug 'junegunn/gv.vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ctrlpvim/ctrlp.vim' 
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
@@ -184,3 +185,10 @@ EOF
 
 " clojure custom
 nnoremap <leader>log :ConjureLogVSplit<cr> :set wrap<cr>
+
+" ctrlp config
+nmap <leader>p :CtrlP<cr>
+nmap <leader>o :CtrlPBuffer<cr>
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
+let g:ctrlp_max_files=0 
+let g:ctrlp_by_filename = 1
