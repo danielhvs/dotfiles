@@ -4,22 +4,7 @@
              util config.util
              str aniseed.string}})
 
-;generic mapping leaders configuration
-; (nvim.set_keymap :n :<space> :<nop> {:noremap true})
-; (set nvim.g.mapleader " ")
-; (set nvim.g.maplocalleader ",")
-
-;don't wrap lines
-; (nvim.ex.set :nowrap)
-
-;;sets a nvim global options
-(let [options
-      {
-       ;settings needed for compe autocompletion
-;       :completeopt "menuone,noselect"
-
-;       ;shared clipboard with linux
-      :clipboard "unnamedplus"}]
+(let [options {:clipboard "unnamedplus"}] ;shared clipboard with linux
  (each [option value (pairs options)]
    (core.assoc nvim.o option value)))
 
