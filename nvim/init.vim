@@ -186,3 +186,11 @@ nmap <leader>o :CtrlPBuffer<cr>
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|eco-docs\|target\|log\'
 let g:ctrlp_max_files=0 
 let g:ctrlp_by_filename = 1
+
+" java lsp
+"  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
+"  use this mapping also with other language servers
+nnoremap <leader>ja <Cmd>lua require('jdtls').code_action()<CR>
+vnoremap <leader>ja <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
+nnoremap <leader>jr <Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>
+nnoremap <leader>jo <Cmd>lua require'jdtls'.organize_imports()<CR>
