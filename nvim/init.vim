@@ -96,7 +96,6 @@ nmap <leader>d :bd!<cr>
 map <leader>q :q!<cr>
 nmap <leader>w :w!<cr>
 map <leader>x :x<cr>
-map <leader>wq :wq!<cr>
 map <leader>c :set list<cr>
 map <leader>C :set nolist<cr>
 nmap <leader>- :bNext<cr>
@@ -176,9 +175,6 @@ command X set splitright | vnew | set filetype=sh | read !sh #
 lua << EOF
   require'init'
 EOF
-
-" clojure custom
-nnoremap <leader>log :ConjureLogVSplit<cr> :set wrap<cr>
 
 " ctrlp config
 nmap <leader>p :CtrlP<cr>
