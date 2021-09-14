@@ -13,17 +13,15 @@
 ; (nvim.ex.set :nowrap)
 
 ;;sets a nvim global options
-;(let [options
-;      {;settings needed for compe autocompletion
+(let [options
+      {
+       ;settings needed for compe autocompletion
 ;       :completeopt "menuone,noselect"
-;       ;case insensitive search
-;       :ignorecase true
-;       ;smart search case
-;       :smartcase true
+
 ;       ;shared clipboard with linux
-;       :clipboard "unnamedplus"}]
-;  (each [option value (pairs options)]
-;    (core.assoc nvim.o option value)))
+      :clipboard "unnamedplus"}]
+ (each [option value (pairs options)]
+   (core.assoc nvim.o option value)))
 
 ;import plugin.fnl
 (require :config.plugin)
