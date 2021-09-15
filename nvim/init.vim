@@ -107,6 +107,7 @@ tnoremap <Esc> <C-\><C-n>
 map <leader>gc :vertical Git commit % -v<cr>
 map <leader>gp :Git push<cr>
 map <leader>gg :vertical Git<cr>
+map <leader>gd :Gvdiffsplit<cr>:windo set wrap<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gl :0Gclog<cr>
