@@ -118,6 +118,7 @@ map <leader>gb :GBrowse<cr>:!i3-msg workspace number 2<cr>
 nnoremap Y y$
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+nnoremap J mzJ`z
 
 " mover linhas
 vnoremap J :m '>+1<CR>gv=gv
