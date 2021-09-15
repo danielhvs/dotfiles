@@ -10,6 +10,7 @@ call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
 Plug 'tpope/vim-surround' " ds'
 Plug 'tpope/vim-commentary' " gc + motion
 Plug 'tpope/vim-repeat' " melhora .
+Plug 'tpope/vim-rhubarb' " git browse vim-fugitive
 Plug 'tpope/vim-fugitive' " git
 Plug 'sheerun/vim-polyglot'
 Plug 'gruvbox-community/gruvbox/'
@@ -112,6 +113,7 @@ map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gl :0Gclog<cr>
 map <leader>gco :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
+map <leader>gb :GBrowse<cr>:!i3-msg workspace number 2<cr>
 
 nnoremap Y y$
 nnoremap <C-d> <C-d>zz
