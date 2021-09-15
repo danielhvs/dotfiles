@@ -111,7 +111,7 @@ map <leader>gd :Gvdiffsplit<cr>:windo set wrap<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gl :0Gclog<cr>
-map <leader>gco :Git checkout %<cr>
+map <leader>go :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
 map <leader>gb :GBrowse<cr>:!i3-msg workspace number 2<cr>
 
