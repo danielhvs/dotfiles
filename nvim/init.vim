@@ -46,7 +46,6 @@ set background=dark
 " testando... 
 set scrolloff=8
 set hidden
-set guicursor=
 " antes usava set hlsearch 
 set nohlsearch
 set lazyredraw
@@ -114,8 +113,6 @@ map <leader>gl :0Gclog<cr>
 map <leader>gco :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
 
-" copia tudo para ctrl v
-nmap <leader>Y mkggcpG'k
 nnoremap Y y$
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
