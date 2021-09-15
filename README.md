@@ -1,5 +1,5 @@
 * My dotfiles
- * vim (unused)
- * neovim
- * terminal: alacritty
- * i3wm
+  * vim (unused)
+  * neovim
+  * terminal: alacritty
+  * i3wm
