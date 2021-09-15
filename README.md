@@ -1,5 +1,5 @@
 * My dotfiles
   * vim (unused)
   * neovim
-  * terminal: alacritty
+  * terminal: alacritty -> gruvbox + custom green
   * i3wm
