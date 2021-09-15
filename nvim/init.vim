@@ -90,8 +90,6 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " custom leader commands
-nmap <leader>json :%!jq .<cr>
-nmap <leader>html :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 nmap <leader>d :bd!<cr>
 map <leader>q :q!<cr>
 nmap <leader>w :w!<cr>
@@ -102,6 +100,13 @@ nmap <leader>- :bNext<cr>
 noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 " terminal
 tnoremap <Esc> <C-\><C-n>
+
+" formats comeca com f
+nmap <leader>fjson :%!jq .<cr>
+nmap <leader>fhtml :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
+
+" sets comecam com <leader>s
+map <leader>sh :set hlsearch!<cr>
 
 " git 
 map <leader>gc :vertical Git commit % -v<cr>
