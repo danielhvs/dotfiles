@@ -208,15 +208,12 @@ alias hlc="heroku logs -a carga-fidati --tail"
 alias j="cd /home/danielhabib/juju/niver"
 alias sdc="tail -n1000 /home/danielhabib/bin/saida.*"
 
-#set -o vi
 # vim default
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 # hack
 xset r rate 250 25
-#alsamixer
-#pavucontrol 
 
 export GITHUB_TOKEN="c3d950f9ebca6ca634582017d4448910f31e2ed7"
 # PROD
@@ -225,9 +222,6 @@ export GITHUB_TOKEN="c3d950f9ebca6ca634582017d4448910f31e2ed7"
 export MONGO_URI="mongodb+srv://fidati-user:F1d4t1@cluster0.ltilg.mongodb.net/fidati?retryWrites=true&w=majority"
 export SERVIDOR="http://localhost:3000"
 # export SERVIDOR=https://fidati-homolog-back.herokuapp.com
-
-# vi mode!
-# set -o vi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
