@@ -220,5 +220,12 @@ nnoremap <leader>lk <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 " lighline plugin " colorscheme Tomorrow_Night
 let g:lightline = {
       \ 'colorscheme': 'selenized_black', 
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
       \ }
 set noshowmode
