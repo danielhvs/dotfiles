@@ -27,6 +27,7 @@ Plug 'junegunn/gv.vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ctrlpvim/ctrlp.vim' 
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
@@ -86,6 +87,10 @@ nnoremap ,alm :read ~/.gitmessage<cr>2j
 " window
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
+
+" disable ex mode
+nnoremap Q <Nop>
+nnoremap gQ <Nop>
 
 " removendo setas
 noremap <Up> <Nop>
@@ -211,3 +216,9 @@ nnoremap <leader>lq <cmd>lua vim.lsp.diagnostic.set_loclist()<CR>
 nnoremap <leader>lf <cmd>lua vim.lsp.buf.formatting()<CR> 
 nnoremap <leader>lj <cmd>lua vim.lsp.diagnostic.goto_next()<CR> 
 nnoremap <leader>lk <cmd>lua vim.lsp.diagnostic.goto_prev()<CR> 
+
+" lighline plugin " colorscheme Tomorrow_Night
+let g:lightline = {
+      \ 'colorscheme': 'selenized_black', 
+      \ }
+set noshowmode
