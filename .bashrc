@@ -242,11 +242,6 @@ export SCRIPT_DIR=/home/danielhabib/.config/i3blocks
 # abre o ultimo arquivo no vim
 alias vvv='vim `ls -tr .| tail -n1`'
 alias 4linux='cd ~/curso/devsecops/527'
-
-export SIBE_DIR="/home/danielhabib/workspace_eco/sibe-pu-repo"
-export SIBE_SKIP_TEST="-Dmaven.test.skip=true"
-export SIBE_OPT="-o"
-
 alias vi=nvim
 alias vim=nvim
 alias nn="cd /home/danielhabib/.local/share/nvim/site/"
