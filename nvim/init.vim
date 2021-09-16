@@ -83,6 +83,10 @@ set nu
 set path+=**
 nnoremap ,alm :read ~/.gitmessage<cr>2j
 
+" window
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+
 " removendo setas
 noremap <Up> <Nop>
 noremap <Down> <Nop>
