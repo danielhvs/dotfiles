@@ -222,7 +222,7 @@ let g:lightline = {
       \ 'colorscheme': 'selenized_black', 
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'readonly', 'filename', 'gitbranch', 'modified' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'
