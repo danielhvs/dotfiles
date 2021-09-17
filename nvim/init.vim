@@ -23,7 +23,6 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
 Plug 'wellle/targets.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dmac/vim-cljfmt'
-Plug 'junegunn/gv.vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ctrlpvim/ctrlp.vim' 
