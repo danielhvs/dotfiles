@@ -4,7 +4,6 @@
 
 (telescope.setup {:defaults {:file_ignore_patterns ["node_modules" 
                                                     "DS_Store" 
-                                                    "git" 
                                                     "eco-docs" 
                                                     "target" 
                                                     "log"]
