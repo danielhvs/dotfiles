@@ -134,8 +134,8 @@ nnoremap <C-u> <C-u>zz
 nnoremap J mzJ`z
 
 " mover linhas
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv
+vnoremap K :m '<-2<CR>gv
 " autocompletar path
 inoremap <C-space> <C-x><C-f>
 
