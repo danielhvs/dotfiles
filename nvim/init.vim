@@ -104,7 +104,7 @@ nmap <leader>w :w!<cr>
 map <leader>x :x<cr>
 map <leader>c :set list<cr>
 map <leader>C :set nolist<cr>
-nmap <leader>- :bNext<cr>
+" usar ]b do vim-unimpaired
 noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 " terminal
 tnoremap <Esc> <C-\><C-n>
