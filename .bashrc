@@ -238,3 +238,4 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 source ~/bin/fidati-env.sh
+source ~/bin/sibe
