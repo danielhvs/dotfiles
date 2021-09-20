@@ -142,7 +142,7 @@ parse_git_branch() {
 export PS1="\[\033[01;34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] "
 # export PS1="\[\033[34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] "
 
-
+alias m2="cd /home/danielhabib/.m2/repository/br/gov/dataprev/sibepu"
 alias gs="git show"
 alias gg="git status"
 alias c="cd ~/workspace_eco/eco-comum"
@@ -215,14 +215,6 @@ export VISUAL=nvim
 # hack
 xset r rate 250 25
 
-export GITHUB_TOKEN="c3d950f9ebca6ca634582017d4448910f31e2ed7"
-# PROD
-# export MONGO_URI="mongodb+srv://fidati-user:F1d4t1@cluster0.mm4i5.mongodb.net/fidati?retryWrites=true&w=majority"
-# HOMOLOG
-export MONGO_URI="mongodb+srv://fidati-user:F1d4t1@cluster0.ltilg.mongodb.net/fidati?retryWrites=true&w=majority"
-export SERVIDOR="http://localhost:3000"
-# export SERVIDOR=https://fidati-homolog-back.herokuapp.com
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -244,3 +236,5 @@ alias k="cd ~/workspace/karel"
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin/go/bin:$PATH"
 fi
+
+source ~/bin/fidati-env.sh
