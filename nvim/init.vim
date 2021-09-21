@@ -27,6 +27,7 @@ Plug 'christoomey/vim-sort-motion'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ctrlpvim/ctrlp.vim' 
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-dadbod'
 call plug#end()
 
 " TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
@@ -86,6 +87,8 @@ nnoremap ,alm :read ~/.gitmessage<cr>2j
 " window
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
 
 " disable ex mode
 nnoremap Q <Nop>
