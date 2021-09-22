@@ -120,7 +120,7 @@ nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 map <leader>sh :set hlsearch!<cr>
 
 " git 
-map <leader>gc :vertical Git commit % -v<cr>
+map <leader>gc :vertical Git commit -v<cr>
 map <leader>gp :Git push<cr>
 map <leader>gg :vertical Git<cr>
 map <leader>gd :Gvdiffsplit<cr>:windo set wrap<cr>
