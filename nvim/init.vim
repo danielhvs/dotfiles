@@ -113,8 +113,8 @@ noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 tnoremap <Esc> <C-\><C-n>
 
 " formats comeca com f
-nmap <leader>fjson :%!jq .<cr>
-nmap <leader>fhtml :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
+nmap <leader>fj :%!jq .<cr>
+nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 
 " sets comecam com <leader>s
 map <leader>sh :set hlsearch!<cr>
