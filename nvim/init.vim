@@ -1,6 +1,4 @@
 " clojure: https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
-" usar quando precisar
-" let g:polyglot_disabled = ['csv']
 
 " comandinhos: 
 let maplocalleader = "-"
@@ -15,7 +13,6 @@ Plug 'tpope/vim-commentary' " gc + motion
 Plug 'tpope/vim-repeat' " melhora .
 Plug 'tpope/vim-rhubarb' " git browse vim-fugitive
 Plug 'tpope/vim-fugitive' " git
-Plug 'sheerun/vim-polyglot'
 Plug 'gruvbox-community/gruvbox/'
 Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-unimpaired'
