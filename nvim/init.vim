@@ -28,6 +28,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ctrlpvim/ctrlp.vim' 
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-dadbod'
+Plug 'vim-test/vim-test'
 call plug#end()
 
 " gruvbox
@@ -211,4 +212,12 @@ let g:lightline = {
       \ }
 set noshowmode
 
+" neovim
 let g:loaded_perl_provider = 0
+
+" vim-test
+nmap <leader>tn :TestNearest<CR>
+nmap <leader>ts :TestSuite<CR>
+nmap <leader>tl :TestLast<CR>
+let test#strategy = "neovim"
+let g:test#neovim#start_normal = 1 " If using neovim strategy
