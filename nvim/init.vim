@@ -210,3 +210,5 @@ let g:lightline = {
         \ },
       \ }
 set noshowmode
+
+let g:loaded_perl_provider = 0
