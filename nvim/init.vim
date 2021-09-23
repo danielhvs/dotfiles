@@ -1,5 +1,8 @@
+" clojure: https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
+" usar quando precisar
+" let g:polyglot_disabled = ['csv']
+
 " comandinhos: 
-" :scriptnames
 let maplocalleader = "-"
 let mapleader = ","
 set termguicolors
@@ -30,10 +33,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-dadbod'
 call plug#end()
 
-" TODO clojure https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
-
-" plugin configs...
-
 " gruvbox
 let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
@@ -45,30 +44,22 @@ let g:buftabline_separators = 1
 set background=dark
 " fim plugin configs
 
-" testando... 
 set scrolloff=8
 set hidden
-" antes usava set hlsearch 
 set nohlsearch
 set lazyredraw
 set splitright
 set splitbelow
-
-" Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
 set nowritebackup
 set noswapfile
-" Be smart when using tabs ;)
 set smarttab
 set expandtab
-" 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
-set autoindent "Auto indent
-set smartindent "Smart indent
-set wrap "Wrap lines
-
-" autocompletar melhor em command mode 
+set autoindent 
+set smartindent 
+set wrap 
 set wildmode=longest,list,full
 set noerrorbells
 set novisualbell
@@ -76,7 +67,6 @@ set incsearch
 set nonumber
 set iskeyword+=-
 set ignorecase
-" When searching try to be smart about cases: se procurar com letra maiuscula considera smart!
 set smartcase
 set relativenumber
 set nu
