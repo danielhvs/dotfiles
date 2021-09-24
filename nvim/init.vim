@@ -214,6 +214,7 @@ set noshowmode
 
 " neovim
 let g:loaded_perl_provider = 0
+set cursorline
 
 " vim-test
 nmap <leader>tn :TestNearest<CR>
