@@ -1,18 +1,18 @@
 font:
   normal:
-    family: Input
-    style: Bold
+    family: InputMonoNarrow
+    style: Regular
 
   bold:
-    family: Input
-    style: Black
+    family: InputMonoNarrow
+    style: Bold
 
   italic:
-    family: Input
+    family: InputMonoNarrow
     style: Italic
 
   bold_italic:
-    family: Input
+    family: InputMonoNarrow
     style: Bold Italic
 
 # Colors (Gruvbox dark)
