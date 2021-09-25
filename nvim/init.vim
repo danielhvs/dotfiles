@@ -29,6 +29,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-dadbod'
 Plug 'vim-test/vim-test'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
 call plug#end()
 
 " gruvbox
@@ -222,3 +225,10 @@ nmap <leader>ts :TestSuite<CR>
 nmap <leader>tl :TestLast<CR>
 let test#strategy = "neovim"
 let g:test#neovim#start_normal = 1 " If using neovim strategy
+
+" google autoformat for java
+call glaive#Install()
+augroup autoformat_settings
+  autocmd FileType java AutoFormatBuffer google-java-format
+augroup END
+Glaive codefmt google_java_executable="java -jar /home/danielhabib/dev/google-java-format-1.11.0-all-deps.jar"
