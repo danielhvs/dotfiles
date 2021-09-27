@@ -74,7 +74,7 @@ set relativenumber
 set nu
 
 set path+=**
-nnoremap ,alm :read ~/.gitmessage<cr>2j
+nnoremap <leader>alm :read ~/.gitmessage<cr>2j
 
 " window
 nnoremap <C-l> <C-w><C-l>
