@@ -155,7 +155,7 @@ alias is="cd ~/workspace_eco/eco-inss-servico"
 alias n="cd ~/workspace_eco/eco-negocio"
 alias v="cd ~/workspace_eco/eco-visao"
 alias vc="grep eco-comum -A1 pom.xml |head -n2"
-alias d="cd /home/danielhabib/sibe/demandas/DM.094553-tbbnb"
+alias d="cd /home/danielhabib/sibe/demandas/DM.095204"
 alias ews="cd ~/workspace_eco/eco-ws"
 alias eiws="cd ~/workspace_eco/eco-inss-ws"
 alias pp="cd *pom/"
@@ -174,9 +174,9 @@ alias sb="cd ~/workspace_eco/sibe-pu-repo/"
 alias sb4="cd ~/workspace_eco/sibe"
 alias dn="cd ~/workspace_eco/dec-negocio/"
 alias ds="cd ~/workspace_eco/dec-service/"
-alias ggrep='echo "git grep <WUT> \$(git rev-list --all)"'
 alias hc="cd /home/danielhabib/workspace_eco/sibe-pu-repo/negocio/sibehiscre/SIBEHiscreEjb"
 alias mcb="cd /home/danielhabib/workspace_eco/sibe-pu-repo/negocio/mcb/McbEjb/"
+alias u="cd /home/danielhabib/workspace/upwork/rectangle"
 
 # Config para ECO
 # export MW_HOME="/home/danielhabib/Oracle/Middleware/Oracle_Home/"
@@ -205,8 +205,10 @@ alias fc="cd ~/workspace/fidati-carga/"
 alias cf="cd ~/workspace/carga-fidati/"
 alias hl="heroku logs -a fidati-back --tail"
 alias hlc="heroku logs -a carga-fidati --tail"
-alias j="cd /home/danielhabib/juju/niver"
 alias sdc="tail -n1000 /home/danielhabib/bin/saida.*"
+
+# ju 
+alias j="cd /home/danielhabib/juju/niver"
 
 # vim default
 export EDITOR=nvim
@@ -240,6 +242,7 @@ fi
 source ~/bin/fidati-env.sh
 source ~/bin/sibe
 
+# perl nvim
 PATH="/home/danielhabib/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/danielhabib/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/danielhabib/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
