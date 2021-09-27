@@ -4,6 +4,7 @@
 let maplocalleader = "-"
 let mapleader = ","
 set termguicolors
+set title
 
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
