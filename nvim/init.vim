@@ -120,7 +120,8 @@ map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gl :0Gclog<cr>
 map <leader>go :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
-map <leader>gb :GBrowse<cr>:!i3-msg workspace number 2<cr>
+map <leader>gw :GBrowse<cr>:!i3-msg workspace number 2<cr>
+map <leader>gb :Git blame<cr>
 
 nnoremap Y y$
 nnoremap <C-d> <C-d>zz
