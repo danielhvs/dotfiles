@@ -135,6 +135,8 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap J mzJ`z
 
+nnoremap <leader>tg yiw:Telescope live_grep<cr><C-R>0<esc>
+
 " mover linhas
 vnoremap J :m '>+1<CR>gv
 vnoremap K :m '<-2<CR>gv
