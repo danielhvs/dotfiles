@@ -76,12 +76,6 @@ set nu
 set path+=**
 nnoremap <leader>alm :read ~/.gitmessage<cr>2j
 
-" manter centralizado
-nnoremap n nzt
-nnoremap N Nzt
-nnoremap # #zt
-nnoremap * *zt
-
 " window
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
