@@ -130,6 +130,9 @@ nnoremap <C-u> <C-u>zz
 nnoremap J mzJ`z
 
 nnoremap <leader>tg yiw:Telescope live_grep<cr><C-R>0<esc>
+nnoremap <leader>tG yiW:Telescope live_grep<cr><C-R>0<esc>
+nnoremap <leader>tf yiw:Telescope find_files<cr><C-R>0<esc>
+nnoremap <leader>tF yiW:Telescope find_files<cr><C-R>0<esc>
 
 " mover linhas
 vnoremap J :m '>+1<CR>gv
