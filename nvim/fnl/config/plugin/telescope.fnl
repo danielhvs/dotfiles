@@ -2,7 +2,8 @@
   {autoload {nvim aniseed.nvim
              telescope telescope}})
 
-(telescope.setup {:defaults {:file_ignore_patterns ["node_modules" 
+(telescope.setup {:defaults {:path_display ["smart"]
+                             :file_ignore_patterns ["node_modules" 
                                                     "DS_Store" 
                                                     "eco-docs" 
                                                     "target" 
@@ -17,9 +18,3 @@
 (nvim.set_keymap :n :<leader>tb ":lua require('telescope.builtin').buffers()<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>th ":lua require('telescope.builtin').help_tags()<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>tc ":lua require('telescope.builtin').git_commits()<CR>" {:noremap true})
-
-
-
-
-
-
