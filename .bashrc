@@ -248,3 +248,7 @@ PERL5LIB="/home/danielhabib/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PE
 PERL_LOCAL_LIB_ROOT="/home/danielhabib/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/danielhabib/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/danielhabib/perl5"; export PERL_MM_OPT;
+
+# conversao de videos para whatsapp (WIN+SHIFT+G)
+alias converte-mp4="echo 'ffmpeg -i NOME_ARQ.avi -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p NOME_ARQ.mp4'"
+
