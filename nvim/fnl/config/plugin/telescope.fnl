@@ -14,7 +14,6 @@
                                              :vertical {:width 0.95}}}
                   :pickers {:find_files {:find_command ["rg" "--files" "--iglob" "!.git" "--hidden"]}}})
 
-(nvim.set_keymap :n :<leader>tf ":lua require('telescope.builtin').find_files()<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>tb ":lua require('telescope.builtin').buffers()<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>th ":lua require('telescope.builtin').help_tags()<CR>" {:noremap true})
 (nvim.set_keymap :n :<leader>tc ":lua require('telescope.builtin').git_commits()<CR>" {:noremap true})
