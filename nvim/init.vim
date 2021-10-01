@@ -33,6 +33,7 @@ Plug 'vim-test/vim-test'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'preservim/tagbar'
 call plug#end()
 
 " gruvbox
@@ -46,7 +47,7 @@ let g:buftabline_separators = 1
 set background=dark
 " fim plugin configs
 
-set scrolloff=8
+set scrolloff=1
 set hidden
 set nohlsearch
 set lazyredraw
@@ -94,7 +95,7 @@ noremap <Right> <Nop>
 
 " custom leader commands
 nmap <leader>d :bd!<cr>
-map <leader>q :q!<cr>
+map <leader>q :q<cr>
 nmap <leader>w :w!<cr>
 map <leader>x :x<cr>
 map <leader>c :set list<cr>
@@ -195,6 +196,8 @@ nnoremap <leader>lk <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics()<cr> 
 nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<cr> 
 nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<cr> 
+
+nmap <leader>lo :TagbarOpenAutoClose<cr>
 
 " lighline plugin " colorscheme Tomorrow_Night
 let g:lightline = {
