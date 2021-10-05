@@ -1,6 +1,4 @@
 " clojure: https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
-
-" comandinhos: 
 let maplocalleader = "-"
 let mapleader = ","
 set termguicolors
@@ -17,7 +15,9 @@ Plug 'tpope/vim-fugitive' " git
 Plug 'gruvbox-community/gruvbox/'
 Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-unimpaired'
-Plug 'airblade/vim-gitgutter'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+" Plug 'airblade/vim-gitgutter'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
@@ -30,9 +30,10 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-dadbod'
 Plug 'vim-test/vim-test'
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
+" Plug 'google/vim-maktaba'
+" Plug 'google/vim-codefmt'
+" Plug 'google/vim-glaive'
+Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 call plug#end()
 
@@ -131,6 +132,7 @@ nnoremap <C-u> <C-u>zz
 nnoremap J mzJ`z
 
 " telescope
+nnoremap <leader>tY y$:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tg yiw:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tG yiW:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tf yiw:Telescope find_files<cr><C-R>0<esc>
@@ -170,6 +172,7 @@ command X set splitright | vnew | set filetype=sh | read !sh #
 
 lua << EOF
   require'init'
+  require('gitsigns').setup()
 EOF
 
 " ctrlp config
@@ -200,6 +203,7 @@ nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics(
 nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<cr> 
 nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<cr> 
 
+" fixme ja tem lo
 nmap <leader>lo :TagbarOpenAutoClose<cr>
 
 " lighline plugin " colorscheme Tomorrow_Night
@@ -239,9 +243,19 @@ nmap <leader>tl :TestLast<CR>
 let test#strategy = "neovim"
 let g:test#neovim#start_normal = 1 " If using neovim strategy
 
-" google autoformat for java
-call glaive#Install()
-augroup autoformat_settings
-  autocmd FileType java AutoFormatBuffer google-java-format
-augroup END
-Glaive codefmt google_java_executable="java -jar /home/danielhabib/dev/google-java-format-1.11.0-all-deps.jar"
+" " google autoformat for java
+" call glaive#Install
+" augroup autoformat_settings
+"   autocmd FileType java AutoFormatBuffer google-java-format
+" augroup END
+" Glaive codefmt google_java_executable="java -jar /home/danielhabib/dev/google-java-format-1.11.0-all-deps.jar"
+
+" nerdtree
+nnoremap <leader>e :NERDTreeFind<cr>
+
+" dtp 
+nmap <leader>sb :cd ~/workspace_eco/sibe-pu-repo<CR>
+nmap <leader>cs :cd ~/workspace_eco/gestao-projeto<CR>
+nmap <leader>fs /execute<cr>z<cr>
+nmap <leader>fc /class<cr>z.
+nmap <leader>fw viW:s/%/\\%/g<cr>gv<esc>viW:s/#/\\#/g<cr>gv<esc>viW:s/&/\\&/g<cr>gv<esc>yiW:!brave-browser <C-R>0 &<cr>gv<esc>viW:s/\\//g<cr>
