@@ -187,7 +187,7 @@ let g:ctrlp_by_filename = 1
 "  use this mapping also with other language servers
 nnoremap <leader>la <Cmd>lua require('jdtls').code_action()<CR>
 vnoremap <leader>la <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
-nnoremap <leader>lo <Cmd>lua require'jdtls'.organize_imports()<CR>
+" nnoremap <leader>lo <Cmd>lua require'jdtls'.organize_imports()<CR>
 nnoremap gd <Cmd>lua vim.lsp.buf.definition()<CR> 
 nnoremap K <Cmd>lua vim.lsp.buf.hover()<CR> 
 nnoremap <leader>ld <Cmd>lua vim.lsp.buf.declaration()<CR> 
@@ -204,7 +204,7 @@ nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<cr>
 nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<cr> 
 
 " fixme ja tem lo
-nmap <leader>lo :TagbarOpenAutoClose<cr>
+nmap <leader>lo :TagbarOpenAutoClose<cr>/
 
 " lighline plugin " colorscheme Tomorrow_Night
 let g:lightline = {
@@ -258,4 +258,5 @@ nmap <leader>sb :cd ~/workspace_eco/sibe-pu-repo<CR>
 nmap <leader>cs :cd ~/workspace_eco/gestao-projeto<CR>
 nmap <leader>fs /execute<cr>z<cr>
 nmap <leader>fc /class<cr>z.
-nmap <leader>fw viW:s/%/\\%/g<cr>gv<esc>viW:s/#/\\#/g<cr>gv<esc>viW:s/&/\\&/g<cr>gv<esc>yiW:!brave-browser <C-R>0 &<cr>gv<esc>viW:s/\\//g<cr>
+nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
+nmap <leader>fv viW:s/%/\\%/g<cr>gv<esc>viW:s/#/\\#/g<cr>gv<esc>viW:s/&/\\&/g<cr>gv<esc>yiW:!brave-browser <C-R>0 &<cr>gv<esc>viW:s/\\//g<cr>
