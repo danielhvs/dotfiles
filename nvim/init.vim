@@ -259,4 +259,7 @@ nmap <leader>cs :cd ~/workspace_eco/gestao-projeto<CR>
 nmap <leader>fs /execute<cr>z<cr>
 nmap <leader>fc /class<cr>z.
 nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
-nmap <leader>fv viW:s/%/\\%/g<cr>gv<esc>viW:s/#/\\#/g<cr>gv<esc>viW:s/&/\\&/g<cr>gv<esc>yiW:!brave-browser <C-R>0 &<cr>gv<esc>viW:s/\\//g<cr>
+" 'escape':
+nmap <leader>fe mzylviW:s/<C-R>0/\\<C-R>0/g<cr>`zd2l
+
+
