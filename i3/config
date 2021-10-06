@@ -251,4 +251,4 @@ bindsym XF86AudioMute        exec --no-startup-id $volumepath/volume -n -t $stat
 
 #screencast
 bindsym $mod+Shift+g exec ~/bin/screencast
-
+bindsym $mod+Shift+y exec screenkey
