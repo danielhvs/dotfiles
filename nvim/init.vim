@@ -120,11 +120,12 @@ map <leader>gg :vertical Git<cr>
 map <leader>gd :Gvdiffsplit<cr>:windo set wrap<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
-map <leader>gl :0Gclog<cr>
+map <leader>gl :Git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso<cr>
 map <leader>go :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
 map <leader>gw :GBrowse<cr>:!i3-msg workspace number 2<cr>
 map <leader>gb :Git blame<cr>
+map <leader>gs :Git! show<cr>:wincmd w<cr>:wincmd o<cr>
 
 nnoremap Y y$
 nnoremap <C-d> <C-d>zz
@@ -260,6 +261,7 @@ nmap <leader>fs /execute<cr>z<cr>
 nmap <leader>fc /class<cr>z.
 nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
 " 'escape':
-nmap <leader>fe mzylviW:s/<C-R>0/\\<C-R>0/g<cr>`zd2l
-
+" exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
+" varios um do lado do outro
+nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<cr>
 
