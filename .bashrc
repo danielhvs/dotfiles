@@ -142,6 +142,7 @@ parse_git_branch() {
 export PS1="\[\033[01;34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] "
 
 alias m2="cd /home/danielhabib/.m2/repository/br/gov/dataprev/sibepu"
+alias gdf="git log --all -p -- $*"
 alias gs="git show"
 alias gg="git status"
 alias c="cd ~/workspace_eco/eco-comum"

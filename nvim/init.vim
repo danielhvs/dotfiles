@@ -121,6 +121,7 @@ map <leader>gd :Gvdiffsplit<cr>:windo set wrap<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
 map <leader>gl :Git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso<cr>
+map <leader>g0 :0Gclog<cr>
 map <leader>go :Git checkout %<cr>
 map <leader>ga :Git add %<cr>
 map <leader>gw :GBrowse<cr>:!i3-msg workspace number 2<cr>
@@ -140,6 +141,7 @@ nnoremap <leader>tf yiw:Telescope find_files<cr><C-R>0<esc>
 nnoremap <leader>tF yiW:Telescope find_files<cr><C-R>0<esc>
 nnoremap <leader>tx :let @0=expand("%:t")<CR>:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tX :let @0=expand("%")<CR>:Telescope live_grep<cr><C-R>0<esc>
+nnoremap <leader>tv yiw:Telescope live_grep<cr>id = "<C-R>0"<esc>
 
 " mover linhas
 vnoremap J :m '>+1<CR>gv
