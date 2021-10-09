@@ -265,3 +265,5 @@ nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
 " varios um do lado do outro
 nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<cr>
 
+" telescope
+autocmd User TelescopePreviewerLoaded setlocal wrap
