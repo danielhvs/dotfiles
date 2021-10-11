@@ -190,7 +190,7 @@ let g:ctrlp_by_filename = 1
 "  use this mapping also with other language servers
 nnoremap <leader>la <Cmd>lua require('jdtls').code_action()<CR>
 vnoremap <leader>la <Esc><Cmd>lua require('jdtls').code_action(true)<CR>
-" nnoremap <leader>lo <Cmd>lua require'jdtls'.organize_imports()<CR>
+nnoremap <leader>lm <Cmd>lua require'jdtls'.organize_imports()<CR>
 nnoremap gd <Cmd>lua vim.lsp.buf.definition()<CR> 
 nnoremap K <Cmd>lua vim.lsp.buf.hover()<CR> 
 nnoremap <leader>ld <Cmd>lua vim.lsp.buf.declaration()<CR> 
@@ -269,3 +269,8 @@ nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<cr>
 
 " telescope
 autocmd User TelescopePreviewerLoaded setlocal wrap
+
+" vim voltar para mesma posicao
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
