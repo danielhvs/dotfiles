@@ -244,7 +244,6 @@ set cursorline
 
 " vim-test
 nmap <leader>tn :TestNearest<CR>
-nmap <leader>ts :TestSuite<CR>
 nmap <leader>tl :TestLast<CR>
 let test#strategy = "neovim"
 let g:test#neovim#start_normal = 1 " If using neovim strategy
@@ -265,6 +264,9 @@ nmap <leader>cs :cd ~/workspace_eco/gestao-projeto<CR>
 nmap <leader>fs /execute<cr>z<cr>
 nmap <leader>fc / class<cr>z<cr>2w
 nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
+nmap <leader>fl yiwOLogDM095209.log(<esc>pcsw"f"a, context<esc>A;<esc>
+nmap <leader>fL yiwOLogDM095209.log(<esc>pcsw"f"a, taskRequest<esc>A;<esc>j^
+
 " 'escape':
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
 " varios um do lado do outro
