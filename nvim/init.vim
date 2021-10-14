@@ -277,3 +277,8 @@ autocmd User TelescopePreviewerLoaded setlocal wrap
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+augroup autoformat_settings
+  autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
+augroup END
+
