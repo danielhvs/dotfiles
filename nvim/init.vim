@@ -134,6 +134,8 @@ nnoremap <C-u> <C-u>zz
 nnoremap J mzJ`z
 
 " telescope
+nnoremap <leader>tp :Telescope live_grep<cr>
+nnoremap <leader>to :Telescope find_files<cr>
 nnoremap <leader>tY y$:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tg yiw:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tG yiW:Telescope live_grep<cr><C-R>0<esc>
@@ -142,6 +144,7 @@ nnoremap <leader>tF yiW:Telescope find_files<cr><C-R>0<esc>
 nnoremap <leader>tx :let @0=expand("%:t")<CR>:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tX :let @0=expand("%")<CR>:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tv yiw:Telescope live_grep<cr>id = "<C-R>0"<esc>
+nnoremap <leader>ts "ayiwgeb~"cyiw~:buffer <C-R>c.java<cr>/<C-R>a<cr>
 
 " mover linhas
 vnoremap J :m '>+1<CR>gv
@@ -260,7 +263,7 @@ nnoremap <leader>e :NERDTreeFind<cr>
 nmap <leader>sb :cd ~/workspace_eco/sibe-pu-repo<CR>
 nmap <leader>cs :cd ~/workspace_eco/gestao-projeto<CR>
 nmap <leader>fs /execute<cr>z<cr>
-nmap <leader>fc /class<cr>z.
+nmap <leader>fc / class<cr>z<cr>2w
 nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
 " 'escape':
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
