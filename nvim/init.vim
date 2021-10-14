@@ -144,7 +144,7 @@ nnoremap <leader>tF yiW:Telescope find_files<cr><C-R>0<esc>
 nnoremap <leader>tx :let @0=expand("%:t")<CR>:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tX :let @0=expand("%")<CR>:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tv yiw:Telescope live_grep<cr>id = "<C-R>0"<esc>
-nnoremap <leader>ts "ayiwgeb~"cyiw~:buffer <C-R>c.java<cr>/<C-R>a<cr>
+nnoremap <leader>ts "ayiwgeb~"cyiwu:buffer <C-R>c.java<cr>/\<<C-R>a\><cr>
 
 " mover linhas
 vnoremap J :m '>+1<CR>gv
