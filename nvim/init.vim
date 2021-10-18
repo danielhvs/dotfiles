@@ -209,8 +209,8 @@ nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics(
 nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<cr> 
 nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<cr> 
 
-" fixme ja tem lo
-nmap <leader>lo :TagbarOpenAutoClose<cr>/
+" outline 
+nmap <leader>lo :TagbarOpenAutoClose<cr>
 
 " lighline plugin " colorscheme Tomorrow_Night
 let g:lightline = {
