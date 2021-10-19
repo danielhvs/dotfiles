@@ -110,9 +110,6 @@ tnoremap <Esc> <C-\><C-n>
 nmap <leader>fj :%!jq .<cr>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 
-" sets comecam com <leader>s
-map <leader>sh :set hlsearch!<cr>
-
 " git 
 map <leader>gc :vertical Git commit -v<cr>
 map <leader>gp :Git push<cr>
@@ -258,14 +255,8 @@ let g:test#neovim#start_normal = 1 " If using neovim strategy
 " nerdtree
 nnoremap <leader>e :NERDTreeFind<cr>
 
-" dtp 
-nmap <leader>sb :cd ~/workspace_eco/sibe-pu-repo<CR>
-nmap <leader>cs :cd ~/workspace_eco/gestao-projeto<CR>
-nmap <leader>fs /execute<cr>z<cr>
-nmap <leader>fc / class<cr>z<cr>2w
+" integracao com outros aplicativos
 nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
-nmap <leader>fl yiwOLogDM095209.log(<esc>pcsw"f"a, context<esc>A;<esc>
-nmap <leader>fL yiwOLogDM095209.log(<esc>pcsw"f"a, taskRequest<esc>A;<esc>j^
 
 " 'escape':
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
@@ -284,3 +275,4 @@ augroup autoformat_settings
   autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
 augroup END
 
+source ~/dtp/nvim/dtp.vim
