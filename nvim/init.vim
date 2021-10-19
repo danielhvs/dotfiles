@@ -87,6 +87,7 @@ nnoremap <C-k> <C-w><C-k>
 " disable ex mode
 nnoremap Q <Nop>
 nnoremap gQ <Nop>
+nnoremap '' ``
 
 " removendo setas
 noremap <Up> <Nop>
