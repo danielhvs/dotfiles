@@ -125,6 +125,7 @@ map <leader>ga :Git add %<cr>
 map <leader>gw :GBrowse<cr>:!i3-msg workspace number 2<cr>
 map <leader>gb :Git blame<cr>
 map <leader>gs :Git! show<cr>:wincmd w<cr>:wincmd o<cr>
+map <leader>gS :Git! log --all -p -- %<cr>:wincmd w<cr>:wincmd o<cr>
 
 nnoremap Y y$
 nnoremap <C-d> <C-d>zz
