@@ -64,7 +64,6 @@ set tabstop=2
 set autoindent 
 set smartindent 
 set wrap 
-set wildmode=longest,list,full
 set noerrorbells
 set novisualbell
 set incsearch 
