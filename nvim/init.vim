@@ -107,7 +107,8 @@ noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 tnoremap <Esc> <C-\><C-n>
 
 " formats comeca com f
-nmap <leader>fj :%!jq .<cr>
+nmap <leader>fJ :%!jq .<cr>
+nmap <leader>fj :e /tmp/json.json<cr>I<C-R>0<esc>:%!jq .<cr>d%<C-O>gr%:bd! /tmp/json.json<cr>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 
 " git 
