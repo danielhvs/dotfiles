@@ -145,6 +145,9 @@ nnoremap <leader>tX :let @0=expand("%")<CR>:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tv yiw:Telescope live_grep<cr>id = "<C-R>0"<esc>
 nnoremap <leader>ts "ayiwgeb~"cyiwu:buffer <C-R>c.java<cr>/\<<C-R>a\><cr>
 
+" terminal
+nnoremap <leader>tt :lcd %:p:h<cr>:terminal<cr>A
+
 " mover linhas
 vnoremap J :m '>+1<CR>gv
 vnoremap K :m '<-2<CR>gv
