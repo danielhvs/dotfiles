@@ -167,6 +167,7 @@ alias ti="cd ~/workspace_eco/eco-testes/eco-testes-integrados"
 alias cs="cd ~/workspace_eco/gestao-projeto/consultas"
 alias s="cd ~/workspace_eco/eco-servico"
 alias we="cd ~/workspace_eco"
+alias wd="cd ~/workspace"
 alias ws="cd ~/weblogic-sibe"
 alias bb="cd ~/workspace_eco/eco-batch/scripts && ./build.sh"
 alias ed="cd ~/workspace_eco/eco-docs"
@@ -178,6 +179,7 @@ alias ds="cd ~/workspace_eco/dec-service/"
 alias hc="cd /home/danielhabib/workspace_eco/sibe-pu-repo/negocio/sibehiscre/SIBEHiscreEjb"
 alias mcb="cd /home/danielhabib/workspace_eco/sibe-pu-repo/negocio/mcb/McbEjb/"
 alias u="cd /home/danielhabib/workspace/upwork/rectangle"
+alias dw="cd /home/danielhabib/Downloads"
 
 # Config para ECO
 # export MW_HOME="/home/danielhabib/Oracle/Middleware/Oracle_Home/"
@@ -255,5 +257,3 @@ alias converte-mp4="echo 'ffmpeg -i NOME_ARQ.avi -c:v libx264 -profile:v baselin
 alias i="less ~/pessoal/as-lagrimas.pdf"
 # 16 – A explosão dourada
 alias clip="xclip -selection clipboard"
-
-
