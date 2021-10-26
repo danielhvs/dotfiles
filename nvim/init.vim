@@ -107,8 +107,8 @@ noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 tnoremap <Esc> <C-\><C-n>
 
 " formats comeca com f
-nmap <leader>fJ :%!jq .<cr>
-nmap <leader>fj y%:e /tmp/json.json<cr>I<C-R>0<esc>:%!jq .<cr>dG<C-O>gr%:bd! /tmp/json.json<cr>
+nmap <leader>fJ ggdG:r !jq '' %<cr><cr>
+nmap <leader>fj y%:e /tmp/json.json<cr>p:w<cr>d%:r !jq '' %<cr>d%<C-O><C-O>gr%:bd! /tmp/json.json<cr>:!rm /tmp/json.json<cr><cr>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 
 " git 
@@ -262,6 +262,7 @@ nnoremap <leader>e :NERDTreeFind<cr>
 
 " integracao com outros aplicativos
 nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
+nmap <leader>fW :!brave-browser % &<cr>
 
 " 'escape':
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
