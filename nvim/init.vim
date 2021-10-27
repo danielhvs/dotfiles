@@ -90,6 +90,8 @@ nnoremap gQ <Nop>
 " custom default remapping
 nnoremap '' ``
 nnoremap z<cr> zt
+nnoremap <C-J> m`o<Esc>``
+nnoremap <C-K> m`O<Esc>``
 
 " removendo setas
 noremap <Up> <Nop>
