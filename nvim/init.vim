@@ -86,7 +86,10 @@ nnoremap <C-k> <C-w><C-k>
 " disable ex mode
 nnoremap Q <Nop>
 nnoremap gQ <Nop>
+
+" custom default remapping
 nnoremap '' ``
+nnoremap z<cr> zt
 
 " removendo setas
 noremap <Up> <Nop>
@@ -178,10 +181,12 @@ endif
 " curl custom
 command X set splitright | vnew | set filetype=sh | read !sh #
 
+" lua code
 lua << EOF
   require'init'
   require('gitsigns').setup()
 EOF
+" end lua code
 
 " ctrlp config
 nmap <leader>p :CtrlP<cr>
@@ -209,7 +214,9 @@ nnoremap <leader>lj <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <leader>lk <cmd>lua vim.lsp.diagnostic.goto_prev()<CR> 
 nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics()<cr> 
 nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<cr> 
+nnoremap <leader>lR :lua require('daniel').custom_lsp_java_references()<cr> 
 nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<cr> 
+nnoremap <leader>lI :lua require('daniel').custom_lsp_implementations()<cr> 
 
 " outline 
 nmap <leader>lo :TagbarOpenAutoClose<cr>
