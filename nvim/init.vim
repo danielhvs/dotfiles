@@ -30,9 +30,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-dadbod'
 Plug 'vim-test/vim-test'
-" Plug 'google/vim-maktaba'
-" Plug 'google/vim-codefmt'
-" Plug 'google/vim-glaive'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 call plug#end()
@@ -257,13 +254,6 @@ nmap <leader>tl :TestLast<CR>
 let test#strategy = "neovim"
 let g:test#neovim#start_normal = 1 " If using neovim strategy
 
-" " google autoformat for java
-" call glaive#Install
-" augroup autoformat_settings
-"   autocmd FileType java AutoFormatBuffer google-java-format
-" augroup END
-" Glaive codefmt google_java_executable="java -jar /home/danielhabib/dev/google-java-format-1.11.0-all-deps.jar"
-
 " nerdtree
 nnoremap <leader>e :NERDTreeFind<cr>
 
@@ -275,9 +265,6 @@ nmap <leader>fW :!brave-browser % &<cr>
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
 " varios um do lado do outro
 nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<cr>
-
-" telescope
-autocmd User TelescopePreviewerLoaded setlocal wrap
 
 " vim voltar para mesma posicao
 if has("autocmd")
