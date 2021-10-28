@@ -112,9 +112,9 @@ nmap <leader>fj y%:e /tmp/json.json<cr>p:w<cr>d%:r !jq '' %<cr>d%<C-O><C-O>gr%:b
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 
 " git 
-map <leader>gc :vertical Git commit -v<cr>
+map <leader>gc :vertical topleft Git commit -v<cr>
 map <leader>gp :Git push<cr>
-map <leader>gg :vertical Git<cr>
+map <leader>gg :vertical topleft Git<cr>
 map <leader>gd :Gvdiffsplit<cr>:windo set wrap<cr>
 map <leader>gf :diffget //2<cr>:diffupdate<cr>
 map <leader>gh :diffget //3<cr>:diffupdate<cr>
