@@ -97,7 +97,7 @@ noremap <Right> <Nop>
 " custom leader commands
 nmap <leader>d :bd!<cr>
 map <leader>q :q<cr>
-nmap <leader>w :w!<cr>
+nmap <leader>w :update<cr>
 map <leader>x :x<cr>
 map <leader>c :set list<cr>
 map <leader>C :set nolist<cr>
