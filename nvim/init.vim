@@ -115,9 +115,9 @@ nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<cr>
 map <leader>gc :vertical topleft Git commit -v<cr>
 map <leader>gp :Git push<cr>
 map <leader>gg :vertical topleft Git<cr>
-map <leader>gd :Gvdiffsplit<cr>:windo set wrap<cr>
-map <leader>gf :diffget //2<cr>:diffupdate<cr>
-map <leader>gh :diffget //3<cr>:diffupdate<cr>
+map <leader>gf :G pull<cr>
+map <leader>gt yiW:G tag <C-R>0
+map <leader>gT :G push --tags<cr> 
 map <leader>gl :Git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso<cr>
 map <leader>g0 :0Gclog<cr>
 map <leader>go :Git checkout %<cr>
@@ -144,6 +144,7 @@ nnoremap <leader>tx :let @0=expand("%:t")<CR>:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tX :let @0=expand("%")<CR>:Telescope live_grep<cr><C-R>0<esc>
 nnoremap <leader>tv yiw:Telescope live_grep<cr>id = "<C-R>0"<esc>
 nnoremap <leader>ts "ayiwgeb~"cyiwu:buffer <C-R>c.java<cr>/\<<C-R>a\><cr>
+nnoremap <leader>te yiw:Telescope find_files<cr>entity/<C-R>0<esc>
 
 " terminal
 nnoremap <leader>tt :lcd %:p:h<cr>:terminal<cr>A
@@ -274,5 +275,9 @@ endif
 augroup autoformat_settings
   autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
 augroup END
+
+" java
+nnoremap <leader>jo ciWLOG.error("daniel: ");<esc>2hi
+nnoremap <leader>jO ^y$oLOG.error("daniel: <esc>pa");<esc>
 
 source ~/dtp/nvim/dtp.vim
