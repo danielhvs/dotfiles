@@ -17,7 +17,6 @@ Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-unimpaired'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
-" Plug 'airblade/vim-gitgutter'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
@@ -279,5 +278,7 @@ augroup END
 " java
 nnoremap <leader>jo ciWLOG.error("daniel: ");<esc>2hi
 nnoremap <leader>jO ^y$oLOG.error("daniel: <esc>pa");<esc>
+nnoremap <leader>jl mmyiwoLOG.error("daniel: <esc>pa = " + <esc>pa);<esc>`m
+nnoremap <leader>jL mmyiWoLOG.error("daniel: <esc>pa = " + <esc>pa);<esc>`m
 
 source ~/dtp/nvim/dtp.vim
