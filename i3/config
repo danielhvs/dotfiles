@@ -72,6 +72,8 @@ bindsym --release button2 kill
 # bindsym $mod+k focus down
 # bindsym $mod+l focus up
 # bindsym $mod+ccedilla focus right
+bindsym $mod+l focus right
+bindsym $mod+h focus left
 bindsym $mod+j focus left
 bindsym $mod+k focus right
 # bindsym $mod+l focus up
@@ -101,7 +103,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -211,7 +213,7 @@ bindsym $mod+F4 exec teams
 bindsym $mod+F10 exec zenity --calendar --width=480
 bindsym $mod+F12 exec lutris
 bindsym Control+Shift+Print exec "maim -s | xclip -selection clipboard -t image/png"
-bindsym $mod+l exec i3lock -c 000000
+bindsym $mod+ccedilla exec i3lock -c 000000
 bindsym $mod+Control+Shift+P exec poweroff
 bindsym $mod+i exec "evince ~/pessoal/as-lagrimas.pdf"
 
