@@ -255,7 +255,7 @@ let test#strategy = "neovim"
 let g:test#neovim#start_normal = 1 " If using neovim strategy
 
 " nerdtree
-nnoremap <leader>e :NERDTreeFind<cr>
+nnoremap <expr> <leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<cr>' : @% == '' ? ':NERDTree<cr>' : ':NERDTreeFind<cr>'
 
 " integracao com outros aplicativos
 nmap <leader>fw yiW:!brave-browser <C-R>0 &<cr>
