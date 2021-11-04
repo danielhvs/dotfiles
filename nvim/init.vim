@@ -35,6 +35,7 @@ source /home/danielhabib/dotfiles/nvim/config/commands.vim
 source /home/danielhabib/dotfiles/nvim/config/ctrlp.vim
 source /home/danielhabib/dotfiles/nvim/config/lightline.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
+source /home/danielhabib/dotfiles/nvim/config/vim-test.vim
 
 " lua code
 lua << EOF
@@ -42,12 +43,6 @@ lua << EOF
   require('gitsigns').setup()
 EOF
 " end lua code
-
-" vim-test
-nmap <leader>tn :TestNearest<CR>
-nmap <leader>tl :TestLast<CR>
-let test#strategy = "neovim"
-let g:test#neovim#start_normal = 1 " If using neovim strategy
 
 " nerdtree
 nnoremap <expr> <leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
