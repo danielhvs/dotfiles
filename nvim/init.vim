@@ -31,17 +31,8 @@ source /home/danielhabib/dotfiles/nvim/config/options.vim
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
-
-" LSP nativo inicio
-if has('nvim-0.5')
-  augroup lsp
-    au!
-    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
-  augroup end
-endif
-
-" curl custom
-command X set splitright | vnew | set filetype=sh | read !sh #
+source /home/danielhabib/dotfiles/nvim/config/lsp.vim
+source /home/danielhabib/dotfiles/nvim/config/commands.vim
 
 " lua code
 lua << EOF
