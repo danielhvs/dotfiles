@@ -45,6 +45,7 @@ source /home/danielhabib/dotfiles/nvim/config/nerdtree.vim
 source /home/danielhabib/dotfiles/nvim/config/java.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-fugitive.vim
 source /home/danielhabib/dotfiles/nvim/config/telescope.vim
+source /home/danielhabib/dotfiles/nvim/config/tagbar.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
 
 " specific
