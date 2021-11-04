@@ -30,7 +30,6 @@ call plug#end()
 source /home/danielhabib/dotfiles/nvim/config/options.vim
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
-source /home/danielhabib/dotfiles/nvim/config/lsp.vim
 source /home/danielhabib/dotfiles/nvim/config/commands.vim
 source /home/danielhabib/dotfiles/nvim/config/ctrlp.vim
 source /home/danielhabib/dotfiles/nvim/config/lightline.vim
