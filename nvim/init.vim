@@ -51,16 +51,6 @@ let g:test#neovim#start_normal = 1 " If using neovim strategy
 
 " nerdtree
 nnoremap <expr> <leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
-
-" integracao com outros aplicativos
-nmap <leader>fw yiW:!brave-browser <C-R>0 &<CR>
-nmap <leader>fW :!brave-browser % &<CR>
-
-" 'escape':
-" exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
-" varios um do lado do outro
-nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<CR>
-
 " vim voltar para mesma posicao
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -69,11 +59,5 @@ endif
 augroup autoformat_settings
   autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
 augroup END
-
-" java
-nnoremap <leader>jo ciWLOG.error("daniel: ");<esc>2hi
-nnoremap <leader>jO ^y$oLOG.error("daniel: <esc>pa");<esc>
-nnoremap <leader>jl mmyiwoSystem.out.println("daniel: <esc>pa");<esc>`m
-nnoremap <leader>jL mmyiWoSystem.out.println("daniel: <esc>pa");<esc>`m
 
 source ~/dtp/nvim/dtp.vim

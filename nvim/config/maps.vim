@@ -107,3 +107,19 @@ nnoremap <leader>lI :lua require('daniel').custom_lsp_implementations()<CR>
 
 " outline 
 nmap <leader>lo :TagbarOpenAutoClose<CR>
+
+" integracao com outros aplicativos
+nmap <leader>fw yiW:!brave-browser <C-R>0 &<CR>
+nmap <leader>fW :!brave-browser % &<CR>
+
+" java
+nnoremap <leader>jo ciWLOG.error("daniel: ");<esc>2hi
+nnoremap <leader>jO ^y$oLOG.error("daniel: <esc>pa");<esc>
+nnoremap <leader>jl mmyiwoSystem.out.println("daniel: <esc>pa");<esc>`m
+nnoremap <leader>jL mmyiWoSystem.out.println("daniel: <esc>pa");<esc>`m
+
+" 'escape':
+" exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
+" varios um do lado do outro
+nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<CR>
+
