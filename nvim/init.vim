@@ -27,6 +27,13 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 call plug#end()
 
+" lua code
+lua << EOF
+  require'init'
+  require('gitsigns').setup()
+EOF
+" end lua code
+
 source /home/danielhabib/dotfiles/nvim/config/options.vim
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
@@ -38,11 +45,5 @@ source /home/danielhabib/dotfiles/nvim/config/nerdtree.vim
 source /home/danielhabib/dotfiles/nvim/config/java.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
 
-" lua code
-lua << EOF
-  require'init'
-  require('gitsigns').setup()
-EOF
-" end lua code
-
+" specific
 source ~/dtp/nvim/dtp.vim
