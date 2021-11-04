@@ -33,6 +33,7 @@ source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
 source /home/danielhabib/dotfiles/nvim/config/lsp.vim
 source /home/danielhabib/dotfiles/nvim/config/commands.vim
 source /home/danielhabib/dotfiles/nvim/config/ctrlp.vim
+source /home/danielhabib/dotfiles/nvim/config/lightline.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
 
 " lua code
@@ -41,36 +42,6 @@ lua << EOF
   require('gitsigns').setup()
 EOF
 " end lua code
-
-" lighline plugin " colorscheme Tomorrow_Night
-let g:lightline = {
-      \ 'colorscheme': 'selenized_black', 
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'gitbranch', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ 'mode_map': {
-        \ 'n' : 'N',
-        \ 'i' : 'I',
-        \ 'R' : 'R',
-        \ 'v' : 'V',
-        \ 'V' : 'VL',
-        \ "\<C-v>": 'VB',
-        \ 'c' : 'C',
-        \ 's' : 'S',
-        \ 'S' : 'SL',
-        \ "\<C-s>": 'SB',
-        \ 't': 'T',
-        \ },
-      \ }
-set noshowmode
-
-" neovim
-let g:loaded_perl_provider = 0
-set cursorline
 
 " vim-test
 nmap <leader>tn :TestNearest<CR>

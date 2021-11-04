@@ -47,3 +47,9 @@ if has('path_extra')
   setglobal tags-=./tags tags-=./tags; tags^=./tags;
 endif
 " fim tim pope sensible
+
+set noshowmode " lighline plugin
+
+" neovim
+let g:loaded_perl_provider = 0
+set cursorline
