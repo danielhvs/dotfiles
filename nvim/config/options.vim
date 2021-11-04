@@ -53,3 +53,8 @@ set noshowmode " lighline plugin
 " neovim
 let g:loaded_perl_provider = 0
 set cursorline
+
+" vim voltar para mesma posicao
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
