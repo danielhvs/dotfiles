@@ -35,14 +35,9 @@ call plug#end()
 
 
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
+source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
 
-" buftabline
-let g:buftabline_numbers    = 0
-let g:buftabline_indicators = 1
-let g:buftabline_separators = 1
 set background=dark
-" fim plugin configs
-
 set scrolloff=1
 set hidden
 set nohlsearch
