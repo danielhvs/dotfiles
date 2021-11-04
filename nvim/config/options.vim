@@ -34,3 +34,16 @@ set smartcase
 set relativenumber
 set nu
 set path+=**
+"
+" tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
+set autoread
+syntax enable
+
+if has('autocmd')
+  filetype plugin indent on
+endif
+
+if has('path_extra')
+  setglobal tags-=./tags tags-=./tags; tags^=./tags;
+endif
+" fim tim pope sensible
