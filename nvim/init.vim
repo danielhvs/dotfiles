@@ -1,9 +1,3 @@
-" clojure: https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
-let maplocalleader = "-"
-let mapleader = ","
-set termguicolors
-set title
-
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
 call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
@@ -33,38 +27,10 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 call plug#end()
 
-
+source /home/danielhabib/dotfiles/nvim/config/options.vim
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
 
-set background=dark
-set scrolloff=1
-set hidden
-set nohlsearch
-set lazyredraw
-set splitright
-set splitbelow
-set nobackup
-set nowritebackup
-set noswapfile
-set smarttab
-set expandtab
-set shiftwidth=2
-set tabstop=2
-set autoindent 
-set smartindent 
-set wrap 
-set noerrorbells
-set novisualbell
-set incsearch 
-set nonumber
-set iskeyword+=-
-set ignorecase
-set smartcase
-set relativenumber
-set nu
-
-set path+=**
 nnoremap <leader>alm :read ~/.gitmessage<CR>2j
 
 " window
