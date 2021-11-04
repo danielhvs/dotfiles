@@ -43,6 +43,7 @@ source /home/danielhabib/dotfiles/nvim/config/lightline.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-test.vim
 source /home/danielhabib/dotfiles/nvim/config/nerdtree.vim
 source /home/danielhabib/dotfiles/nvim/config/java.vim
+source /home/danielhabib/dotfiles/nvim/config/vim-fugitive.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
 
 " specific
