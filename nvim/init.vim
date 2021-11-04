@@ -33,9 +33,8 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 call plug#end()
 
-" gruvbox
-let g:gruvbox_contrast_dark="hard"
-colorscheme gruvbox
+
+source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 
 " buftabline
 let g:buftabline_numbers    = 0
