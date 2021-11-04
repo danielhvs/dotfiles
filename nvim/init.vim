@@ -34,8 +34,9 @@ source /home/danielhabib/dotfiles/nvim/config/lsp.vim
 source /home/danielhabib/dotfiles/nvim/config/commands.vim
 source /home/danielhabib/dotfiles/nvim/config/ctrlp.vim
 source /home/danielhabib/dotfiles/nvim/config/lightline.vim
-source /home/danielhabib/dotfiles/nvim/config/maps.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-test.vim
+source /home/danielhabib/dotfiles/nvim/config/nerdtree.vim
+source /home/danielhabib/dotfiles/nvim/config/maps.vim
 
 " lua code
 lua << EOF
@@ -43,9 +44,6 @@ lua << EOF
   require('gitsigns').setup()
 EOF
 " end lua code
-
-" nerdtree
-nnoremap <expr> <leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
 
 augroup autoformat_settings
   autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
