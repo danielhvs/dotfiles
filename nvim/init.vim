@@ -30,9 +30,10 @@ call plug#end()
 source /home/danielhabib/dotfiles/nvim/config/options.vim
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
-source /home/danielhabib/dotfiles/nvim/config/maps.vim
 source /home/danielhabib/dotfiles/nvim/config/lsp.vim
 source /home/danielhabib/dotfiles/nvim/config/commands.vim
+source /home/danielhabib/dotfiles/nvim/config/ctrlp.vim
+source /home/danielhabib/dotfiles/nvim/config/maps.vim
 
 " lua code
 lua << EOF
@@ -40,13 +41,6 @@ lua << EOF
   require('gitsigns').setup()
 EOF
 " end lua code
-
-" ctrlp config
-nmap <leader>p :CtrlP<CR>
-nmap <leader>o :CtrlPBuffer<CR>
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|eco-docs\|target\|log\'
-let g:ctrlp_max_files=0 
-let g:ctrlp_by_filename = 1
 
 " java lsp
 "  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
