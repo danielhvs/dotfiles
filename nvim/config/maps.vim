@@ -53,9 +53,11 @@ vnoremap K :m '<-2<CR>gv
 " path autocomplete
 inoremap <C-space> <C-x><C-f>
 
-" integracao com outros aplicativos
-nmap <leader>fw yiW:!xdg-open <C-R>0 &<CR>
-nmap <leader>fW :!xdg-open % &<CR>
+" integrate with other apps
+" option: use the detox application to fix filenames
+" /usr/bin/detox
+nmap <leader>fw yiW:!xdg-open "<C-R>0" &<CR>
+nmap <leader>fW :!xdg-open "%" &<CR>
 
 " 'escape':
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
