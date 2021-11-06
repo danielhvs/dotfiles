@@ -63,3 +63,6 @@ nmap <leader>fW :!xdg-open "%" &<CR>
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
 " varios um do lado do outro
 nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<CR>
+  
+" source 
+nmap <leader>sv :source $MYVIMRC<CR>
