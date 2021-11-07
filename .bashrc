@@ -257,3 +257,12 @@ alias converte-mp4="echo 'ffmpeg -i NOME_ARQ.avi -c:v libx264 -profile:v baselin
 alias i="less ~/pessoal/as-lagrimas.pdf"
 # 16 – A explosão dourada
 alias clip="xclip -selection clipboard"
+
+
+#initialize Z (https://github.com/rupa/z) 
+source /home/danielhabib/bin/z/z-1.11/z.sh
+
+# tmux
+alias tt="nvim ~/dotfiles/.tmux.conf"
+alias tn="tmux -u -f ~/dotfiles/.tmux.conf new"
+alias ta="tmux -u -f ~/dotfiles/.tmux.conf attach"
