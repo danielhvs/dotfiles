@@ -26,6 +26,7 @@ Plug 'vim-test/vim-test'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'ThePrimeagen/harpoon'
+Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 " lua code
@@ -48,6 +49,7 @@ source /home/danielhabib/dotfiles/nvim/config/vim-fugitive.vim
 source /home/danielhabib/dotfiles/nvim/config/telescope.vim
 source /home/danielhabib/dotfiles/nvim/config/tagbar.vim
 source /home/danielhabib/dotfiles/nvim/config/harpoon.vim
+source /home/danielhabib/dotfiles/nvim/config/vim-highlightedyank.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
 
 " specific
