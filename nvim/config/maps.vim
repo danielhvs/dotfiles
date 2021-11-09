@@ -8,7 +8,7 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 
 " disable ex mode
-nnoremap Q <Nop>
+nnoremap Q !!sh<CR>
 nnoremap gQ <Nop>
 
 " custom display
