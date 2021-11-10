@@ -266,3 +266,4 @@ source /home/danielhabib/bin/z/z-1.11/z.sh
 alias tt="nvim ~/dotfiles/.tmux.conf"
 alias tn="tmux -u -f ~/dotfiles/.tmux.conf new"
 alias ta="tmux -u -f ~/dotfiles/.tmux.conf attach"
+alias tls="tmux ls"
