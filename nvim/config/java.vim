@@ -36,5 +36,7 @@ nnoremap <leader>lI :lua require('daniel').custom_lsp_implementations()<CR>
 " java
 nnoremap <leader>jo ciWLOG.error("daniel: ");<esc>2hi
 nnoremap <leader>jO ^y$oLOG.error("daniel: <esc>pa");<esc>
-nnoremap <leader>jl mmyiwoSystem.out.println("daniel: <esc>pa");<esc>`m
-nnoremap <leader>jL mmyiWoSystem.out.println("daniel: <esc>pa");<esc>`m
+nnoremap <leader>jl mmyiwoLOG.error("daniel: <esc>pa");<esc>`m
+nnoremap <leader>jL mmyiWoLOG.error("daniel: <esc>pa");<esc>`m
+nnoremap <leader>jp mmyiwoLOG.error("daniel: <esc>pa = " + <esc>pa);<esc>`m
+nnoremap <leader>jP mmyiWoLOG.error("daniel: <esc>pa = " + <esc>pa);<esc>`m
