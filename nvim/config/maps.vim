@@ -57,7 +57,7 @@ inoremap <C-space> <C-x><C-f>
 " option: use the detox application to fix filenames
 " /usr/bin/detox
 nmap <leader>fw yiW:!xdg-open <C-R>0 &<CR>
-nmap <leader>fW :!xdg-open % &<CR>
+nmap <leader>fW :!xdg-open % &<CR>:bd!<CR>
 
 " 'escape':
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
@@ -66,3 +66,6 @@ nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<CR>
   
 " source 
 nmap <leader>sv :source $MYVIMRC<CR>
+
+" barra
+nnoremap <leader>- S---------------------------------------------------------------------------------------------------<ESC>0
