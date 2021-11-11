@@ -67,8 +67,8 @@ nnoremap <leader>- S------------------------------------------------------------
 " integrate with other apps
 " option: use the detox application to fix filenames
 " /usr/bin/detox
-nmap <leader>fw yiW:!mimeopen <C-R>0 &<CR>
-nmap <leader>fW :!mimeopen -n %<CR>:bd!<CR>
+nmap <leader>fw yiW:!xdg-open  <C-R>0 &<CR>
+nmap <leader>fW :!xdg-open -n %<CR>:bd!<CR>
 
 " determine a file's MIME type
 " $ mimetype photo.jpeg
