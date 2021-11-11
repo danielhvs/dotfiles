@@ -53,12 +53,6 @@ vnoremap K :m '<-2<CR>gv
 " path autocomplete
 inoremap <C-space> <C-x><C-f>
 
-" integrate with other apps
-" option: use the detox application to fix filenames
-" /usr/bin/detox
-nmap <leader>fw yiW:!xdg-open <C-R>0 &<CR>
-nmap <leader>fW :!xdg-open % &<CR>:bd!<CR>
-
 " 'escape':
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
 " varios um do lado do outro
@@ -69,3 +63,26 @@ nmap <leader>sv :source $MYVIMRC<CR>
 
 " barra
 nnoremap <leader>- S---------------------------------------------------------------------------------------------------<ESC>0
+
+" integrate with other apps
+" option: use the detox application to fix filenames
+" /usr/bin/detox
+nmap <leader>fw yiW:!mimeopen <C-R>0 &<CR>
+nmap <leader>fW :!mimeopen -n %<CR>:bd!<CR>
+
+" determine a file's MIME type
+" $ mimetype photo.jpeg
+" photo.jpeg: image/jpeg
+
+" # choose the default application for this file
+" $ mimeopen -d photo.jpeg
+" Please choose an application
+
+"     1) Feh (feh)
+"     2) GNU Image Manipulation Program (gimp)
+"     3) Pinta (pinta)
+
+" use application #
+
+" # open a file with its default application
+" $ mimeopen -n photo.jpeg
