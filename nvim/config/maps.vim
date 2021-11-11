@@ -35,6 +35,7 @@ map <leader>c :set list<CR>
 map <leader>C :set nolist<CR>
 " usar ]b do vim-unimpaired
 noremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+noremap <leader>cw :pwd<CR>
 
 " terminal
 tnoremap <Esc> <C-\><C-n>
