@@ -1,6 +1,7 @@
 " sao 2 arquivos diferentes!
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
 call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround' " ds'
 Plug 'tpope/vim-commentary' " gc + motion
 Plug 'tpope/vim-repeat' " melhora .
