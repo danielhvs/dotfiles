@@ -3,10 +3,11 @@ let g:lightline = {
       \ 'colorscheme': 'selenized_black', 
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'gitbranch', 'modified' ] ]
+      \             [ 'readonly', 'filename', 'gitbranch', 'session', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'FugitiveHead',
+      \   'session': 'ObsessionStatus'
       \ },
       \ 'mode_map': {
         \ 'n' : 'N',
@@ -22,4 +23,8 @@ let g:lightline = {
         \ 't': 'T',
         \ },
       \ }
+
+
+
+
 
