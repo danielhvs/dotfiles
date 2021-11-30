@@ -230,6 +230,14 @@ export LD_LIBRARY_PATH=/home/danielhabib/jprofiler12/bin/linux-x64
 # xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 export SCRIPT_DIR=/home/danielhabib/.config/i3blocks
 
+# copy the last file to the clipboard 
+alias llcp="ls -tr |tail -n1|xargs realpath| xclip -selection clipboard"
+
+# copy the fullpath to the clipboard
+lcp() {
+  realpath $1 | xclip -selection clipboard
+}
+
 # abre o ultimo arquivo no vim
 alias vvv='vim `ls -tr .| tail -n1`'
 alias 4linux='cd ~/curso/devsecops/527'
