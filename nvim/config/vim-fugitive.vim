@@ -1,5 +1,6 @@
 map <leader>gc :vertical topleft Git commit -v<CR>
 map <leader>gp :Git push<CR>
+map <leader>gP yiW:Git push --set-upstream origin <C-R>0
 map <leader>gg :vertical topleft Git<CR>
 map <leader>gf :G pull<CR>
 map <leader>gt yiW:G tag <C-R>0
