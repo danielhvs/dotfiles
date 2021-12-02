@@ -233,6 +233,11 @@ export SCRIPT_DIR=/home/danielhabib/.config/i3blocks
 # copy the last file to the clipboard 
 alias llcp="ls -tr |tail -n1|xargs realpath| xclip -selection clipboard"
 
+# copy the full file to the clipboard
+catcp() {
+  cat $1 | xclip -selection clipboard
+}
+
 # copy the fullpath to the clipboard
 lcp() {
   realpath $1 | xclip -selection clipboard
