@@ -4,3 +4,4 @@ nnoremap <expr> <leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' 
 nnoremap <leader>E :NERDTree<CR>
 let g:NERDTreeMapHelp            = ''
 let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeAutoDeleteBuffer = 1
