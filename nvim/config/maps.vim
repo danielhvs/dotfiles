@@ -65,7 +65,9 @@ nmap <leader>sv :source $MYVIMRC<CR>
 " barra
 nnoremap <leader>- S------------------------------------------------------------<ESC>030lR  <ESC>ha
 
-nmap <leader>cp :!ls -tr ~/Downloads\|tail -n1\|xclip -selection clipboard<CR>:!cp -v ~/Downloads/<C-R>+ .<CR>
+nmap <leader>cp :!cd ~/Downloads && ls -rt \|tail -n1\|xargs -d"\n" detox<CR>:!ls -tr ~/Downloads\|tail -n1\|xclip -selection clipboard<CR>:!cp -v ~/Downloads/<C-R>+ .<CR>
+
+
 
 " integrate with other apps
 " option: use the detox application to fix filenames

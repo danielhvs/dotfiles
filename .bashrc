@@ -231,7 +231,7 @@ export LD_LIBRARY_PATH=/home/danielhabib/jprofiler12/bin/linux-x64
 export SCRIPT_DIR=/home/danielhabib/.config/i3blocks
 
 # copy the last file to the clipboard 
-alias llcp="ls -tr |tail -n1|xargs realpath| xclip -selection clipboard"
+alias lldw="ls -tr ~/Downloads"
 
 # copy the full file to the clipboard
 catcp() {
@@ -242,6 +242,15 @@ catcp() {
 lcp() {
   realpath $1 | xclip -selection clipboard
 }
+
+# copy the fullpath to the clipboard
+llcp() {
+  cd $1 &&
+  echo `ls -tr $1 |tail -n1|xargs realpath` && 
+  ls -tr $1 |tail -n1|xargs realpath| xclip -selection clipboard &&
+  cd -
+}
+
 
 # abre o ultimo arquivo no vim
 alias vvv='vim `ls -tr .| tail -n1`'

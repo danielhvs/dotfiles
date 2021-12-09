@@ -7,6 +7,7 @@ set title
 
 " source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
 
+set numberwidth=1 
 set background=dark
 set scrolloff=1
 set hidden
