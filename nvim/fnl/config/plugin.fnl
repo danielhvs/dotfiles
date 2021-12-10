@@ -33,9 +33,6 @@
   ;file searching
   :nvim-telescope/telescope.nvim {:requires [:nvim-lua/plenary.nvim]
                                   :mod :telescope}
-  ;parsing system
-  :nvim-treesitter/nvim-treesitter {:run ":TSUpdate"
-                                    :mod :treesitter}
   ;lsp
   :neovim/nvim-lspconfig {:mod :lspconfig}
 
