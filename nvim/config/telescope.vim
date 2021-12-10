@@ -1,3 +1,18 @@
+lua << EOF
+require('telescope').setup(
+{defaults = 
+  {path_display = { "smart" },
+   initial_mode = "normal",
+   prompt_prefix = "",
+   file_ignore_patterns = {"node_modules", "DS_Store", "target", "log"},
+   borderchars = { "─","│","─","│","┌","┐","┘","└" }, 
+   layout_config = {preview_width = 60, horizontal = {width = 0.95}, vertical = {width = 0.95}}
+  },
+  pickers = {
+    find_files = {
+      find_command = {"rg", "--files", "--iglob", "!.git", "--hidden"}}}})
+EOF
+
 nnoremap <leader>tp :Telescope live_grep<CR>
 nnoremap <leader>to :Telescope find_files<CR>
 nnoremap <leader>tY y$:Telescope live_grep<CR><C-R>0<ESC>:s/\([(){}]\)/\\\1/g<CR><ESC>
