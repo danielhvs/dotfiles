@@ -30,11 +30,6 @@
   ;nvim config and plugins in Fennel
   :Olical/aniseed {:branch :master}
 
-  ;lsp
-  :neovim/nvim-lspconfig {:mod :lspconfig}
-
-  :hrsh7th/cmp-path {:branch :main}
-
   ;autocomplete
   :hrsh7th/nvim-cmp {:requires [:hrsh7th/cmp-buffer
                                 :hrsh7th/cmp-nvim-lsp

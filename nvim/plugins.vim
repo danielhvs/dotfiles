@@ -10,6 +10,7 @@ Plug 'gruvbox-community/gruvbox/'
 Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-unimpaired'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'guns/vim-sexp'
@@ -27,3 +28,11 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'ThePrimeagen/harpoon'
 Plug 'machakann/vim-highlightedyank'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'hrsh7th/cmp-path', {'branch': 'main'}
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'PaterJason/cmp-conjure'
+Plug 'hrsh7th/nvim-cmp' " dependencies above
