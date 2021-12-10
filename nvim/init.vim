@@ -52,6 +52,3 @@ source /home/danielhabib/dotfiles/nvim/config/tagbar.vim
 source /home/danielhabib/dotfiles/nvim/config/harpoon.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-highlightedyank.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
-
-" specific
-source ~/dtp/nvim/dtp.vim

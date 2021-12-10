@@ -30,9 +30,6 @@
   ;nvim config and plugins in Fennel
   :Olical/aniseed {:branch :master}
 
-  ;clojure
-  :Olical/conjure {:branch :master :mod :conjure}
-
   ;file searching
   :nvim-telescope/telescope.nvim {:requires [:nvim-lua/plenary.nvim]
                                   :mod :telescope}
