@@ -36,6 +36,8 @@ map <leader>C :set nolist<CR>
 " usar ]b do vim-unimpaired
 noremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 noremap <leader>cw :pwd<CR>
+" copy realpath to clipboard
+noremap <leader>cr :let @+ = expand("%:p")<CR>
 
 " terminal
 tnoremap <Esc> <C-\><C-n>
