@@ -30,9 +30,8 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'machakann/vim-highlightedyank'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'neovim/nvim-lspconfig'
-
+" cmp
 Plug 'hrsh7th/cmp-path', {'branch': 'main'}
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'PaterJason/cmp-conjure'
 Plug 'hrsh7th/nvim-cmp' " dependencies above
