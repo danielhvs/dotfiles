@@ -13,11 +13,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mfussenegger/nvim-jdtls'
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
 Plug 'wellle/targets.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'dmac/vim-cljfmt'
 Plug 'christoomey/vim-sort-motion'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ctrlpvim/ctrlp.vim' 
@@ -34,4 +30,12 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-path', {'branch': 'main'}
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'PaterJason/cmp-conjure'
 Plug 'hrsh7th/nvim-cmp' " dependencies above
+" clojure
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
+Plug 'Olical/conjure'
+" java
+Plug 'mfussenegger/nvim-jdtls'
+call plug#end()
