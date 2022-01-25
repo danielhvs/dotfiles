@@ -11,6 +11,7 @@ source /home/danielhabib/dotfiles/nvim/config/commands.vim
 source /home/danielhabib/dotfiles/nvim/config/ctrlp.vim
 source /home/danielhabib/dotfiles/nvim/config/lightline.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-test.vim
+source /home/danielhabib/dotfiles/nvim/config/gitsigns.vim
 source /home/danielhabib/dotfiles/nvim/config/nerdtree.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-fugitive.vim
 source /home/danielhabib/dotfiles/nvim/config/telescope.vim
