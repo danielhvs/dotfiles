@@ -1,9 +1,3 @@
-" lua code
-lua << EOF
-  require('gitsigns').setup()
-EOF
-" end lua code
-
 source /home/danielhabib/dotfiles/nvim/config/options.vim
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
