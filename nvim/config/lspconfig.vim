@@ -22,10 +22,13 @@ local _1_ = function(client, bufnr)
   -- lf is now using cljstyle
   buf_set_keymap("n", "<leader>lj", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>lk", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", {noremap = true})
-  buf_set_keymap("n", "<leader>la", ":Telescope lsp_code_actions<cr>", {noremap = true})
-  buf_set_keymap("n", "<leader>lw", ":lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>", {noremap = true})
+  -- buf_set_keymap("n", "<leader>la", ":Telescope lsp_code_actions<cr>", {noremap = true})
+  buf_set_keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", {noremap = true})
+  -- buf_set_keymap("n", "<leader>lw", ":lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>lr", ":lua require('telescope.builtin').lsp_references()<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>li", ":lua require('telescope.builtin').lsp_implementations()<cr>", {noremap = true})
+
+
 end
 
 lsp.clojure_lsp.setup({
@@ -35,3 +38,5 @@ lsp.clojure_lsp.setup({
 
 EOF
 
+nnoremap <leader>lR :lua require('daniel').custom_lsp_java_references()<CR> 
+nnoremap <leader>lI :lua require('daniel').custom_lsp_implementations()<CR> 
