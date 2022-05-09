@@ -8,7 +8,7 @@ require('telescope').setup(
    borderchars = { "─","│","─","│","┌","┐","┘","└" }, 
    -- layout_config = {preview_width = 60, horizontal = {width = 0.95}, vertical = {width = 0.95}}
    layout_config = {horizontal = {width = 0.95}, vertical = {width = 0.95}},
-   wrap_results = true
+   wrap_results = false
   },
   pickers = {
     find_files = {
