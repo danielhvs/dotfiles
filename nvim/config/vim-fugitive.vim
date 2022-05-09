@@ -6,6 +6,7 @@ map <leader>gf :G pull<CR>
 map <leader>gt yiW:G tag <C-R>0
 map <leader>gT :G push --tags<CR> 
 map <leader>gl :Git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso<CR>
+map <leader>gL :Git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso
 map <leader>g0 :0Gclog<CR>
 map <leader>go :Git checkout %<CR>
 map <leader>ga :Git add %<CR>
