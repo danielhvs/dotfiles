@@ -30,8 +30,8 @@ nnoremap <leader>lk :lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics()<CR> 
 nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<CR> 
 nnoremap <leader>lR :lua require('daniel').custom_lsp_java_references()<CR> 
-nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<CR> 
 nnoremap <leader>lI :lua require('daniel').custom_lsp_implementations()<CR> 
+nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<CR> 
 
 " java
 nnoremap <leader>jo ciWLOG.error("daniel: ");<esc>2hi

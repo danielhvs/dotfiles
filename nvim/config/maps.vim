@@ -65,9 +65,10 @@ nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<CR>
 nmap <leader>sv :source $MYVIMRC<CR>
 
 " barra
-nnoremap <leader>- S------------------------------------------------------------<ESC>030lR  <ESC>ha
+nnoremap <leader>- O------------------------------------------------------------<ESC>030lR  <ESC>ha
 
 nmap <leader>cp :!cd ~/Downloads && ls -rt \|tail -n1\|xargs -d"\n" detox<CR>:!ls -tr ~/Downloads\|tail -n1\|xclip -selection clipboard<CR>:!cp -v ~/Downloads/<C-R>+ .<CR>
+
 
 
 
@@ -76,6 +77,10 @@ nmap <leader>cp :!cd ~/Downloads && ls -rt \|tail -n1\|xargs -d"\n" detox<CR>:!l
 " /usr/bin/detox
 nmap <leader>fw yiW:!xdg-open  <C-R>0 &<CR>
 nmap <leader>fW :!xdg-open -n %<CR>:bd!<CR>
+
+" format limit 80 chars
+nmap <leader>fl :set textwidth=80<CR>gqas
+nmap <leader>fL ma:set textwidth=80<CR>gggqG`a
 
 " determine a file's MIME type
 " $ mimetype photo.jpeg
