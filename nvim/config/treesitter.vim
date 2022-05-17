@@ -17,6 +17,8 @@ require'nvim-treesitter.configs'.setup {
 					["if"] = "@function.inner",
 					["ac"] = "@conditional.outer",
 					["ic"] = "@conditional.inner",
+					["al"] = "@loop.outer",
+					["il"] = "@loop.inner",
 					},
 				},
 
