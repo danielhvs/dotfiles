@@ -13,7 +13,7 @@ augroup END
 " java lsp
 "  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
 "  use this mapping also with other language servers
-nnoremap <leader>la :Telescope lsp_code_actions<CR>
+nnoremap <leader>la :lua vim.lsp.buf.code_action()<CR>
 " vnoremap <leader>la <Esc>:lua require('jdtls').code_action(true)<CR>?
 nnoremap <leader>lm :lua require'jdtls'.organize_imports()<CR>
 nnoremap gd :lua vim.lsp.buf.definition()<CR> 
