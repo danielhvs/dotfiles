@@ -31,8 +31,7 @@ nmap <leader>d :bd!<CR>
 map <leader>q :q<CR>
 nmap <leader>w :update<CR>
 map <leader>x :x<CR>
-map <leader>c :set list<CR>
-map <leader>C :set nolist<CR>
+" removed in favor to vim-unimpaired ]ol
 " usar ]b do vim-unimpaired
 noremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 noremap <leader>cw :pwd<CR>
