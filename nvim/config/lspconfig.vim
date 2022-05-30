@@ -27,14 +27,19 @@ local _1_ = function(client, bufnr)
   -- buf_set_keymap("n", "<leader>lw", ":lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>lr", ":lua require('telescope.builtin').lsp_references()<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>li", ":lua require('telescope.builtin').lsp_implementations()<cr>", {noremap = true})
-
+  -- buf_set_keymap("n", "<leader>lR", ":lua vim.lsp.buf.incoming_calls()<CR>", {noremap = true})
+  -- buf_set_keymap("n", "<leader>lO", ":lua vim.lsp.buf.outgoing_calls()<CR>", {noremap = true})
 
 end
 
 lsp.clojure_lsp.setup({
   on_attach = _1_,
-  handlers = {["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {severity_sort = true, update_in_insert = false, underline = true, virtual_text = false}), ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "single"}), ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "single"})}, 
-  capabilities = cmplsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())})
+  handlers = {
+    ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
+    {severity_sort = true, update_in_insert = false, underline = true, virtual_text = false}),
+    ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "single"}), 
+    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "single"})}, 
+     capabilities = cmplsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())})
 
 EOF
 
