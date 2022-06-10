@@ -1,4 +1,17 @@
-" LSP nativo inicio
+" " LSP nativo inicio
+" lua << EOF
+" 	local config = { root_dir = require('jdtls.setup').find_root(
+" 		{
+"     '/home/danielhabib/workspace-nvim/eco/', 
+" 		'.git', 
+" 		'mvnw', 
+" 		'gradlew'
+" 		}) 
+" 	}
+" require('jdtls').start_or_attach(config)
+" EOF
+
+
 if has('nvim-0.5')
   augroup lsp
     au!
@@ -14,7 +27,8 @@ augroup END
 "  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
 "  use this mapping also with other language servers
 nnoremap <leader>la :lua vim.lsp.buf.code_action()<CR>
-" vnoremap <leader>la <Esc>:lua require('jdtls').code_action(true)<CR>?
+vnoremap <leader>la :lua vim.lsp.buf.range_code_action()<CR>
+" vnoremap <leader>la :lua require'jdtls'.code_action(true)<CR>
 nnoremap <leader>lm :lua require'jdtls'.organize_imports()<CR>
 nnoremap gd :lua vim.lsp.buf.definition()<CR> 
 nnoremap K :lua vim.lsp.buf.hover()<CR> 
@@ -32,11 +46,12 @@ nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<CR>
 nnoremap <leader>lR :lua require('daniel').custom_lsp_java_references()<CR> 
 nnoremap <leader>lI :lua require('daniel').custom_lsp_implementations()<CR> 
 nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<CR> 
+" nnoremap <leader>lR :lua vim.lsp.buf.incoming_calls()<CR> 
+nnoremap <leader>lO :lua vim.lsp.buf.outgoing_calls()<CR> 
 
 " java
-nnoremap <leader>jo ciWLOG.error("daniel: ");<esc>2hi
-nnoremap <leader>jO ^y$oLOG.error("daniel: <esc>pa");<esc>
-nnoremap <leader>jl mmyiwoLOG.error("daniel: <esc>pa");<esc>`m
-nnoremap <leader>jL mm^y$oLOG.error("daniel: <C-R>0");<esc>`m
-nnoremap <leader>jp mmyiwoLOG.error("daniel: <esc>pa = " + <esc>pa);<esc>`m
-nnoremap <leader>jP mmyiWoLOG.error("daniel: <esc>pa = " + <esc>pa);<esc>`m
+nnoremap <leader>jl mmyiwoSystem.out.println("daniel: <esc>pa = " + <esc>pa);<esc>`m
+nnoremap <leader>jL mmyiWoSystem.out.println("daniel: <esc>pa = " + <esc>pa);<esc>`m
+
+" kill all java
+nnoremap <leader>l! :!killall java -v<CR>
