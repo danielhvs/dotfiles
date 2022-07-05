@@ -7,6 +7,19 @@ require'nvim-treesitter.configs'.setup {
   },
 
 	textobjects = {
+       swap = {
+            enable = true,
+            swap_next = {
+              ["<leader>mp"] = "@parameter.inner",
+              ["<leader>mb"] = "@block.outer",
+              ["<leader>mc"] = "@conditional.outer",
+            },
+            swap_previous = {
+              ["<leader>mP"] = "@parameter.inner",
+              ["<leader>mB"] = "@block.outer",
+              ["<leader>mC"] = "@conditional.outer",
+            },
+          },
 			select = {
 				enable = true,
 				-- Automatically jump forward to textobj, similar to targets.vim
