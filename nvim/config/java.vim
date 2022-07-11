@@ -52,7 +52,7 @@ nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<CR>
 " nnoremap <leader>lR :lua vim.lsp.buf.incoming_calls()<CR> 
 nnoremap <leader>lO :lua vim.lsp.buf.outgoing_calls()<CR> 
 " kill all lsp
-nnoremap <leader>l! lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
+nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 
 " java
 nnoremap <leader>jl mmyiwoSystem.out.println("daniel: <esc>pa = " + <esc>pa);<esc>`m
