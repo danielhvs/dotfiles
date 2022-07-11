@@ -14,7 +14,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'wellle/targets.vim'
-Plug 'christoomey/vim-sort-motion'
+" Plug 'christoomey/vim-sort-motion' ; just use `!sort`
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ctrlpvim/ctrlp.vim' 
 Plug 'itchyny/lightline.vim'
