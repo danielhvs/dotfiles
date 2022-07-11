@@ -11,17 +11,20 @@
 " require('jdtls').start_or_attach(config)
 " EOF
 
-
-if has('nvim-0.5')
-  augroup lsp
-    au!
-    au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
-  augroup end
-endif
+" if has('nvim-0.5')
+"   augroup lsp
+"     au!
+"     au FileType java lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
+"   augroup end
+" endif
 
 augroup autoformat_settings
   autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
 augroup END
+
+" start lsp manually
+nnoremap <leader>lx :lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})
+nnoremap <leader>lX :lua vim.lsp.buf_attach_client(0, 1)
 
 " java lsp
 "  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
