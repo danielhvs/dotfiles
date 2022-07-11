@@ -28,4 +28,7 @@ nnoremap <leader>tx :let @0=expand("%:t")<CR>:Telescope live_grep<CR>I<C-R>0<ESC
 nnoremap <leader>tX :let @0=expand("%")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>
 nnoremap <leader>tv yiw:Telescope live_grep<CR>id = "<C-R>0"<ESC>
 nnoremap <leader>te yiw:Telescope find_files<CR>entity/<C-R>0.java<ESC>
-nnoremap <leader>tN yiw:Telescope find_files<CR>p:s/\./\//g<CR><ESC>:s/-/_/g<CR><ESC>
+nnoremap <leader>tr :Telescope resume<CR>
+nnoremap <leader>ts :Telescope git_status<CR>
+nnoremap <leader>tS :Telescope git_commits<CR>
+nnoremap <leader>p :Telescope find_files<CR>
