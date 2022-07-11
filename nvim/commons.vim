@@ -16,3 +16,4 @@ source /home/danielhabib/dotfiles/nvim/config/maps.vim
 source /home/danielhabib/dotfiles/nvim/config/treesitter.vim
 source /home/danielhabib/dotfiles/nvim/config/cmp.vim
 source /home/danielhabib/dotfiles/nvim/config/telescope-ui-select.vim
+source /home/danielhabib/dotfiles/nvim/config/switch.vim
