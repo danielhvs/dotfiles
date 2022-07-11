@@ -97,3 +97,8 @@ nmap <leader>fL ma:set textwidth=80<CR>gggqG`a
 
 " # open a file with its default application
 " $ mimeopen -n photo.jpeg
+
+nmap <leader>lw <cmd>lua require('diaglist').open_all_diagnostics()<cr>/error\|<cr>
+nmap <leader>l0 <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>/error\|<cr>
+
+nmap <leader>Y mzggyG`z
