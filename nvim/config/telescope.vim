@@ -6,8 +6,10 @@ require('telescope').setup(
    prompt_prefix = "",
    file_ignore_patterns = {"node_modules", "DS_Store", "target" },
    borderchars = { "─","│","─","│","┌","┐","┘","└" }, 
-   -- layout_config = {preview_width = 60, horizontal = {width = 0.95}, vertical = {width = 0.95}}
-   layout_config = {horizontal = {width = 0.95}, vertical = {width = 0.95}},
+   layout_config = {horizontal = {width = 0.95}, 
+                    --preview_width = 0.65,
+                    vertical = {width = 0.95}},
+
    wrap_results = false
   },
   pickers = {
