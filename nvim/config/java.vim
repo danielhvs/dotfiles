@@ -48,8 +48,5 @@ nnoremap <leader>lO :lua vim.lsp.buf.outgoing_calls()<CR>
 nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 
 " java
-" nnoremap <leader>jl mmyiwoSystem.out.println("daniel: <esc>pa = " + <esc>pa);<esc>`m
-" nnoremap <leader>jL mmyiWoSystem.out.println("daniel: <esc>pa = " + <esc>pa);<esc>`m
-
 nnoremap <leader>jl mmyiwoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
 nnoremap <leader>jL mmyiWoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
