@@ -1,54 +1,3 @@
-" /home/danielhabib/bin/java-lsp.sh
-" LSP nativo inicio
-lua << EOF
-
--- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
-function ccc() 
-  local config = {
-    -- The command that starts the language server
-    -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
-    cmd = {
-      'java',
-      '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-      '-Dosgi.bundles.defaultStartLevel=4',
-      '-Declipse.product=org.eclipse.jdt.ls.core.product',
-      '-Dlog.protocol=true',
-      '-Dlog.level=ALL',
-      '-Xms1g',
-      '--add-modules=ALL-SYSTEM',
-      '--add-opens', 'java.base/java.util=ALL-UNNAMED',
-      '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-      '-jar', '/home/danielhabib/dev/eclipse-jdt-ls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
-      '-configuration', '/home/danielhabib/dev/eclipse-jdt-ls/config_linux/',
-      '-data', '/home/danielhabib/workspace-nvim/eco/'
-    },
-
-    root_dir = require('jdtls.setup').find_root({
-    '/home/danielhabib/workspace-nvim/eco/eco-comum/pom.xml',
-    '/home/danielhabib/workspace-nvim/eco/eco-batch/pom.xml'
-    }),
-
-    settings = {
-      java = {
-      }
-    },
-
-    init_options = {
-      bundles = {}
-    },
-  }
-  return config
-end
-
-local attach = function() require('jdtls').start_or_attach(ccc()) end
-
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-	pattern = {"*.java"},
-	callback = attach,
-})
-
-EOF
-
 " if has('nvim-0.5')
 "   augroup lsp
 "     au!
@@ -102,7 +51,5 @@ nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 " nnoremap <leader>jl mmyiwoSystem.out.println("daniel: <esc>pa = " + <esc>pa);<esc>`m
 " nnoremap <leader>jL mmyiWoSystem.out.println("daniel: <esc>pa = " + <esc>pa);<esc>`m
 
-
-nnoremap <leader>jl mmyiwoLOG.info("<esc>pa = " + <esc>pa);<esc>`m
-nnoremap <leader>jL mmyiWoLOG.info("<esc>pa = " + <esc>pa);<esc>`m
-
+nnoremap <leader>jl mmyiwoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
+nnoremap <leader>jL mmyiWoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
