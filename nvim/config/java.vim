@@ -34,7 +34,7 @@ nnoremap <leader>lh :lua vim.lsp.buf.signature_help()<CR>
 nnoremap <leader>ln :lua vim.lsp.buf.rename()<CR> 
 nnoremap <leader>le :lua vim.lsp.diagnostic.show_line_diagnostics()<CR> 
 nnoremap <leader>lq :lua vim.lsp.diagnostic.set_loclist()<CR> 
-" nnoremap <leader>lf :lua vim.lsp.buf.formatting()<CR> 
+nnoremap <leader>lF :lua vim.lsp.buf.formatting()<CR> 
 nnoremap <leader>lf :!git diff -U0 HEAD\|google-java-format-diff.py -p1 -i<CR>
 nnoremap <leader>lj :lua vim.lsp.diagnostic.goto_next()<CR> 
 nnoremap <leader>lk :lua vim.lsp.diagnostic.goto_prev()<CR> 
