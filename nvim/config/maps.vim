@@ -27,7 +27,7 @@ noremap <Right> <Nop>
 
 " custom leader commands
 nnoremap <leader>D :%bd\|e#\|bd#<CR>
-nmap <leader>d :bd!<CR>
+nmap <leader>d :bd<CR>
 map <leader>q :q<CR>
 nmap <leader>w :update<CR>
 map <leader>x :x<CR>
@@ -45,9 +45,6 @@ tnoremap <Esc> <C-\><C-n>
 nmap <leader>fJ ggdG:r !jq '' %<CR><CR>
 nmap <leader>fj y%:e /tmp/json.json<CR>p:w<CR>d%:r !jq '' %<CR>d%<C-O><C-O>gr%:bd! /tmp/json.json<CR>:!rm /tmp/json.json<CR><CR>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<CR>
-
-" terminal
-nnoremap <leader>tt :lcd %:p:h<CR>:terminal<CR>A
 
 " moving lines
 vnoremap J :m '>+1<CR>gv
