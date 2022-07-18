@@ -15,4 +15,6 @@ map <leader>gb :Git blame<CR>
 map <leader>gs :Git! show<CR>:wincmd w<CR>:wincmd o<CR>
 map <leader>gS :Git! log --all -p -- %<CR>:wincmd w<CR>:wincmd o<CR>
 map <leader>ge :Gedit<CR>
-
+map <leader>gd "yyiw:G show <C-R>y<CR>
+map <leader>gC "yyiw:G cherry-pick <C-R>y<CR>
+map <leader>gr "yyiw:G revert <C-R>y<CR>
