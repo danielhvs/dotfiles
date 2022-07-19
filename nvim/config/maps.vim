@@ -99,3 +99,6 @@ nmap <leader>lw <cmd>lua require('diaglist').open_all_diagnostics()<cr>/error\|<
 nmap <leader>l0 <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>/error\|<cr>
 
 nmap <leader>Y mzggyG`z
+
+" last edited position
+nnoremap 'e '`

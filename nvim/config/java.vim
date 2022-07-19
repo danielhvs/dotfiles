@@ -51,3 +51,5 @@ nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 " java
 nnoremap <leader>jl mmyiwoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
 nnoremap <leader>jL mmyiWoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
+
+nnoremap <leader>l? :LspInfo<CR>

@@ -5,8 +5,6 @@ let mapleader = ","
 set termguicolors
 set title
 
-" source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
-
 set clipboard=unnamedplus
 set numberwidth=1 
 set background=dark

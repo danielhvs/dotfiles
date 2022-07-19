@@ -1,3 +1,4 @@
+" custom stuff based upon tpope
 if exists("g:loaded_sexp_mappings_for_regular_people") || &cp
   finish
 endif
