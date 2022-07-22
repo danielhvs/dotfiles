@@ -103,3 +103,6 @@ nmap <leader>Y mzggyG`z
 
 " last edited position
 nnoremap 'e '`
+
+nnoremap <localleader>w bi
+nnoremap <localleader>W ei
