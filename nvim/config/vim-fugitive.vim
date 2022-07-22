@@ -12,7 +12,7 @@ map <leader>go :Git checkout %<CR>
 map <leader>ga :Git add %<CR>
 map <leader>gw :GBrowse<CR>:!i3-msg workspace number 3<CR>
 map <leader>gb :Git blame<CR>
-map <leader>gs :Git! show<CR>:wincmd w<CR>:wincmd o<CR>
+map <leader>gs :G show<CR>
 map <leader>gS :Git! log --all -p -- %<CR>:wincmd w<CR>:wincmd o<CR>
 map <leader>ge :Gedit<CR>
 map <leader>gd "yyiw:G show <C-R>y<CR>
