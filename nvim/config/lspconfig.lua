@@ -29,6 +29,8 @@ local _1_ = function(client, bufnr)
   -- buf_set_keymap("n", "<leader>lR", ":lua vim.lsp.buf.incoming_calls()<CR>", {noremap = true})
   -- buf_set_keymap("n", "<leader>lO", ":lua vim.lsp.buf.outgoing_calls()<CR>", {noremap = true})
 
+  buf_set_keymap("n", "<leader>lR", ":lua require('daniel').custom_lsp_java_references()<cr>", {noremap = true})
+  buf_set_keymap("n", "<leader>lI", ":lua require('daniel').custom_lsp_implementations()<cr>", {noremap = true})
 end
 
 lsp.clojure_lsp.setup({
@@ -39,6 +41,3 @@ lsp.clojure_lsp.setup({
     ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "single"}), 
     ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "single"})}, 
      capabilities = cmplsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())})
-
-require('daniel').custom_lsp_java_references()
-require('daniel').custom_lsp_implementations()
