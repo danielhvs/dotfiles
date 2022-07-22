@@ -105,4 +105,4 @@ nmap <leader>Y mzggyG`z
 nnoremap 'e '`
 
 nnoremap <localleader>w bi
-nnoremap <localleader>W ei
+nnoremap <localleader>W ea
