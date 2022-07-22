@@ -34,4 +34,5 @@ nnoremap <leader>tr :Telescope resume<CR>
 nnoremap <leader>ts :Telescope git_status<CR>
 nnoremap <leader>tS :Telescope git_commits<CR>
 nnoremap <leader>p :Telescope find_files<CR>
+nnoremap <leader>tb :Telescope git_branches<CR>
 nnoremap <leader>T :Telescope 
