@@ -19,3 +19,4 @@ map <leader>gd "yyiw:G show <C-R>y<CR>
 map <leader>gC "yyiw:G cherry-pick <C-R>y<CR>
 map <leader>gr "yyiw:G revert <C-R>y<CR>
 map <leader>g! :G push --force-with-lease
+nnoremap <leader>g\| :e 1<CR>:diffthis<CR>:e 2<CR>:diffthis<CR>:vs 1<CR>
