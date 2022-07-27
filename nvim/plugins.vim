@@ -44,4 +44,5 @@ Plug 'nvim-telescope/telescope-ui-select.nvim'
 " Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
 Plug 'romainl/vim-qf'
 Plug 'AndrewRadev/switch.vim'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
