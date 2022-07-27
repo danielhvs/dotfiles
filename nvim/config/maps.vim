@@ -99,7 +99,7 @@ nmap <leader>fL ma:set textwidth=80<CR>gggqG`a
 nmap <leader>lw <cmd>lua require('diaglist').open_all_diagnostics()<cr>/error\|<cr>
 nmap <leader>l0 <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>/error\|<cr>
 
-nmap <leader>Y mzggyG`z
+nnoremap <leader>Y :%y<CR>
 
 " last edited position
 nnoremap 'e '`
