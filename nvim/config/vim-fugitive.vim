@@ -20,3 +20,5 @@ map <leader>gC "yyiw:G cherry-pick <C-R>y<CR>
 map <leader>gr "yyiw:G revert <C-R>y<CR>
 map <leader>g! :G push --force-with-lease
 nnoremap <leader>g\| :e 2<CR>:%.!sort<CR>:diffthis<CR>:e 1<CR>:%.!sort<CR>:diffthis<CR>:vs 2<CR>
+nnoremap <leader>gm :G diff master %<CR>
+nnoremap <leader>gM :G diff master<CR>
