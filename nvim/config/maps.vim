@@ -106,3 +106,7 @@ nnoremap 'e '`
 
 nnoremap <localleader>w bi
 nnoremap <localleader>W ea
+
+" send to file
+vnoremap <leader>ff V:e 1<CR>:bd! %<CR>:'<,'>w! 1<CR>:e 1<CR>
+nnoremap <leader>ff :e 1<CR>:bd! %<CR>%w! 1<CR>:e 1<CR>
