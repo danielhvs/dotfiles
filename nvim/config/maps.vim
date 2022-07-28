@@ -111,6 +111,6 @@ nnoremap <localleader>W ea
 vnoremap <leader>ff V:e 1<CR>:bd! %<CR>:'<,'>w! 1<CR>:e 1<CR>
 nnoremap <leader>ff :e 1<CR>:bd! %<CR>:%w! 1<CR>:e 1<CR>
 " normalize
-nnoremap <leader>fn :%s/,/\r/e<CR>:%!sort<CR>:%s/ $//e<CR>:%s/^ //e<CR>:%s/^$\n//e<CR>
+nnoremap <leader>fn :%s/,/\r/ge<CR>:%!sort<CR>:%s/ $//ge<CR>:%s/^ //ge<CR>:%s/^$\n//ge<CR>
 " trim ,
-nnoremap <leader>fN :%s/[ ,]/\r/e<CR>:%!sort<CR>:%s/ $//e<CR>:%s/^ //e<CR>:%s/^$\n//e<CR>
+nnoremap <leader>fN :%s/[ ,]/\r/ge<CR>:%!sort<CR>:%s/ $//ge<CR>:%s/^ //ge<CR>:%s/^$\n//ge<CR>
