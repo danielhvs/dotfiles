@@ -18,7 +18,8 @@ require('telescope').setup(
 EOF
 
 nnoremap <leader>tp :Telescope live_grep<CR>
-nnoremap <leader>to :Telescope oldfiles<CR>
+nnoremap <leader>to :Telescope oldfiles only_cwd=true<CR>
+nnoremap <leader>tO :Telescope oldfiles<CR>
 nnoremap <leader>tY y$:Telescope live_grep<CR>p:s/\([(){}]\)/\\\1/g<CR><ESC>
 nnoremap <leader>ty yiw:Telescope live_grep<CR>p0d/[A-Z]<CR>~I\.<ESC>0
 nnoremap <leader>tg "zyiw:Telescope live_grep<CR>I<C-R>z<ESC>:s/\([(){}]\)/\\\1/g<CR><ESC>
