@@ -9,3 +9,8 @@ nnoremap <localleader>rt mm:ConjureEvalRootForm<CR>?deftest<CR>w"yyiwO(run-test 
 nnoremap <leader>rt mm:ConjureEvalRootForm<CR>?deftest<CR>w"yyiwO(run-test <C-R>y)<ESC><CR>k0l:redraw<CR>:ConjureEvalCurrentForm<CR>dd:update<CR>`m
 
 autocmd User ConjureEval if expand("%:t") =~ "^conjure-log-" | exec "normal G" | endif
+
+nnoremap <localleader>1 :lua require("harpoon.ui").nav_file(1)<CR>
+nnoremap <localleader>2 :lua require("harpoon.ui").nav_file(2)<CR>:ConjureEvalBuf<CR>
+nnoremap <localleader>3 :lua require("harpoon.ui").nav_file(3)<CR>:ConjureEvalBuf<CR>
+nnoremap <localleader>4 :lua require("harpoon.ui").nav_file(4)<CR>:ConjureEvalBuf<CR>
