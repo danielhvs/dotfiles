@@ -43,8 +43,8 @@ noremap <leader>cr :let @+ = expand("%:p")<CR>
 tnoremap <Esc> <C-\><C-n>
 
 " formats comeca com f
-nmap <leader>fJ ggdG:r !jq '' %<CR><CR>
-nmap <leader>fj y%:e /tmp/json.json<CR>p:w<CR>d%:r !jq '' %<CR>d%<C-O><C-O>gr%:bd! /tmp/json.json<CR>:!rm /tmp/json.json<CR><CR>
+nmap <leader>fJ :%.!jq .<CR>
+nmap <leader>fj vap:.!jq .<CR>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<CR>
 
 " moving lines
