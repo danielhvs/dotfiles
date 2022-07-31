@@ -26,9 +26,10 @@ local _1_ = function(client, bufnr)
   -- buf_set_keymap("n", "<leader>lw", ":lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>lr", ":lua require('telescope.builtin').lsp_references()<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>li", ":lua require('telescope.builtin').lsp_implementations()<cr>", {noremap = true})
+	-- outline
   buf_set_keymap("n", "<leader>lO", ":Telescope lsp_document_symbols<CR>", {noremap = true})
-  -- buf_set_keymap("n", "<leader>lR", ":lua vim.lsp.buf.incoming_calls()<CR>", {noremap = true})
-  -- buf_set_keymap("n", "<leader>lO", ":lua vim.lsp.buf.outgoing_calls()<CR>", {noremap = true})
+  buf_set_keymap("n", "<leader>lK", ":lua vim.lsp.buf.outgoing_calls()<CR>", {noremap = true})
+  buf_set_keymap("n", "<leader>lC", ":lua vim.lsp.buf.incoming_calls()<CR>", {noremap = true})
 
   buf_set_keymap("n", "<leader>lR", ":lua require('daniel').custom_lsp_java_references()<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>lI", ":lua require('daniel').custom_lsp_implementations()<cr>", {noremap = true})

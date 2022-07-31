@@ -14,3 +14,4 @@ nnoremap <localleader>1 :lua require("harpoon.ui").nav_file(1)<CR>
 nnoremap <localleader>2 :lua require("harpoon.ui").nav_file(2)<CR>:ConjureEvalBuf<CR>
 nnoremap <localleader>3 :lua require("harpoon.ui").nav_file(3)<CR>:ConjureEvalBuf<CR>
 nnoremap <localleader>4 :lua require("harpoon.ui").nav_file(4)<CR>:ConjureEvalBuf<CR>
+nnoremap <localleader>- :e src/ardoq/route_tree.clj<CR>:ConjureEvalBuf<CR>:bd %<CR>
