@@ -32,7 +32,12 @@ nnoremap <leader>ld :lua vim.lsp.buf.declaration()<CR>
 nnoremap <leader>lt :lua vim.lsp.buf.type_definition()<CR> 
 nnoremap <leader>lh :lua vim.lsp.buf.signature_help()<CR> 
 nnoremap <leader>ln :lua vim.lsp.buf.rename()<CR> 
-nnoremap <leader>le :lua vim.lsp.diagnostic.show_line_diagnostics()<CR> 
+nnoremap <leader>lc :lua require'jdtls'.extract_constant()<CR>
+vnoremap <leader>lc :lua require'jdtls'.extract_constant(true)<CR>
+nnoremap <leader>le :lua require'jdtls'.extract_method()<CR>
+vnoremap <leader>le :lua require'jdtls'.extract_method(true)<CR>
+nnoremap <leader>lv :lua require'jdtls'.extract_variable()<CR>
+vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 nnoremap <leader>lq :lua vim.lsp.diagnostic.set_loclist()<CR> 
 nnoremap <leader>lF :lua vim.lsp.buf.formatting()<CR> 
 nnoremap <leader>lf :!git diff -U0 HEAD\|google-java-format-diff.py -p1 -i<CR>
@@ -43,8 +48,8 @@ nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<CR>
 nnoremap <leader>lR :lua require('daniel').custom_lsp_java_references()<CR> 
 nnoremap <leader>lI :lua require('daniel').custom_lsp_implementations()<CR> 
 nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<CR> 
-" nnoremap <leader>lR :lua vim.lsp.buf.incoming_calls()<CR> 
-nnoremap <leader>lO :lua vim.lsp.buf.outgoing_calls()<CR> 
+nnoremap <leader>lC :lua vim.lsp.buf.incoming_calls()<CR> 
+nnoremap <leader>lK :lua vim.lsp.buf.outgoing_calls()<CR> 
 " kill all lsp
 nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 
