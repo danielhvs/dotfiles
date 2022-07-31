@@ -45,4 +45,6 @@ Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'romainl/vim-qf'
 Plug 'AndrewRadev/switch.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'ldelossa/litee.nvim'
+Plug 'ldelossa/litee-calltree.nvim'
 call plug#end()
