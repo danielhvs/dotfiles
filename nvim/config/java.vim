@@ -38,6 +38,7 @@ nnoremap <leader>le :lua require'jdtls'.extract_method()<CR>
 vnoremap <leader>le :lua require'jdtls'.extract_method(true)<CR>
 nnoremap <leader>lv :lua require'jdtls'.extract_variable()<CR>
 vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
+vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 nnoremap <leader>lq :lua vim.lsp.diagnostic.set_loclist()<CR> 
 nnoremap <leader>lF :lua vim.lsp.buf.formatting()<CR> 
 nnoremap <leader>lf :!git diff -U0 HEAD\|google-java-format-diff.py -p1 -i<CR>
