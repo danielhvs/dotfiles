@@ -58,9 +58,3 @@ set cursorline
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-augroup CursorLineOnlyInActiveWindow
-  autocmd!
-  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline relativenumber number
-  autocmd WinLeave * setlocal nocursorline norelativenumber
-augroup END  
