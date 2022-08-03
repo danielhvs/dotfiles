@@ -4,7 +4,7 @@ xnoremap <leader>fa <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 " nnoremap <leader>fA <Plug>(EasyAlign)
 " must be in the last line
-nnoremap <leader>fA mmv?^.*[EDQ] <CR>j:EasyAlign! **\|<CR>`m
+nnoremap <leader>fA mmv?^.*[E] <CR>j:EasyAlign! **\|<CR>`m
 
 nnoremap <leader>fa vip:EasyAlign! **\|<CR>
 
