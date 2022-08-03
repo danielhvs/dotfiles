@@ -15,6 +15,10 @@ augroup autoformat_settings
   autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
 augroup END
 
+augroup autoformat_settings
+  autocmd FileType feature set smarttab expandtab shiftwidth=2 tabstop=2
+augroup END
+
 " start lsp manually
 " nnoremap <leader>lx :lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})<CR>
 " nnoremap <leader>lX :lua vim.lsp.buf_attach_client(0, 1)<CR>
@@ -29,7 +33,7 @@ nnoremap <leader>lm :lua require'jdtls'.organize_imports()<CR>
 nnoremap gd :lua vim.lsp.buf.definition()<CR> 
 nnoremap K :lua vim.lsp.buf.hover()<CR> 
 nnoremap <leader>ld :lua vim.lsp.buf.declaration()<CR> 
-nnoremap <leader>lt :lua vim.lsp.buf.type_definition()<CR> 
+nnoremap <leader>lt :lua require'jdtls'.test_nearest_method()<CR>
 nnoremap <leader>lh :lua vim.lsp.buf.signature_help()<CR> 
 nnoremap <leader>ln :lua vim.lsp.buf.rename()<CR> 
 nnoremap <leader>lc :lua require'jdtls'.extract_constant()<CR>
