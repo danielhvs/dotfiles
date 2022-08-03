@@ -116,3 +116,6 @@ nnoremap <leader>ff :e 1<CR>:bd! %<CR>:%w! 1<CR>:e 1<CR>
 nnoremap <leader>fn :%s/,/\r/ge<CR>:%!sort<CR>:%s/ $//ge<CR>:%s/^ //ge<CR>:%s/^$\n//ge<CR>
 " trim ,
 nnoremap <leader>fN :%s/[ ,]/\r/ge<CR>:%!sort<CR>:%s/ $//ge<CR>:%s/^ //ge<CR>:%s/^$\n//ge<CR>
+
+nnoremap co :Git checkout
+nnoremap c* *Ncgn
