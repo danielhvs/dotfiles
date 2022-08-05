@@ -100,6 +100,7 @@ nmap <leader>lE <cmd>lua require('diaglist').open_all_diagnostics()<cr>/error\|<
 nmap <leader>le <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>/error\|<cr>
 
 nnoremap <leader>Y :%y<CR>
+nnoremap <leader>P mmo<ESC>pdgg
 
 " last edited position
 nnoremap 'e '`
