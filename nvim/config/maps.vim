@@ -62,7 +62,7 @@ nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<CR>
 nmap <leader>sv :source $MYVIMRC<CR>
 
 " section
-nnoremap <leader>- {mmS-<ESC>"yx80"yp}<ESC>80"yp'm030lR
+nnoremap <leader>- {O-<ESC>mm"yx80"ypj}o<ESC>80"yp'm030lR
 
 nmap <leader>cp :!cd ~/Downloads && ls -rt \|tail -n1\|xargs -d"\n" detox<CR>:!ls -tr ~/Downloads\|tail -n1\|xclip -selection clipboard<CR>:!cp -v ~/Downloads/<C-R>+ .<CR>
 
