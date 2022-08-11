@@ -2,10 +2,10 @@
 nnoremap <leader>alm :read ~/.gitmessage<CR>2j
 
 " window
-nnoremap <C-l> :set nocursorline<CR><C-w><C-l>:set cursorline<CR>
-nnoremap <C-h> :set nocursorline<CR><C-w><C-h>:set cursorline<CR>
-nnoremap <C-j> :set nocursorline<CR><C-w><C-j>:set cursorline<CR>
-nnoremap <C-k> :set nocursorline<CR><C-w><C-k>:set cursorline<CR>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
 
 " disable ex mode
 nnoremap Q !!sh<CR>
