@@ -23,3 +23,9 @@ map <leader>g! :G push --force-with-lease
 nnoremap <leader>g\| :e 2<CR>:diffthis<CR>:e 1<CR>:diffthis<CR>:vs 2<CR>
 nnoremap <leader>gm :G diff master %<CR>
 nnoremap <leader>gM :G diff master<CR>
+" konflict
+nnoremap <leader>gK :Gvdiffsplit!<CR> 
+nnoremap <leader>gkh :diffget //2<CR>
+nnoremap <leader>gkl :diffget //3<CR>
+" both
+nnoremap <leader>gkb ?^<<<<CR>ddk/^=======<CR>ddk/^>>>>>>><CR>dd

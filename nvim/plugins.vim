@@ -47,4 +47,5 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ldelossa/litee.nvim'
 Plug 'ldelossa/litee-calltree.nvim'
+Plug 'wincent/vcs-jump'
 call plug#end()
