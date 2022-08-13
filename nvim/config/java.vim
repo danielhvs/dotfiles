@@ -44,8 +44,7 @@ nnoremap <leader>lv :lua require'jdtls'.extract_variable()<CR>
 vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 nnoremap <leader>lq :lua vim.lsp.diagnostic.set_loclist()<CR> 
-nnoremap <leader>lF :lua vim.lsp.buf.formatting()<CR> 
-nnoremap <leader>lf :!git diff -U0 HEAD\|google-java-format-diff.py -p1 -i<CR>
+nnoremap <leader>lf :lua vim.lsp.buf.formatting()<CR> 
 nnoremap <leader>lj :lua vim.lsp.diagnostic.goto_next()<CR> 
 nnoremap <leader>lk :lua vim.lsp.diagnostic.goto_prev()<CR> 
 nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics()<CR> 
@@ -59,7 +58,9 @@ nnoremap <leader>lK :lua vim.lsp.buf.outgoing_calls()<CR>
 nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 
 " java
-nnoremap <leader>jl mmyiwoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
-nnoremap <leader>jL mmyiWoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
+" nnoremap <leader>jl mmyiwoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
+" nnoremap <leader>jL mmyiWoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
+nnoremap <leader>jl mmyiwoSystem.out.println("daniel <esc>pa = " + <esc>pa);<esc>=j`m
+nnoremap <leader>jL mmyiwoSystem.out.println("daniel <esc>pa");<esc>=j`m
 
 nnoremap <leader>l? :LspInfo<CR>
