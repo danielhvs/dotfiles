@@ -118,3 +118,6 @@ nnoremap <leader>fN :%s/[ ,]/\r/ge<CR>:%!sort<CR>:%s/ $//ge<CR>:%s/^ //ge<CR>:%s
 
 nnoremap co :Git checkout
 nnoremap c* *Ncgn
+
+" command direct to command mode
+nnoremap ! "yyy:<C-R>y<CR>
