@@ -46,6 +46,7 @@ tnoremap <Esc> <C-\><C-n>
 nmap <leader>fJ :%.!jq .<CR>
 nmap <leader>fj vap:.!jq .<CR>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<CR>
+nnoremap <leader>f<space> mm:%s/\s\+$//e<CR>`m
 
 " moving lines
 vnoremap J :m '>+1<CR>gv
