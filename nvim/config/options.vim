@@ -34,6 +34,9 @@ set smartcase
 set relativenumber
 set nu
 set path+=**
+set listchars+=trail:·
+set list
+
 "
 " tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
 set autoread
