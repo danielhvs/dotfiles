@@ -32,7 +32,7 @@ set iskeyword+=-
 set ignorecase
 set smartcase
 set relativenumber
-set nu
+set number
 set path+=**
 set listchars+=trail:·
 set list
