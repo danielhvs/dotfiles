@@ -37,3 +37,4 @@ nnoremap <leader>tS :Telescope git_commits<CR>
 nnoremap <leader>p :Telescope find_files<CR>
 nnoremap <leader>tb :Telescope git_branches<CR>
 nnoremap <leader>T :Telescope 
+nnoremap <leader>tc :Telescope current_buffer_fuzzy_find<CR>
