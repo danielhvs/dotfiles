@@ -29,3 +29,6 @@ nnoremap <leader>gkh :diffget //2<CR>
 nnoremap <leader>gkl :diffget //3<CR>
 " both
 nnoremap <leader>gkb ?^<<<<CR>ddk/^=======<CR>ddk/^>>>>>>><CR>dd
+" up
+nnoremap <leader>gku ?^<<<<CR>"zddk/^=======<CR>"zd/^>>>>>>><CR>"zdd
+nnoremap <leader>gkd ?^<<<<CR>"zd/^=======<CR>"zdd/^>>>>>>><CR>"zdd
