@@ -35,7 +35,8 @@ set relativenumber
 set number
 set path+=**
 set listchars+=trail:·
-set list
+set listchars+=tab:·␉
+set nolist
 
 "
 " tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
