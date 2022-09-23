@@ -1,7 +1,6 @@
 source /home/danielhabib/dotfiles/nvim/config/options.vim
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
-source /home/danielhabib/dotfiles/nvim/config/commands.vim
 source /home/danielhabib/dotfiles/nvim/config/ctrlp.vim
 source /home/danielhabib/dotfiles/nvim/config/lightline.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-test.vim
@@ -21,4 +20,3 @@ source /home/danielhabib/dotfiles/nvim/config/easy-align.vim
 source /home/danielhabib/dotfiles/nvim/config/calltree.vim
 source /home/danielhabib/dotfiles/nvim/config/vcs-jump.vim
 nnoremap <leader>s! mmo<ESC>:.!ls -rt /tmp/nvim*/*dbout \| tail -n1 \| xargs cat<CR>`m
-
