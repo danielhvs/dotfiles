@@ -15,11 +15,11 @@ local _1_ = function(client, bufnr)
   buf_set_keymap("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>lh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<CR>", {noremap = true})
-  buf_set_keymap("n", "<leader>le", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", {noremap = true})
-  buf_set_keymap("n", "<leader>lq", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", {noremap = true})
+  -- buf_set_keymap("n", "<leader>le", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", {noremap = true})
+  buf_set_keymap("n", "<leader>lq", "<cmd>lua vim.diagnostic.set_loclist()<CR>", {noremap = true})
   -- lf is now using cljstyle
-  buf_set_keymap("n", "<leader>lj", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", {noremap = true})
-  buf_set_keymap("n", "<leader>lk", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", {noremap = true})
+  buf_set_keymap("n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", {noremap = true})
+  buf_set_keymap("n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", {noremap = true})
   -- buf_set_keymap("n", "<leader>la", ":Telescope lsp_code_actions<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", {noremap = true})
   buf_set_keymap("v", "<leader>la", "<cmd>lua vim.lsp.buf.range_code_action()<CR>", {noremap = true})
@@ -36,10 +36,11 @@ local _1_ = function(client, bufnr)
 end
 
 lsp.clojure_lsp.setup({
+  -- cmd = { '/home/danielhabib/workspace/clojure-lsp/clojure-lsp' },
   on_attach = _1_,
   handlers = {
     ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
     {severity_sort = true, update_in_insert = false, underline = true, virtual_text = false}),
     ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "single"}), 
     ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = "single"})}, 
-     capabilities = cmplsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())})
+     capabilities = cmplsp.default_capabilities()})
