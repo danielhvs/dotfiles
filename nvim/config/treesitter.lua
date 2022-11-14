@@ -1,9 +1,9 @@
-lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   highlight = {
-    enable = true
+    enable = true,
+    additional_vim_regex_highlighting = true, -- may slow down but fixes keyword highlight
   },
 
 	textobjects = {
@@ -53,9 +53,4 @@ require'nvim-treesitter.configs'.setup {
       },
 
 		},
-
-
 	}
-
-
-EOF

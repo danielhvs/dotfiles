@@ -12,7 +12,7 @@ source /home/danielhabib/dotfiles/nvim/config/tagbar.vim
 source /home/danielhabib/dotfiles/nvim/config/harpoon.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-highlightedyank.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
-source /home/danielhabib/dotfiles/nvim/config/treesitter.vim
+luafile /home/danielhabib/dotfiles/nvim/config/treesitter.lua
 source /home/danielhabib/dotfiles/nvim/config/cmp.vim
 source /home/danielhabib/dotfiles/nvim/config/telescope-ui-select.vim
 source /home/danielhabib/dotfiles/nvim/config/switch.vim
