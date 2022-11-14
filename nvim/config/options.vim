@@ -37,6 +37,7 @@ set path+=**
 set listchars+=trail:·
 set listchars+=tab:·␉
 set nolist
+set mouse=
 
 "
 " tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
