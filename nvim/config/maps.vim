@@ -103,13 +103,8 @@ nmap <leader>le <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>/error
 nnoremap <leader>Y :%y<CR>
 nnoremap <leader>P mmo<ESC>pdgg
 
-" last edited position
-nnoremap 'e '`
-
 nnoremap <localleader>w bi
 nnoremap <localleader>W ea
-nnoremap <leader>O <c-w>_ \| <c-w>\|
-nnoremap <leader>C <c-w>=
 
 " send to file
 vnoremap <leader>ff V:e 1<CR>:bd! %<CR>:'<,'>w! 1<CR>:e 1<CR>
@@ -124,4 +119,4 @@ nnoremap c* *Ncgn
 
 " command direct to command mode just !
 nnoremap ! "yyy:<C-R>y<CR>
-
+nnoremap <leader>. :e #<CR>
