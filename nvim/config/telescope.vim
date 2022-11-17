@@ -38,3 +38,8 @@ nnoremap <leader>p :Telescope find_files<CR>
 nnoremap <leader>tb :Telescope git_branches<CR>
 nnoremap <leader>T :Telescope 
 nnoremap <leader>tc :Telescope current_buffer_fuzzy_find<CR>
+nnoremap <leader>lE :Telescope diagnostics severity=E<CR>
+nnoremap <leader>le :Telescope diagnostics bufnr=0 severity=E<CR>
+nnoremap <leader>lW :Telescope diagnostics severity=W<CR>
+nnoremap <leader>lw :Telescope diagnostics bufnr=0 severity=W<CR>
+
