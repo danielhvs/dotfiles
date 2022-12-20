@@ -11,7 +11,7 @@ local _1_ = function(client, bufnr)
 
   buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true})
   buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", {noremap = true})
-  buf_set_keymap("n", "<leader>ld", "<Cmd>lua vim.lsp.buf.declaration()<CR>", {noremap = true})
+  -- buf_set_keymap("n", "<leader>ld", "<Cmd>lua vim.lsp.buf.declaration()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>lh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<CR>", {noremap = true})

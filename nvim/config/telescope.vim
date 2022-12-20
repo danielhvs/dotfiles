@@ -30,7 +30,6 @@ nnoremap <leader>tF "zyiW:Telescope find_files<CR>I<C-R>z<ESC>
 nnoremap <leader>tx :let @0=expand("%:t")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>
 nnoremap <leader>tX :let @0=expand("%")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>
 nnoremap <leader>tv yiw:Telescope live_grep<CR>id = "<C-R>0"<ESC>
-nnoremap <leader>te yiw:Telescope find_files<CR>entity/<C-R>0.java<ESC>
 nnoremap <leader>tr :Telescope resume<CR>
 nnoremap <leader>ts :Telescope git_status<CR>
 nnoremap <leader>tS :Telescope git_commits<CR>
@@ -38,8 +37,8 @@ nnoremap <leader>p :Telescope find_files<CR>
 nnoremap <leader>tb :Telescope git_branches<CR>
 nnoremap <leader>T :Telescope 
 nnoremap <leader>tc :Telescope current_buffer_fuzzy_find<CR>
-nnoremap <leader>lE :Telescope diagnostics severity=E<CR>
-nnoremap <leader>le :Telescope diagnostics bufnr=0 severity=E<CR>
+nnoremap <leader>tE :Telescope diagnostics severity=E<CR>
+nnoremap <leader>te :Telescope diagnostics bufnr=0 severity=E<CR>
 nnoremap <leader>lW :Telescope diagnostics severity=W<CR>
 nnoremap <leader>lw :Telescope diagnostics bufnr=0 severity=W<CR>
 
