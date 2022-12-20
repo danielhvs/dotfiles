@@ -3,7 +3,7 @@ require'nvim-treesitter.configs'.setup {
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = true, -- may slow down but fixes keyword highlight
+    additional_vim_regex_highlighting = false, -- may slow down but fixes keyword highlight
   },
 
 	textobjects = {
