@@ -105,6 +105,7 @@ nmap <leader>le <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>/error
 nnoremap <leader>Y :%y<CR>
 nnoremap <leader>Pe :!tmux switch-client -t eco<CR>
 nnoremap <leader>Pf :!tmux switch-client -t flex<CR>
+nnoremap <leader>Pv :!tmux switch-client -t vpn<CR>
 
 nnoremap <localleader>w bi
 nnoremap <localleader>W ea
