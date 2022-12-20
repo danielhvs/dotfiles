@@ -23,8 +23,8 @@ nnoremap <leader>gW :G co master -- %
 map <leader>gr "yyiw:G revert <C-R>y<CR>
 map <leader>g! :G push --force-with-lease
 nnoremap <leader>g\| :e 2<CR>:diffthis<CR>:e 1<CR>:diffthis<CR>:vs 2<CR>
-nnoremap <leader>gm :G diff master %<CR>
-nnoremap <leader>gM :G diff master<CR>
+nnoremap <leader>gm :G diff origin/master %<CR>
+nnoremap <leader>gM :G diff origin/master<CR>
 " konflict
 nnoremap <leader>gK :Gvdiffsplit!<CR> 
 nnoremap <leader>gkh :diffget //2<CR>
@@ -35,7 +35,7 @@ nnoremap <leader>gkb ?^<<<<CR>ddk/^=======<CR>ddk/^>>>>>>><CR>dd
 nnoremap <leader>gku ?^<<<<CR>"zddk/^=======<CR>"zd/^>>>>>>><CR>"zdd
 " down
 nnoremap <leader>gkd ?^<<<<CR>"zd/^=======<CR>"zdd/^>>>>>>><CR>"zdd
-nnoremap <leader>gç :G rebase master -i<CR>
+nnoremap <leader>gç :G rebase origin/master -i<CR>
 nnoremap <leader>gÇ :G rebase -i 
 
 nnoremap <leader>gk? ?^<<<<CR>j"uy/^=======<CR>:e u.clj<CR>ggdG"uP:w!<CR><C-o><C-o>/^>>>>>>><CR>"dy?^=======<CR>:e d.clj<CR>ggdG"dPdd:w!<CR><C-o>:!meld u.clj d.clj<CR><C-o>
