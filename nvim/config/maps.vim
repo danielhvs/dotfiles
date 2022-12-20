@@ -42,13 +42,15 @@ noremap <leader>cr :let @+ = expand("%:p")<CR>
 " terminal
 tnoremap <Esc> <C-\><C-n>
 
-" formats comeca com f
+" formats starts with f
 nmap <leader>fJ :%.!jq .<CR>
 nmap <leader>fj vap:.!jq .<CR>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<CR>
 nnoremap <leader>f<space> mm:%s/\s\+$//e<CR>`m
 nnoremap <leader>ft mm:%s/\t/  /ge<CR>`m
 vnoremap <leader>f, :s/,//ge<CR>
+vnoremap <leader>f: :s/://ge<CR>
+vnoremap <leader>f\ :s/\\//ge<CR>
 
 " moving lines
 vnoremap J :m '>+1<CR>gv
@@ -101,14 +103,12 @@ nmap <leader>lE <cmd>lua require('diaglist').open_all_diagnostics()<cr>/error\|<
 nmap <leader>le <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>/error\|<cr>
 
 nnoremap <leader>Y :%y<CR>
-nnoremap <leader>P mmo<ESC>pdgg
+nnoremap <leader>Pe :!tmux switch-client -t eco<CR>
+nnoremap <leader>Pf :!tmux switch-client -t flex<CR>
 
 nnoremap <localleader>w bi
 nnoremap <localleader>W ea
 
-" send to file
-vnoremap <leader>ff V:e 1<CR>:bd! %<CR>:'<,'>w! 1<CR>:e 1<CR>
-nnoremap <leader>ff :e 1<CR>:bd! %<CR>:%w! 1<CR>:e 1<CR>
 " normalize
 nnoremap <leader>fn :%s/,/\r/ge<CR>:%!sort<CR>:%s/ $//ge<CR>:%s/^ //ge<CR>:%s/^$\n//ge<CR>
 " trim ,
