@@ -9,6 +9,7 @@ nnoremap <C-k> <C-w><C-k>
 
 " disable ex mode
 nnoremap Q mm0"yy$:r! <C-R>y<CR>`m
+vnoremap Q mm"yy:r! <C-R>y<CR>`m
 nnoremap gQ mm0!!sh<CR>`m
 
 " custom display
