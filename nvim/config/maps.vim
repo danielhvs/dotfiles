@@ -57,6 +57,7 @@ vnoremap <leader>f\ :s/\\//ge<CR>
 nnoremap <leader>' mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
 
 " format around
+nmap <leader>, mmcsW``mf`
 nmap <leader>) mmcsw)<ESC>`m
 nmap <leader>( mmcsW)<ESC>`m
 nmap <leader>] mmcsw]<ESC>`m
