@@ -56,6 +56,14 @@ vnoremap <leader>f\ :s/\\//ge<CR>
 " similar to format
 nnoremap <leader>' mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
 
+" format around
+nmap <leader>) mmcsw)<ESC>`m
+nmap <leader>( mmcsW)<ESC>`m
+nmap <leader>] mmcsw]<ESC>`m
+nmap <leader>[ mmcsW]<ESC>`m
+nmap <leader>} mmcsw}<ESC>`m
+nmap <leader>} mmcsW}<ESC>`m
+
 " moving lines
 vnoremap J :m '>+1<CR>gv
 vnoremap K :m '<-2<CR>gv
