@@ -54,7 +54,7 @@ vnoremap <leader>f: :s/://ge<CR>
 vnoremap <leader>f\ :s/\\//ge<CR>
 
 " similar to format
-nnoremap <leader>' mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
+nnoremap <leader>` mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
 
 " format around
 nmap <leader>, mmcsW``mf`
