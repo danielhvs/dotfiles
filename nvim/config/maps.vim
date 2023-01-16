@@ -77,7 +77,7 @@ inoremap <C-space> <C-x><C-f>
 nmap <leader>fE xV:s/<C-R>"/\\<C-R>"/g<CR>
 
 " from json to edn
-nmap <leader>fe "yvap: :!jet --from json --to edn<CR>
+nnoremap <leader>fe "yvap: :!jet --from json --to edn -k<CR>
 
 " source 
 nmap <leader>sv :source $MYVIMRC<CR>
