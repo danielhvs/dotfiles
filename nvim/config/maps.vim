@@ -74,8 +74,11 @@ inoremap <C-space> <C-x><C-f>
 " 'escape':
 " exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
 " varios um do lado do outro
-nmap <leader>fe xV:s/<C-R>"/\\<C-R>"/g<CR>
-  
+nmap <leader>fE xV:s/<C-R>"/\\<C-R>"/g<CR>
+
+" from json to edn
+nmap <leader>fe "yvap: :!jet --from json --to edn<CR>
+
 " source 
 nmap <leader>sv :source $MYVIMRC<CR>
 
