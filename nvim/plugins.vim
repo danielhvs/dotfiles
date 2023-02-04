@@ -48,4 +48,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'ldelossa/litee.nvim'
 Plug 'ldelossa/litee-calltree.nvim'
 Plug 'wincent/vcs-jump'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'lukas-reineke/virt-column.nvim'
 call plug#end()

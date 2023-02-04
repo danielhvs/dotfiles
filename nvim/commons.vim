@@ -19,4 +19,5 @@ source /home/danielhabib/dotfiles/nvim/config/switch.vim
 source /home/danielhabib/dotfiles/nvim/config/easy-align.vim
 source /home/danielhabib/dotfiles/nvim/config/calltree.vim
 source /home/danielhabib/dotfiles/nvim/config/vcs-jump.vim
-nnoremap <leader>s! mmo<ESC>:.!ls -rt /tmp/nvim*/*dbout \| tail -n1 \| xargs cat<CR>`m
+source /home/danielhabib/dotfiles/nvim/config/editor-config.vim
+luafile /home/danielhabib/dotfiles/nvim/config/virt-column.lua
