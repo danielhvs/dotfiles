@@ -52,6 +52,9 @@ nnoremap <leader>ft mm:%s/\t/  /ge<CR>`m
 vnoremap <leader>f, :s/,//ge<CR>
 vnoremap <leader>f: :s/://ge<CR>
 vnoremap <leader>f\ :s/\\//ge<CR>
+vnoremap <leader>f<space> :s/ //ge<CR>
+vnoremap <leader>f- :s/-/ /ge<CR>
+nnoremap <leader>fs vap:!sql-formatter<CR>
 
 " similar to format
 nnoremap <leader>` mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m

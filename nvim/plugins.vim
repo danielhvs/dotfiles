@@ -49,5 +49,6 @@ Plug 'ldelossa/litee.nvim'
 Plug 'ldelossa/litee-calltree.nvim'
 Plug 'wincent/vcs-jump'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'lukas-reineke/virt-column.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 call plug#end()

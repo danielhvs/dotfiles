@@ -20,4 +20,4 @@ source /home/danielhabib/dotfiles/nvim/config/easy-align.vim
 source /home/danielhabib/dotfiles/nvim/config/calltree.vim
 source /home/danielhabib/dotfiles/nvim/config/vcs-jump.vim
 source /home/danielhabib/dotfiles/nvim/config/editor-config.vim
-luafile /home/danielhabib/dotfiles/nvim/config/virt-column.lua
+luafile /home/danielhabib/dotfiles/nvim/config/mason.lua
