@@ -1,7 +1,8 @@
 " vim-test
 " nmap <leader>tn :TestNearest<CR>
 " nmap <leader>tN :!mvn clean<CR><CR>:TestNearest<CR>
-nnoremap <leader>tn mm?@Test<CR>jWW"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
+" nnoremap <leader>tn mm?@Test<CR>jWW"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
+nnoremap <leader>tn mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
 nnoremap <leader>tN mm?@Test<CR>jWW"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c<CR>
 nnoremap <leader>ta :terminal mvn clean test<CR><C-O>
 
