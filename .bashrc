@@ -117,7 +117,7 @@ fi
 	
 alias gg="git status"
 alias gd="git diff"
-alias gp="git pull"
+alias gf="git pull"
 alias gps="git push"
 alias gpst="git push --tags"
 alias gpss='git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`'
@@ -130,9 +130,6 @@ alias gs="git show"
 alias gls='git log --stat'
 alias ga='git add'
 alias gdc='git diff --cached'
-#alias f='cd ~/workspace/fidati-front/'
-#alias b='cd ~/workspace/fidati-back/'
-#alias c='cd ~/workspace/carga-fidati/'
 alias lrs='lein ring server'
 alias lfg='lein figwheel'
 
