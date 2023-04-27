@@ -1,16 +1,3 @@
-" if has('nvim-0.5')
-"   augroup lsp
-"     au!
-"     au FileType java lua vim.lsp.buf_attach_client(0, 1)
-"   augroup end
-" endif
-"
-
-" augroup jdtls_lsp
-"     autocmd!
-"     au FileType java lua vim.lsp.buf_attach_client(0, 1)
-" augroup end
-
 augroup autoformat_settings
   autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
 augroup END
@@ -18,10 +5,6 @@ augroup END
 augroup autoformat_settings
   autocmd FileType feature set smarttab expandtab shiftwidth=2 tabstop=2
 augroup END
-
-" start lsp manually
-" nnoremap <leader>lx :lua require('jdtls').start_or_attach({cmd = {'java-lsp.sh'}})<CR>
-" nnoremap <leader>lX :lua vim.lsp.buf_attach_client(0, 1)<CR>
 
 " java lsp
 "  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
@@ -45,8 +28,8 @@ vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 nnoremap <leader>lq :lua vim.lsp.diagnostic.set_loclist()<CR> 
 nnoremap <leader>lf :lua vim.lsp.buf.formatting()<CR> 
-nnoremap <leader>lj :lua vim.lsp.diagnostic.goto_next()<CR> 
-nnoremap <leader>lk :lua vim.lsp.diagnostic.goto_prev()<CR> 
+nnoremap <leader>lj :lua vim.diagnostic.goto_next()<CR> 
+nnoremap <leader>lk :lua vim.diagnostic.goto_prev()<CR> 
 nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics()<CR> 
 nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<CR> 
 nnoremap <leader>lR :lua require('daniel').custom_lsp_java_references()<CR> 
@@ -62,5 +45,6 @@ nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 " nnoremap <leader>jL mmyiWoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
 nnoremap <leader>jl mmyiwoSystem.out.println("daniel <esc>pa = " + <esc>pa);<esc>=j`m
 nnoremap <leader>jL mmyiwoSystem.out.println("daniel <esc>pa");<esc>=j`m
+nnoremap <leader>jj mmyiwoconsole.log("daniel <esc>pa = ", <esc>pa);<esc>=j`m
 
 nnoremap <leader>l? :LspInfo<CR>

@@ -74,13 +74,9 @@ vnoremap K :m '<-2<CR>gv
 " path autocomplete
 inoremap <C-space> <C-x><C-f>
 
-" 'escape':
-" exemplo: deixar sempre no inicio o caracter a escapar inclusive colocando
-" varios um do lado do outro
-nmap <leader>fE xV:s/<C-R>"/\\<C-R>"/g<CR>
-
 " from json to edn
 nnoremap <leader>fe "yvap: :!jet --from json --to edn -k<CR>
+nnoremap <leader>fE "yvap: :!jet --from edn --to json<CR>
 
 " source 
 nmap <leader>sv :source $MYVIMRC<CR>
@@ -140,3 +136,6 @@ nnoremap c* *Ncgn
 " command direct to command mode just !
 nnoremap ! "yyy:<C-R>y<CR>
 nnoremap <leader>. :e #<CR>
+
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz

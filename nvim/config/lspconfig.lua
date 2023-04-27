@@ -7,6 +7,7 @@ vim.fn.sign_define("LspDiagnosticsSignInformation", {text = ""})
 vim.fn.sign_define("LspDiagnosticsSignHint", {text = ""})
 
 local _1_ = function(client, bufnr)
+  local bufopts = { noremap=true, silent=true, buffer=bufnr }
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", {noremap = true})
@@ -17,7 +18,6 @@ local _1_ = function(client, bufnr)
   buf_set_keymap("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<CR>", {noremap = true})
   -- buf_set_keymap("n", "<leader>le", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>lq", "<cmd>lua vim.diagnostic.set_loclist()<CR>", {noremap = true})
-  -- lf is now using cljstyle
   buf_set_keymap("n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", {noremap = true})
   -- buf_set_keymap("n", "<leader>la", ":Telescope lsp_code_actions<cr>", {noremap = true})
@@ -33,6 +33,11 @@ local _1_ = function(client, bufnr)
 
   buf_set_keymap("n", "<leader>lR", ":lua require('daniel').custom_lsp_java_references()<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>lI", ":lua require('daniel').custom_lsp_implementations()<cr>", {noremap = true})
+
+  vim.keymap.set('n', '<leader>lf', 
+  function() 
+    vim.lsp.buf.format { async = true } 
+  end, bufopts)
 end
 
 lsp.clojure_lsp.setup({

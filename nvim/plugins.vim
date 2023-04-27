@@ -12,7 +12,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'mfussenegger/nvim-jdtls'
 Plug 'wellle/targets.vim'
 " Plug 'christoomey/vim-sort-motion' ; just use `!sort`
 Plug 'kyazdani42/nvim-web-devicons'
@@ -51,4 +50,5 @@ Plug 'wincent/vcs-jump'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'xiyaowong/telescope-emoji.nvim'
 call plug#end()
