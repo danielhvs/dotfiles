@@ -1,7 +1,7 @@
 lua << EOF
 require('gitsigns').setup {
 
-  current_line_blame_formatter = '<author>, <summary>, <author_time:%Y-%m-%d>',
+  current_line_blame_formatter = '<summary>, <author_time:%Y-%m-%d>, <author>',
   current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
   current_line_blame_opts = {
     virt_text = true,
@@ -9,6 +9,7 @@ require('gitsigns').setup {
     delay = 1000,
     ignore_whitespace = false,
   },
+  _inline2 = true, -- ???
 
   on_attach = function(bufnr)
     local function map(mode, lhs, rhs, opts)
@@ -30,6 +31,7 @@ require('gitsigns').setup {
     map('n', '<leader>hu', '<cmd>Gitsigns undo_stage_hunk<CR>')
     map('n', '<leader>hR', '<cmd>Gitsigns reset_buffer<CR>')
     map('n', '<leader>hp', '<cmd>Gitsigns preview_hunk<CR>')
+    map('n', '<leader>hP', '<cmd>Gitsigns preview_hunk_inline<CR>')
     map('n', '<leader>hb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>')
     map('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>')
     map('n', '<leader>hD', '<cmd>lua require"gitsigns".diffthis("~")<CR>')
