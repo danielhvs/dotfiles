@@ -10,7 +10,8 @@ augroup END
 "  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
 "  use this mapping also with other language servers
 nnoremap <leader>la :lua vim.lsp.buf.code_action()<CR>
-vnoremap <leader>la :lua vim.lsp.buf.range_code_action()<CR>
+vnoremap <leader>la :lua vim.lsp.buf.code_action()<CR>
+
 " vnoremap <leader>la :lua require'jdtls'.code_action(true)<CR>
 nnoremap <leader>lm :lua require'jdtls'.organize_imports()<CR>
 nnoremap gd :lua vim.lsp.buf.definition()<CR> 
@@ -27,7 +28,7 @@ nnoremap <leader>lv :lua require'jdtls'.extract_variable()<CR>
 vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 nnoremap <leader>lq :lua vim.lsp.diagnostic.set_loclist()<CR> 
-" nnoremap <leader>lf :lua vim.lsp.buf.formatting()<CR> 
+nmap <leader>ls mmvap,lf<ESC>'m
 nnoremap <leader>lf :lua vim.lsp.buf.format()<CR> 
 nnoremap <leader>lj :lua vim.diagnostic.goto_next()<CR> 
 nnoremap <leader>lk :lua vim.diagnostic.goto_prev()<CR> 
@@ -49,3 +50,4 @@ nnoremap <leader>jL mmyiwoSystem.out.println("daniel <esc>pa");<esc>=j`m
 nnoremap <leader>jj mmyiwoconsole.log("daniel <esc>pa = ", <esc>pa);<esc>=j`m
 
 nnoremap <leader>l? :LspInfo<CR>
+nnoremap <leader>lp :JdtUpdateConfig<CR>
