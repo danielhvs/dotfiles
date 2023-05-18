@@ -1,12 +1,18 @@
-" vim-test
-" nmap <leader>tn :TestNearest<CR>
-" nmap <leader>tN :!mvn clean<CR><CR>:TestNearest<CR>
-" nnoremap <leader>tn mm?@Test<CR>jWW"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
-nnoremap <leader>tn mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
-nnoremap <leader>tN mm?@Test<CR>jWW"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c<CR>
-nnoremap <leader>ta :terminal mvn clean test<CR><C-O>
+" vim-test (custom)
 
-" nmap <leader>tl :TestLast<CR>
-" nmap <leader>tL :!mvn clean<CR><CR>:TestLast<CR>
-let test#strategy = "neovim"
-let g:test#neovim#start_normal = 1 " If using neovim strategy
+" Class
+nnoremap <leader>tN mmgg/^class<CR>W"cyiw`m:terminal $LOCAL_MVN test -Dtest=<C-R>c -Plocal<CR>
+
+" All
+nnoremap <leader>ta :terminal $LOCAL_MVN clean test -Plocal<CR><C-O>
+
+" Nested
+nnoremap <leader>tn mm?@Nested<CR>j0/class<CR>W"nyiwgg/^class<CR>W"cyiw`m:terminal $LOCAL_MVN test -Dtest=<C-R>c\$<C-R>n -Plocal<CR>
+
+" Method
+nnoremap <leader>tm mm?@Nested<CR>j0/class<CR>W"nyiw`m?@Test<CR>/void<CR>W"myiwgg/^class<CR>W"cyiw`m:terminal $LOCAL_MVN test -Dtest=<C-R>c\$<C-R>n\#<C-R>m -Plocal<CR>
+
+" Olds... ç
+nnoremap <leader>çn mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
+nnoremap <leader>çN mm?@Test<CR>jWW"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c<CR>
+nnoremap <leader>ça :terminal mvn clean test<CR><C-O>
