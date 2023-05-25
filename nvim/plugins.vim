@@ -49,4 +49,5 @@ Plug 'wincent/vcs-jump'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'xiyaowong/telescope-emoji.nvim'
+Plug 'stevearc/oil.nvim'
 call plug#end()
