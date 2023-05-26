@@ -41,3 +41,6 @@ nnoremap <leader>gç :G rebase origin/master -i<CR>
 nnoremap <leader>gÇ :G rebase -i 
 
 nnoremap <leader>gk? ?^<<<<CR>j"uy/^=======<CR>:e u.clj<CR>ggdG"uP:w!<CR><C-o><C-o>/^>>>>>>><CR>"dy?^=======<CR>:e d.clj<CR>ggdG"dPdd:w!<CR><C-o>:!meld u.clj d.clj<CR><C-o>
+
+nnoremap <leader>cva :G commit --amend -v<CR>
+nnoremap <leader>cvc :G commit -v<CR>

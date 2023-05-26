@@ -10,7 +10,8 @@ nnoremap <leader>ta :terminal $LOCAL_MVN clean test -Plocal<CR><C-O>
 nnoremap <leader>tn mm?@Nested<CR>j0/class<CR>W"nyiwgg/^class<CR>W"cyiw`m:terminal $LOCAL_MVN test -Dtest=<C-R>c\$<C-R>n -Plocal<CR>
 
 " Method
-nnoremap <leader>tm mm?@Nested<CR>j0/class<CR>W"nyiw`m?@Test<CR>/void<CR>W"myiwgg/^class<CR>W"cyiw`m:terminal $LOCAL_MVN test -Dtest=<C-R>c\$<C-R>n\#<C-R>m -Plocal<CR>
+nnoremap <leader>tm mm?@Test<CR>/void<CR>W"myiwgg/^class<CR>W"cyiw`m:terminal $LOCAL_MVN test -Dtest=<C-R>c\#<C-R>m -Plocal<CR>
+nnoremap <leader>tM mm?@Nested<CR>j0/class<CR>W"nyiw`m?@Test<CR>/void<CR>W"myiwgg/^class<CR>W"cyiw`m:terminal $LOCAL_MVN test -Dtest=<C-R>c\$<C-R>n\#<C-R>m -Plocal<CR>
 
 " Olds... ç
 nnoremap <leader>çn mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
