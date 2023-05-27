@@ -23,7 +23,7 @@
     evil-surround
     ;; key bindings and code colorization for Clojure
     ;; https://github.com/clojure-emacs/clojure-mode
- ;;   clojure-mode
+    clojure-mode
 
     ;; extra syntax highlighting for clojure
   ;;  clojure-mode-extra-font-locking
@@ -59,3 +59,44 @@
 (require 'evil)
 (evil-mode 1)
 (global-evil-surround-mode 1)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(clojure-mode use-package rainbow-delimiters magit evil-surround)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; No cursor blinking, it's distracting
+(blink-cursor-mode 0)
+
+;; full path in title bar
+(setq-default frame-title-format "%b (%f)")
+
+;; no bell
+(setq ring-bell-function 'ignore)
+
+(global-set-key [(control x) (k)] 'kill-this-buffer)
+
+;; atualiza arquivo
+(global-auto-revert-mode t)
+
+;; Turn off the menu bar at the top of each frame because it's distracting
+(menu-bar-mode -1)
+
+;; Show line numbers
+;; (global-display-line-numbers-mode)
+(global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
+
+
+;; You can uncomment this to remove the graphical toolbar at the top. After
+;; awhile, you won't need the toolbar.
+(when (fboundp 'tool-bar-mode) 
+  (tool-bar-mode -1))
