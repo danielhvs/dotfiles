@@ -1,3 +1,7 @@
+;;disable splash screen and startup message
+(setq inhibit-startup-message t) 
+(setq initial-scratch-message nil)
+
 ;; 1. install https://github.com/jwiegley/use-package
 ;; Define package repositories
 (require 'package)
@@ -40,8 +44,6 @@
     ;; project navigation
     ;; projectile
 
-    ;; colorful parenthesis matching
-    rainbow-delimiters
     ;; git integration
     magit))
 
@@ -56,16 +58,24 @@
 ;; Langauage-specific
 ;; (load "setup-clojure.el")
 
-(require 'evil)
-(evil-mode 1)
-(global-evil-surround-mode 1)
+(defun init-evil ()
+  (global-evil-surround-mode 1)
+  (setq evil-want-C-u-scroll t))
+(use-package evil
+ :ensure t
+ :init (init-evil)
+ :config (evil-mode 1)
+)
+
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(clojure-mode use-package rainbow-delimiters magit evil-surround)))
+ '(custom-enabled-themes '(deeper-blue))
+ '(package-selected-packages '(clojure-mode use-package magit evil-surround)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -95,15 +105,14 @@
 (global-display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
 
+;; ui
+
 
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
 (when (fboundp 'tool-bar-mode) 
   (tool-bar-mode -1))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(deeper-blue)))
+;; Don't show native OS scroll bars for buffers because they're redundant
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
