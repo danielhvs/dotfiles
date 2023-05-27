@@ -58,14 +58,12 @@
 ;; Langauage-specific
 ;; (load "setup-clojure.el")
 
-(defun init-evil ()
-  (global-evil-surround-mode 1)
-  (setq evil-want-C-u-scroll t))
+;; EVIL
 (use-package evil
- :ensure t
- :init (init-evil)
- :config (evil-mode 1)
-)
+  :ensure t
+  :init (setq evil-want-C-u-scroll t)
+  :config (evil-mode 1))
+(global-evil-surround-mode 1)
 
 
 
