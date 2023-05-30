@@ -24,6 +24,8 @@
   '(
     evil
 
+    smex
+
     evil-surround
     ;; key bindings and code colorization for Clojure
     ;; https://github.com/clojure-emacs/clojure-mode
@@ -65,7 +67,11 @@
   :config (evil-mode 1))
 (global-evil-surround-mode 1)
 
-
+;; SMEX
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
