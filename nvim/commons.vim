@@ -1,4 +1,5 @@
 source /home/danielhabib/dotfiles/nvim/config/options.vim
+luafile /home/danielhabib/dotfiles/nvim/config/options.lua
 source /home/danielhabib/dotfiles/nvim/config/gruvbox.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-buftabline.vim
 source /home/danielhabib/dotfiles/nvim/config/ctrlp.vim

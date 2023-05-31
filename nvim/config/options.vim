@@ -1,10 +1,4 @@
 " clojure: https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
-let maplocalleader = "-"
-let mapleader = ","
-
-set termguicolors
-set title
-
 set clipboard=unnamedplus
 set numberwidth=1 
 set background=dark
@@ -19,10 +13,6 @@ set nowritebackup
 set noswapfile
 set smarttab
 set expandtab
-set shiftwidth=2
-set tabstop=2
-set autoindent 
-set smartindent 
 set wrap 
 set noerrorbells
 set novisualbell
