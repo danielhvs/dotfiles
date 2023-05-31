@@ -1,10 +1,10 @@
 local lsp    = require('lspconfig')
 local cmplsp = require('cmp_nvim_lsp')
 
-vim.fn.sign_define("DiagnosticSignError", { text = "" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = "" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = "" })
-vim.fn.sign_define("DiagnosticSignHint", { text = "" })
+vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "error" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "warn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "info" })
+vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "hint" })
 
 local setup_mappings = function(_, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -41,19 +41,31 @@ local setup_mappings = function(_, bufnr)
     end, bufopts)
 end
 
+local the_capabilities = cmplsp.default_capabilities()
+local the_handlers = {
+  ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
+    { severity_sort = false,
+      update_in_insert = false,
+      underline = true,
+      virtual_text = false }),
+  ["textDocument/hover"] =
+      vim.lsp.with(vim.lsp.handlers.hover,
+        { border = "single" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
+}
+
 lsp.clojure_lsp.setup({
   -- cmd = { '/home/danielhabib/workspace/clojure-lsp/clojure-lsp' },
   on_attach = setup_mappings,
-  handlers = {
-    ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
-      { severity_sort = true, update_in_insert = false, underline = true, virtual_text = false }),
-    ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" }),
-    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
-  },
-  capabilities = cmplsp.default_capabilities()
+  handlers = the_handlers,
+  capabilities = the_capabilities,
 })
 
+
 lsp.lua_ls.setup {
+  on_attach = setup_mappings,
+  capabilities = the_capabilities,
+  handlers = the_handlers,
   settings = {
     Lua = {
       diagnostics = {
