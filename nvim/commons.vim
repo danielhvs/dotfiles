@@ -17,7 +17,5 @@ source /home/danielhabib/dotfiles/nvim/config/cmp.vim
 source /home/danielhabib/dotfiles/nvim/config/telescope-ui-select.vim
 source /home/danielhabib/dotfiles/nvim/config/switch.vim
 source /home/danielhabib/dotfiles/nvim/config/easy-align.vim
-source /home/danielhabib/dotfiles/nvim/config/calltree.vim
-source /home/danielhabib/dotfiles/nvim/config/vcs-jump.vim
 luafile /home/danielhabib/dotfiles/nvim/config/mason.lua
 luafile /home/danielhabib/dotfiles/nvim/config/oil.lua
