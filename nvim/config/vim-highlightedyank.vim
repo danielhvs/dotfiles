@@ -1,1 +1,1 @@
-let g:highlightedyank_highlight_duration = 200
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}

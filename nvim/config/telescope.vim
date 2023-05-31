@@ -15,7 +15,6 @@ require('telescope').setup(
   pickers = {
     find_files = {
       find_command = {"rg", "--files", "--iglob", "!.git", "--hidden"}}}})
-require("telescope").load_extension("emoji")
 EOF
 
 nnoremap <leader>tp :Telescope live_grep<CR>
@@ -34,7 +33,6 @@ nnoremap <leader>tv yiw:Telescope live_grep<CR>id = "<C-R>0"<ESC>
 nnoremap <leader>tr :Telescope resume<CR>
 nnoremap <leader>ts :Telescope git_status<CR>
 nnoremap <leader>tS :Telescope git_commits<CR>
-nnoremap <leader>tj :Telescope emoji<CR>
 nnoremap <leader>p :Telescope find_files<CR>
 nnoremap <leader>tb :Telescope git_branches<CR>
 nnoremap <leader>T :Telescope 
