@@ -9,7 +9,6 @@ luafile /home/danielhabib/dotfiles/nvim/config/gitsigns.lua
 source /home/danielhabib/dotfiles/nvim/config/nerdtree.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-fugitive.vim
 luafile /home/danielhabib/dotfiles/nvim/config/telescope.lua
-source /home/danielhabib/dotfiles/nvim/config/telescope.vim
 source /home/danielhabib/dotfiles/nvim/config/tagbar.vim
 source /home/danielhabib/dotfiles/nvim/config/harpoon.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-highlightedyank.vim
