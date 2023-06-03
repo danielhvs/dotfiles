@@ -43,4 +43,5 @@ Plug 'junegunn/vim-easy-align'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'stevearc/oil.nvim'
+Plug 'Asheq/close-buffers.vim'
 call plug#end()

@@ -27,9 +27,6 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 
 " custom leader commands
-nnoremap <leader>D :%bd\|e#\|bd#<CR>
-nmap <leader>d :bd<CR>
-nmap <leader>! :bd!<CR>
 map <leader>q :q<CR>
 nmap <leader>w :update<CR>
 map <leader>x :x<CR>

@@ -3,7 +3,7 @@ require('telescope').setup(
     defaults =
     {
       path_display = { "smart" },
-      initial_mode = "insert",
+      initial_mode = "normal",
       prompt_prefix = "",
       file_ignore_patterns = { "node_modules", "DS_Store", "target" },
       borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
@@ -40,3 +40,4 @@ vim.keymap.set("n", "<leader>tE", ":Telescope diagnostics severity=E<CR>");
 vim.keymap.set("n", "<leader>te", ":Telescope diagnostics bufnr=0 severity=E<CR>");
 vim.keymap.set("n", "<leader>tW", ":Telescope diagnostics severity=W<CR>");
 vim.keymap.set("n", "<leader>tw", ":Telescope diagnostics bufnr=0 severity=W<CR>");
+vim.keymap.set("n", "<leader>lO", ":Telescope lsp_document_symbols<CR>");
