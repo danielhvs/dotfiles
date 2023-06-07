@@ -35,6 +35,7 @@ vim.keymap.set("n", "<leader>tS", ":Telescope git_commits<CR>");
 vim.keymap.set("n", "<leader>p", ":Telescope find_files<CR>");
 vim.keymap.set("n", "<leader>tb", ":Telescope git_branches<CR>");
 vim.keymap.set("n", "<leader>T", ":Telescope ");
+vim.keymap.set("n", "<leader>th", ":Telescope harpoon marks<CR>");
 vim.keymap.set("n", "<leader>tc", ":Telescope current_buffer_fuzzy_find<CR>");
 vim.keymap.set("n", "<leader>tE", ":Telescope diagnostics severity=E<CR>");
 vim.keymap.set("n", "<leader>te", ":Telescope diagnostics bufnr=0 severity=E<CR>");

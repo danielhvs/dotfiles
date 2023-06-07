@@ -10,7 +10,7 @@ source /home/danielhabib/dotfiles/nvim/config/nerdtree.vim
 source /home/danielhabib/dotfiles/nvim/config/vim-fugitive.vim
 luafile /home/danielhabib/dotfiles/nvim/config/telescope.lua
 source /home/danielhabib/dotfiles/nvim/config/tagbar.vim
-source /home/danielhabib/dotfiles/nvim/config/harpoon.vim
+luafile /home/danielhabib/dotfiles/nvim/config/harpoon.lua
 source /home/danielhabib/dotfiles/nvim/config/vim-highlightedyank.vim
 source /home/danielhabib/dotfiles/nvim/config/maps.vim
 luafile /home/danielhabib/dotfiles/nvim/config/maps.lua
