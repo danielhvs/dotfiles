@@ -1,6 +1,6 @@
 map <leader>gc :vertical topleft Git commit -v<CR>
-map <leader>gp :Git push<CR>
-map <leader>gP yiW:Git push --set-upstream origin <C-R>0
+map <leader>gp :G! push<CR>
+map <leader>gP yiW:G! push --set-upstream origin <C-R>0
 map <leader>gg :vertical topleft Git<CR>
 map <leader>gf :G pull<CR>
 map <leader>gt yiW:G tag <C-R>0
@@ -15,7 +15,7 @@ map <leader>gb :Git blame<CR>
 map <leader>gs :G show<CR>
 map <leader>gS :Git! log --all -p -- %<CR>:wincmd w<CR>:wincmd o<CR>
 map <leader>ge :Gedit<CR>
-map <leader>gd :G diff -- %<CR>
+map <leader>gd "gyiw:G show <C-R>g<CR>
 map <leader>gD :terminal git difftool -- %<CR>
 map <leader>gC "yyiw:G cherry-pick <C-R>y<CR>
 " WUT get file from other branch
