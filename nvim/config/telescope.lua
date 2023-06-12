@@ -23,7 +23,7 @@ require('telescope').setup(
 vim.keymap.set("n", "<leader>tp", ":Telescope live_grep<CR>", {});
 vim.keymap.set("n", "<leader>to", ":Telescope oldfiles only_cwd=true<CR>");
 vim.keymap.set("n", "<leader>tO", ":Telescope oldfiles<CR>");
-vim.keymap.set("n", "<leader>tY", "\"y$:Telescope live_grep<CR>p:s/\\([(){}]\\)/\\\\\1/g<CR><ESC>");
+vim.keymap.set("n", "<leader>tY", "\"ty$:Telescope live_grep<CR>\"tpV:s/\\([(){}]\\)/\\\\\\1/g<CR>");
 vim.keymap.set("n", "<leader>tg", "\"zyiw:Telescope live_grep<CR>\"zp");
 vim.keymap.set("n", "<leader>tf", "\"zyiw:Telescope find_files<CR>I<C-R>z<ESC>");
 vim.keymap.set("n", "<leader>tF", "\"zyiW:Telescope find_files<CR>I<C-R>z<ESC>");
