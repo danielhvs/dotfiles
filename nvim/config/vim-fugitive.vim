@@ -16,7 +16,7 @@ map <leader>gs :G show<CR>
 map <leader>gS :Git! log --all -p -- %<CR>:wincmd w<CR>:wincmd o<CR>
 map <leader>ge :Gedit<CR>
 map <leader>gd "gyiw:G show <C-R>g<CR>
-map <leader>gD :terminal git difftool -- %<CR>
+map <leader>gD "gyiw:terminal git difftool <C-R>g^ <C-R>g<CR>
 map <leader>gC "yyiw:G cherry-pick <C-R>y<CR>
 " WUT get file from other branch
 nnoremap <leader>gW :G co master -- %
