@@ -46,6 +46,8 @@ nmap <leader>fj vap:.!jq .<CR>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<CR>
 nnoremap <leader>f<space> mm:%s/\s\+$//e<CR>`m
 nnoremap <leader>ft mm:%s/\t/  /ge<CR>`m
+" format file - to _
+nnoremap <leader>ff V:s/-/_/g<CR>
 vnoremap <leader>f, :s/,//ge<CR>
 vnoremap <leader>f: :s/://ge<CR>
 vnoremap <leader>f\ :s/\\//ge<CR>
@@ -58,7 +60,7 @@ nnoremap <leader>` mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
 
 " format around
 nmap <leader>, mmcsW``mf`
-nmap <leader>" mmcsw"`mf"
+nmap <leader>" mmcsw"`mf"a
 nmap <leader>) mmcsw)<ESC>`m
 nmap <leader>( mmcsW)<ESC>`m
 nmap <leader>] mmcsw]<ESC>`m

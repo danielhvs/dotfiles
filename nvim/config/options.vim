@@ -24,8 +24,7 @@ set smartcase
 set relativenumber
 set number
 set path+=**
-set listchars+=trail:·
-set listchars+=tab:·␉
+set listchars=tab:→\ ,trail:·
 set nolist
 set mouse=
 
