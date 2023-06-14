@@ -3,8 +3,8 @@ map <leader>gp :G! push<CR>
 map <leader>gP yiW:G! push --set-upstream origin <C-R>0
 map <leader>gg :vertical topleft Git<CR>
 map <leader>gf :G pull<CR>
-map <leader>gt yiW:G tag <C-R>0
-map <leader>gT :G push --tags<CR> 
+map <leader>gt :terminal git difftool -- %<CR>
+map <leader>gT :terminal git difftool 
 map <leader>gl :Git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso<CR>
 map <leader>gL :Git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=iso
 map <leader>g0 :0Gclog<CR>
