@@ -1,6 +1,6 @@
 map <leader>gc :vertical topleft Git commit -v<CR>
-map <leader>gp :G! push<CR>
-map <leader>gP yiW:G! push --set-upstream origin <C-R>0
+map <leader>gp :G push<CR>
+map <leader>gP yiW:G push --set-upstream origin <C-R>0
 map <leader>gg :vertical topleft Git<CR>
 map <leader>gf :G pull<CR>
 map <leader>gt :terminal git difftool -- %<CR>
