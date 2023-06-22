@@ -31,9 +31,6 @@ local setup_mappings = function(_, bufnr)
   buf_set_keymap("n", "<leader>lK", ":lua vim.lsp.buf.outgoing_calls()<CR>", { noremap = true })
   buf_set_keymap("n", "<leader>lC", ":lua vim.lsp.buf.incoming_calls()<CR>", { noremap = true })
 
-  buf_set_keymap("n", "<leader>lR", ":lua require('daniel').custom_lsp_java_references()<cr>", { noremap = true })
-  buf_set_keymap("n", "<leader>lI", ":lua require('daniel').custom_lsp_implementations()<cr>", { noremap = true })
-
   vim.keymap.set('n', '<leader>lf',
     function()
       vim.lsp.buf.format { async = true }
