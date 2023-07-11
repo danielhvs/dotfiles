@@ -1,6 +1,6 @@
 require 'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  sync_install = false,     -- install languages synchronously (only applied to `ensure_installed`)
+  ensure_installed =  { "typescript", "javascript", "c", "lua", "vim", "vimdoc", "sql", "clojure", "java", "json", "json5", "make", "bash" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false, -- may slow down but fixes keyword highlight

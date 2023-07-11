@@ -45,4 +45,5 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'stevearc/oil.nvim'
 Plug 'Asheq/close-buffers.vim'
 Plug 'Wansmer/treesj'
+Plug 'mfussenegger/nvim-dap'
 call plug#end()

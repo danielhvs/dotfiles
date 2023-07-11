@@ -22,3 +22,4 @@ source /home/danielhabib/dotfiles/nvim/config/easy-align.vim
 luafile /home/danielhabib/dotfiles/nvim/config/mason.lua
 luafile /home/danielhabib/dotfiles/nvim/config/oil.lua
 luafile /home/danielhabib/dotfiles/nvim/config/treesj.lua
+luafile /home/danielhabib/dotfiles/nvim/config/dap.lua
