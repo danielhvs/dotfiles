@@ -42,6 +42,6 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'stevearc/oil.nvim'
 Plug 'Asheq/close-buffers.vim'
-Plug 'Wansmer/treesj'
 Plug 'mfussenegger/nvim-dap'
+Plug 'https://gitlab.com/schrieveslaach/sonarlint.nvim'
 call plug#end()
