@@ -34,7 +34,6 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people' " depende do vim-sexp
 Plug 'Olical/conjure'
 " java
 Plug 'mfussenegger/nvim-jdtls'
-Plug 'onsails/diaglist.nvim'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'romainl/vim-qf'
 Plug 'AndrewRadev/switch.vim'
