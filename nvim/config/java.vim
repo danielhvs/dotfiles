@@ -1,10 +1,10 @@
 augroup autoformat_settings
-  autocmd FileType java set nosmarttab noexpandtab shiftwidth=2 tabstop=2
+  autocmd FileType java set shiftwidth=4 tabstop=4
 augroup END
 
-augroup autoformat_settings
-  autocmd FileType feature set smarttab expandtab shiftwidth=2 tabstop=2
-augroup END
+" augroup autoformat_settings
+"   autocmd FileType feature set smarttab expandtab shiftwidth=2 tabstop=2
+" augroup END
 
 " java lsp
 "  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
@@ -51,3 +51,6 @@ nnoremap <leader>jj mmyiwoconsole.log("daniel <esc>pa = ", <esc>pa);<esc>=j`m
 
 nnoremap <leader>l? :LspInfo<CR>
 nnoremap <leader>lp :JdtUpdateConfig<CR>
+
+" :lua require'jdtls'.test_class()<CR>
+" :lua require'jdtls'.test_nearest_method()<CR>

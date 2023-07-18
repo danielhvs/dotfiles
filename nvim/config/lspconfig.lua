@@ -58,16 +58,16 @@ lsp.clojure_lsp.setup({
 })
 
 
-lsp.lua_ls.setup {
-  on_attach = setup_mappings,
-  capabilities = the_capabilities,
-  handlers = the_handlers,
-  settings = {
-    Lua = {
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { 'vim' },
-      },
-    },
-  },
-}
+-- lsp.lua_ls.setup {
+--   on_attach = setup_mappings,
+--   capabilities = the_capabilities,
+--   handlers = the_handlers,
+--   settings = {
+--     Lua = {
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = { 'vim' },
+--       },
+--     },
+--   },
+-- }
