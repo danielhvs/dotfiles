@@ -54,6 +54,8 @@ vnoremap <leader>f\ :s/\\//ge<CR>
 vnoremap <leader>f<space> :s/ //ge<CR>
 vnoremap <leader>f- :s/-/ /ge<CR>
 nnoremap <leader>fs vap:!sql-formatter<CR>
+nnoremap <leader>ft vap:!prettier --parser=typescript -w<CR>
+nnoremap <leader>fT :!prettier --parser=typescript -w %<CR>
 
 " similar to format
 nnoremap <leader>` mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
