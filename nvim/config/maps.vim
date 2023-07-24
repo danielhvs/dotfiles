@@ -45,7 +45,7 @@ nmap <leader>fJ :%.!jq .<CR>
 nmap <leader>fj vap:.!jq .<CR>
 nmap <leader>fh :%!tidy --show-errors 0 -i -q 2>/dev/null<CR>
 nnoremap <leader>f<space> mm:%s/\s\+$//e<CR>`m
-nnoremap <leader>ft mm:%s/\t/  /ge<CR>`m
+nnoremap <leader>f<tab> mm:%s/\t/  /ge<CR>`m
 " format file - to _
 nnoremap <leader>ff V:s/-/_/g<CR>
 vnoremap <leader>f, :s/,//ge<CR>
@@ -54,8 +54,8 @@ vnoremap <leader>f\ :s/\\//ge<CR>
 vnoremap <leader>f<space> :s/ //ge<CR>
 vnoremap <leader>f- :s/-/ /ge<CR>
 nnoremap <leader>fs vap:!sql-formatter<CR>
-nnoremap <leader>ft vap:!prettier --parser=typescript -w<CR>
-nnoremap <leader>fT :!prettier --parser=typescript -w %<CR>
+nnoremap <leader>ft vap:!prettier --parser=typescript --trailing-comma=es5 -w<CR>
+nnoremap <leader>fT :!prettier --parser=typescript --trailing-comma=es5 -w %<CR>
 
 " similar to format
 nnoremap <leader>` mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
