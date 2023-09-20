@@ -11,4 +11,4 @@ nnoremap <localleader>2 :lua require("harpoon.ui").nav_file(2)<CR>:ConjureEvalBu
 nnoremap <localleader>3 :lua require("harpoon.ui").nav_file(3)<CR>:ConjureEvalBuf<CR>:bd %<CR>
 nnoremap <localleader>4 :lua require("harpoon.ui").nav_file(4)<CR>:ConjureEvalBuf<CR>:bd %<CR>
 nnoremap <leader>ll :ConjureLogVSplit<CR>:set wrap<CR>
-nnoremap <localleader>rt mm:ConjureEvalBuf<CR>?deftest<CR>$B"yyiw`m<ESC>:redraw<CR>"dddGo<CR>(comment (clojure.test/run-test <C-R>y))<ESC>F(lmA:ConjureEvalCurrentForm<CR>:update<CR>`m
+nnoremap <localleader>rt :ConjureEvalBuf<CR>?deftest<CR>$B"yyiw`m<ESC>"dddGo<CR>(comment (clojure.test/run-test <C-R>y))<ESC>:redraw<CR>F(lmAma:ConjureEvalCurrentForm<CR>:update<CR>
