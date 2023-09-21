@@ -42,3 +42,5 @@ vim.keymap.set("n", "<leader>te", ":Telescope diagnostics bufnr=0 severity=E<CR>
 vim.keymap.set("n", "<leader>tW", ":Telescope diagnostics severity=W<CR>");
 vim.keymap.set("n", "<leader>tw", ":Telescope diagnostics bufnr=0 severity=W<CR>");
 vim.keymap.set("n", "<leader>lO", ":Telescope lsp_document_symbols<CR>");
+vim.keymap.set("n", "<leader>ti", ":Telescope diagnostics bufnr=0 severity=I<CR>");
+vim.keymap.set("n", "<leader>tI", ":Telescope diagnostics severity=I<CR>");
