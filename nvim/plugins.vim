@@ -44,4 +44,8 @@ Plug 'stevearc/oil.nvim'
 Plug 'Asheq/close-buffers.vim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'https://gitlab.com/schrieveslaach/sonarlint.nvim'
+" Plug 'https://github.com/PaterJason/nvim-treesitter-sexp'
+" Plug 'gpanders/nvim-parinfer'
+" Plug 'julienvincent/nvim-paredit'
+" Plug 'dundalek/parpar.nvim'
 call plug#end()

@@ -23,3 +23,5 @@ luafile /home/danielhabib/dotfiles/nvim/config/mason.lua
 luafile /home/danielhabib/dotfiles/nvim/config/oil.lua
 luafile /home/danielhabib/dotfiles/nvim/config/dap.lua
 luafile /home/danielhabib/dotfiles/nvim/config/sonarlint.lua
+" luafile /home/danielhabib/dotfiles/nvim/config/paredit.lua
+" luafile /home/danielhabib/dotfiles/nvim/config/nvim-treesitter-sexp.lua
