@@ -32,6 +32,8 @@ require 'nvim-treesitter.configs'.setup {
         ["ic"] = "@conditional.inner",
         ["al"] = "@loop.outer",
         ["il"] = "@loop.inner",
+        ["aP"] = "@parameter.outer",
+        ["iP"] = "@parameter.inner",
       },
     },
 
