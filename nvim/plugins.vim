@@ -1,6 +1,7 @@
 " /home/danielhabib/.config/nvim/plugin/ReplaceWithRegister
 call plug#begin('/home/danielhabib/.local/share/nvim/site/autoload')
 Plug 'tpope/vim-surround' " ds'
+Plug 'tpope/vim-abolish' " cr- (coerce to kebab, camel etc), crc cru, crs
 Plug 'tpope/vim-commentary' " gc + motion
 Plug 'tpope/vim-repeat' " melhora .
 Plug 'tpope/vim-rhubarb' " git browse vim-fugitive
