@@ -144,6 +144,6 @@ nnoremap <leader>. :e #<CR>
 nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
 
-nnoremap <leader>rr "ryiw:%s/<C-r>r/
-nnoremap <leader>rr "ryiw:%s/<C-r>r/
+nnoremap <leader>rr "ryiw:%s/<C-r>r/<C-r>r
+nnoremap <leader>rR "ryiw:%s/<C-r>r/
 nnoremap <leader>c! "ryy:r !echo "scale=10; <C-r>r" \| bc<CR>
