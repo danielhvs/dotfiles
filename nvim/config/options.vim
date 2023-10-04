@@ -27,6 +27,8 @@ set path+=**
 set listchars=tab:→\ ,trail:·
 set nolist
 set mouse=
+" for `gf` to work well
+set wildignore+=**/node_modules/**,**/target/**
 
 "
 " tim pope sensible plugin https://github.com/tpope/vim-sensible/blob/master/plugin/sensible.vim
@@ -52,3 +54,4 @@ set cursorline
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
