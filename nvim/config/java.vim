@@ -2,9 +2,9 @@ augroup autoformat_settings
   autocmd FileType java set shiftwidth=4 tabstop=4
 augroup END
 
-" augroup autoformat_settings
-"   autocmd FileType feature set smarttab expandtab shiftwidth=2 tabstop=2
-" augroup END
+augroup autoformat_settings
+  autocmd FileType feature set smarttab expandtab shiftwidth=2 tabstop=2
+augroup END
 
 " java lsp
 "  `code_action` is a superset of vim.lsp.buf.code_action and you'll be able to
@@ -35,7 +35,6 @@ nnoremap <leader>lk :lua vim.diagnostic.goto_prev()<CR>
 nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics()<CR> 
 nnoremap <leader>lr :lua require('telescope.builtin').lsp_references()<CR> 
 nnoremap <leader>lR :lua require('daniel').custom_lsp_java_references()<CR> 
-nnoremap <leader>lI :lua require('daniel').custom_lsp_implementations()<CR> 
 nnoremap <leader>li :lua require('telescope.builtin').lsp_implementations()<CR> 
 nnoremap <leader>lC :lua vim.lsp.buf.incoming_calls()<CR> 
 nnoremap <leader>lK :lua vim.lsp.buf.outgoing_calls()<CR> 
@@ -45,8 +44,8 @@ nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 " java
 " nnoremap <leader>jl mmyiwoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
 " nnoremap <leader>jL mmyiWoLOG.info("daniel <esc>pa = " + <esc>pa);<esc>=j`m
-nnoremap <leader>jl mmyiwoSystem.out.println("daniel <esc>pa = " + <esc>pa);<esc>=j`m
-nnoremap <leader>jL mmyiwoSystem.out.println("daniel <esc>pa");<esc>=j`m
+nnoremap <leader>jl mmyiwoLOG.info(":debug <esc>pa = " + <esc>pa);<esc>=j`m
+nnoremap <leader>jL mmyiwoLOG.info(":debug <esc>pa ");<esc>F"i
 nnoremap <leader>jj mmyiwoconsole.log("daniel <esc>pa = ", <esc>pa);<esc>=j`m
 
 nnoremap <leader>l? :LspInfo<CR>
