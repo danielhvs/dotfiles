@@ -52,6 +52,7 @@ vnoremap <leader>f, :s/,//ge<CR>
 vnoremap <leader>fo :s/; (out) //ge<CR>
 vnoremap <leader>f: :s/://ge<CR>
 vnoremap <leader>f\ :s/\\//ge<CR>
+nnoremap <leader>f\ vap:s/\\//ge<CR>
 vnoremap <leader>f<space> :s/ //ge<CR>
 vnoremap <leader>f- :s/-/ /ge<CR>
 nnoremap <leader>fs vap:!sql-formatter<CR>
