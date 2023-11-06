@@ -1,3 +1,6 @@
+" bug? so me fix
+nmap gx :silent execute "!xdg-open " . shellescape("<cWORD>")<CR>
+"
 " git 
 nnoremap <leader>alm :read ~/.gitmessage<CR>2j
 
