@@ -21,3 +21,6 @@ nnoremap <localleader>u :find user.clj<CR>
 
 let g:conjure#eval#inline#highlight = "clojureFunc"
 let g:conjure#eval#inline#prefix = "=> "
+
+nnoremap <localleader>q yapGo(execute! @ds (queries/select-raw ""))<ESC>F"i<CR><CR><CR><CR><ESC>2kp:ConjureEvalRootForm<CR>:update<CR>
+nnoremap <localleader>Q Go(execute! @ds (queries/select-raw ""))<ESC>F"i<CR><CR><CR><CR><ESC>2kp:ConjureEvalRootForm<CR>:update<CR>
