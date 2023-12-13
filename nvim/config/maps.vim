@@ -85,8 +85,8 @@ vnoremap K :m '<-2<CR>gv
 inoremap <C-space> <C-x><C-f>
 
 " from json to edn
-nnoremap <leader>fe "yvap: :!jet --from json --to edn -k<CR>
-nnoremap <leader>fE "yvap: :!jet --from edn --to json<CR>
+nnoremap <leader>fe mm"yvap: :!jet --from json --to edn -k<CR>%o<ESC>`m
+nnoremap <leader>fE mm"yvap: :!jet --from edn --to json<CR>%o<ESC>`m
 
 " source 
 nmap <leader>sv :source $MYVIMRC<CR>
