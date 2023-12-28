@@ -25,3 +25,4 @@ luafile /home/danielhabib/dotfiles/nvim/config/oil.lua
 luafile /home/danielhabib/dotfiles/nvim/config/dap.lua
 luafile /home/danielhabib/dotfiles/nvim/config/sonarlint.lua
 source /home/danielhabib/dotfiles/nvim/config/conjure.vim
+source /home/danielhabib/dotfiles/nvim/config/git-messenger.vim
