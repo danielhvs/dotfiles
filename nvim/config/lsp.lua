@@ -1,10 +1,4 @@
-local lsp    = require('lspconfig')
-local cmplsp = require('cmp_nvim_lsp')
-
-vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "error" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "warn" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "info" })
-vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "hint" })
+local lsp = require('lspconfig')
 
 local setup_mappings = function(_, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -12,16 +6,13 @@ local setup_mappings = function(_, bufnr)
 
   buf_set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true })
   buf_set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true })
-  -- buf_set_keymap("n", "<leader>ld", "<Cmd>lua vim.lsp.buf.declaration()<CR>", {noremap = true})
   buf_set_keymap("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { noremap = true })
   buf_set_keymap("n", "<leader>lh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { noremap = true })
   buf_set_keymap("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true })
   buf_set_keymap("n", "<leader>lq", "<cmd>lua vim.diagnostic.set_loclist()<CR>", { noremap = true })
   buf_set_keymap("n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", { noremap = true })
   buf_set_keymap("n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { noremap = true })
-  -- buf_set_keymap("n", "<leader>la", ":Telescope lsp_code_actions<cr>", {noremap = true})
   buf_set_keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true })
-  -- buf_set_keymap("v", "<leader>la", "<cmd>lua vim.lsp.buf.range_code_action()<CR>", {noremap = true})
   buf_set_keymap("v", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true })
   buf_set_keymap("n", "<leader>lw", ":lua require('telescope.builtin').diagnostics()<cr>", { noremap = true })
   buf_set_keymap("n", "<leader>lr", ":lua require('telescope.builtin').lsp_references()<cr>", { noremap = true })
@@ -37,38 +28,28 @@ local setup_mappings = function(_, bufnr)
     end, bufopts)
 end
 
-local the_capabilities = cmplsp.default_capabilities()
 local the_handlers = {
   ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
-    { severity_sort = false,
+    {
+      severity_sort = false,
       update_in_insert = false,
       underline = true,
-      virtual_text = false }),
-  ["textDocument/hover"] =
-      vim.lsp.with(vim.lsp.handlers.hover,
-        { border = "single" }),
-  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
+      virtual_text = true
+    }),
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover,
+    { border = "solid" }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "solid" })
 }
 
-lsp.clojure_lsp.setup({
-  -- cmd = { '/home/danielhabib/workspace/clojure-lsp/clojure-lsp' },
-  on_attach = setup_mappings,
+lsp.lua_ls.setup {
   handlers = the_handlers,
-  capabilities = the_capabilities,
-})
-
-
- lsp.lua_ls.setup {
-   on_attach = setup_mappings,
-   capabilities = the_capabilities,
-   handlers = the_handlers,
-   settings = {
-     Lua = {
-       diagnostics = {
-         -- Get the language server to recognize the `vim` global
-         globals = { 'vim' },
-       },
-     },
-   },
- }
-
+  on_attach = setup_mappings,
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = { 'vim' },
+      },
+    },
+  }
+}

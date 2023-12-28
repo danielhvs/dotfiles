@@ -28,7 +28,7 @@ Plug 'hrsh7th/cmp-path', {'branch': 'main'}
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'PaterJason/cmp-conjure'
-Plug 'PaterJason/cmp-cmdline'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp' " dependencies above
 " clojure
 Plug 'guns/vim-sexp'
@@ -48,4 +48,5 @@ Plug 'Asheq/close-buffers.vim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'https://gitlab.com/schrieveslaach/sonarlint.nvim'
 Plug 'rhysd/git-messenger.vim'
+Plug 'nvimtools/none-ls.nvim'
 call plug#end()
