@@ -1,5 +1,5 @@
 require 'nvim-treesitter.configs'.setup {
-  ensure_installed =  { "make", "typescript", "javascript", "c", "lua", "vim", "vimdoc", "sql", "clojure", "java", "json", "json5", "make", "bash" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed =  { "dockerfile", "make", "typescript", "javascript", "c", "lua", "vim", "vimdoc", "sql", "clojure", "java", "json", "json5", "make", "bash" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   highlight = {
     enable = true,
