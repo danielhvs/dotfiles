@@ -1,6 +1,10 @@
 local lsp = require('lspconfig')
 local cmplsp = require('cmp_nvim_lsp')
 
+local the_capabilities = cmplsp.default_capabilities();
+
+vim.keymap.set('n', '<leader>l?', ':LspInfo<CR>', { noremap = true });
+
 local setup_mappings = function(_, bufnr)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   local function key_map(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -23,10 +27,9 @@ local setup_mappings = function(_, bufnr)
   key_map("n", "<leader>lK", ":lua vim.lsp.buf.outgoing_calls()<CR>", { noremap = true })
   key_map("n", "<leader>lC", ":lua vim.lsp.buf.incoming_calls()<CR>", { noremap = true })
 
-  vim.keymap.set('n', '<leader>lf',
-    function()
-      vim.lsp.buf.format { async = true }
-    end, bufopts)
+  vim.keymap.set('n', '<leader>lf', function()
+    vim.lsp.buf.format { async = true }
+  end, bufopts)
 end
 
 local the_handlers = {
@@ -37,12 +40,9 @@ local the_handlers = {
       underline = true,
       virtual_text = true
     }),
-  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover,
-    { border = "solid" }),
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "solid" }),
   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "solid" })
 }
-
-local the_capabilities = cmplsp.default_capabilities();
 
 lsp.lua_ls.setup {
   handlers = the_handlers,
@@ -60,7 +60,7 @@ lsp.lua_ls.setup {
 
 lsp.clojure_lsp.setup({
   -- the below is  for developing clojure-lsp
-  -- cmd = { '/home/danielhabib/workspace/clojure-lsp/clojure-lsp' }, 
+  -- cmd = { '/home/danielhabib/workspace/clojure-lsp/clojure-lsp' },
   on_attach = setup_mappings,
   handlers = the_handlers,
   capabilities = the_capabilities,

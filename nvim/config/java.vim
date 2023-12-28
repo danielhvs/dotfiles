@@ -46,9 +46,3 @@ nnoremap <leader>jl mmyiwoLOG.info(":debug <esc>pa = ", <esc>pa);<esc>=j`m
 nnoremap <leader>jL mmyiwoLOG.info(":debug <esc>pa ");<esc>F"i
 nnoremap <leader>jL mmyiwoLOG.info(":debug <esc>pa ");<esc>F"i
 nmap <leader>jk mm,fc"cyiw}aprivate static final LoggerFactory LOG = LoggerFactory.getInstance(<C-R>c.class.toString());<ESC>ggoimport br.gov.dataprev.infra.core.util.io.LoggerFactory;<ESC>`mzz
-
-nnoremap <leader>l? :LspInfo<CR>
-nnoremap <leader>lp :JdtUpdateConfig<CR>
-
-" :lua require'jdtls'.test_class()<CR>
-" :lua require'jdtls'.test_nearest_method()<CR>
