@@ -61,6 +61,7 @@ nnoremap <leader>f\ vap:s/\\//ge<CR>
 vnoremap <leader>f<space> :s/ //ge<CR>
 vnoremap <leader>f- :s/-/ /ge<CR>
 nnoremap <leader>fs vap:!sql-formatter<CR>
+vnoremap <leader>fs :!sql-formatter<CR>
 nnoremap <leader>ft vap:!prettier --parser=typescript --trailing-comma=es5 -w<CR>
 nnoremap <leader>fT :!prettier --parser=typescript --trailing-comma=es5 -w %<CR>
 nnoremap <leader>fo vap:s/; (out) //ge<CR>
@@ -131,9 +132,6 @@ nnoremap <leader>Y :%y<CR>
 nnoremap <leader>Pe :!tmux switch-client -t eco<CR>
 nnoremap <leader>Pf :!tmux switch-client -t flex<CR>
 nnoremap <leader>Pv :!tmux switch-client -t vpn<CR>
-
-nnoremap <localleader>w bi
-nnoremap <localleader>W ea
 
 " normalize
 nnoremap <leader>fn :%s/,/\r/ge<CR>:%!sort<CR>:%s/ $//ge<CR>:%s/^ //ge<CR>:%s/^$\n//ge<CR>
