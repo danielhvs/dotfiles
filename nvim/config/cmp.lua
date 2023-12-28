@@ -10,8 +10,18 @@ local cmp = require('cmp')
 --   )[entry.source.name] or "")
 --   return item
 -- end
+--
+
+ cmp.setup.cmdline('/', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' }
+      }
+    })
 
  return cmp.setup({
+
+
    formatting = {format = _1_},
    mapping = {["<S-Tab>"] = cmp.mapping.select_prev_item(),
               ["<Tab>"] = cmp.mapping.select_next_item(),
@@ -25,5 +35,5 @@ local cmp = require('cmp')
               {name = "conjure"}, 
               {name = "path"},
               {name = "buffer"},
-              {name = "vim-dadbod-completion"}
+              {name = "cmdline"}
             })})

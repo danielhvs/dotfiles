@@ -28,6 +28,7 @@ Plug 'hrsh7th/cmp-path', {'branch': 'main'}
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'PaterJason/cmp-conjure'
+Plug 'PaterJason/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp' " dependencies above
 " clojure
 Plug 'guns/vim-sexp'
