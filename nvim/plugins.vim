@@ -46,4 +46,5 @@ Plug 'stevearc/oil.nvim'
 Plug 'Asheq/close-buffers.vim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'https://gitlab.com/schrieveslaach/sonarlint.nvim'
+Plug 'rhysd/git-messenger.vim'
 call plug#end()

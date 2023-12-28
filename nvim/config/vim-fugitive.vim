@@ -31,7 +31,6 @@ nnoremap <leader>gM :G diff origin/master<CR>
 nnoremap <leader>gn :terminal git difftool origin/master -- %<CR>
 nnoremap <leader>gN :terminal git difftool origin/master<CR>
 " konflict
-nnoremap <leader>gK :Gvdiffsplit!<CR> 
 nnoremap <leader>gkh :diffget //2<CR>
 nnoremap <leader>gkl :diffget //3<CR>
 " both
