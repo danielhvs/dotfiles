@@ -2,5 +2,3 @@ require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = { "tsserver", "tailwindcss" }
 })
-
-require 'lspconfig'.tsserver.setup {}
