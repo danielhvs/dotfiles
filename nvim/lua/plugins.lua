@@ -6,7 +6,6 @@ return {
 , 'tpope/vim-unimpaired'
 , 'wellle/targets.vim'
 , 'kyazdani42/nvim-web-devicons'
-, 'tpope/vim-dadbod'
 , 'romainl/vim-qf'
 , 'Asheq/close-buffers.vim'
 }
