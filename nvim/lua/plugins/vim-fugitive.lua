@@ -30,8 +30,7 @@ nnoremap <leader>gW :G co master -- %
 map <leader>gr "yyiw:G revert <C-R>y<CR>
 map <leader>g! :G push --force-with-lease
 map <leader>gu :G reset HEAD -- %<CR>
-nnoremap <leader>g\| :e 2<CR>:diffthis<CR>:e 1<CR>:diffthis<CR>:vs 2<CR>
-nnoremap <leader>gm :G diff origin/master %<CR>
+" nnoremap <leader>gm :G diff origin/master %<CR> see git-messenger
 nnoremap <leader>gM :G diff origin/master<CR>
 nnoremap <leader>gn :terminal git difftool origin/master -- %<CR>
 nnoremap <leader>gN :terminal git difftool origin/master<CR>
