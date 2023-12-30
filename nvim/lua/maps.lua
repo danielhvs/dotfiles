@@ -7,15 +7,13 @@ map("n", "<localleader>t", ":e t<CR>")
 map("n", "<localleader>m", ":e Makefile<CR>")
 map("n", "<localleader>2", ":e ~/.m2/settings.xml<CR>")
 
-
-vim.cmd[[
-
+vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
 nmap gx :silent execute "!xdg-open " . shellescape("<cWORD>")<CR>
 " bug? fix for vim-fugitive rhubarb :GBrowse
 command! -nargs=1 Browse silent execute '!xdg-open' shellescape(<q-args>,1)
 "
-" git 
+" git
 nnoremap <leader>alm :read ~/.gitmessage<CR>2j
 
 " window
@@ -101,7 +99,7 @@ inoremap <C-space> <C-x><C-f>
 nnoremap <leader>fe mm"yvap: :!jet --from json --to edn -k<CR>%o<ESC>`m
 nnoremap <leader>fE mm"yvap: :!jet --from edn --to json<CR>%o<ESC>`m
 
-" source 
+" source
 nmap <leader>sv :source $MYVIMRC<CR>
 
 " section
