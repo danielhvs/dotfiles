@@ -114,30 +114,6 @@ nmap <leader>cp :!cd ~/Downloads && ls -rt \|tail -n1\|xargs -d"\n" detox<CR>:!l
 nmap <leader>fw yiW:!xdg-open  <C-R>0 &<CR>
 nmap <leader>fW :!xdg-open -n %<CR>:bd!<CR>
 
-" format limit 80 chars
-nmap <leader>fl :set textwidth=80<CR>gqas
-nmap <leader>fL ma:set textwidth=80<CR>gggqG`a
-
-" determine a file's MIME type
-" $ mimetype photo.jpeg
-" photo.jpeg: image/jpeg
-
-" # choose the default application for this file
-" $ mimeopen -d photo.jpeg
-" Please choose an application
-
-"     1) Feh (feh)
-"     2) GNU Image Manipulation Program (gimp)
-"     3) Pinta (pinta)
-
-" use application #
-
-" # open a file with its default application
-" $ mimeopen -n photo.jpeg
-
-nmap <leader>lE <cmd>lua require('diaglist').open_all_diagnostics()<cr>/error\|<cr>
-nmap <leader>le <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>/error\|<cr>
-
 nnoremap <leader>Y :%y<CR>
 nnoremap <leader>Pe :!tmux switch-client -t eco<CR>
 nnoremap <leader>Pf :!tmux switch-client -t flex<CR>
@@ -161,5 +137,23 @@ nnoremap <C-i> <C-i>zz
 nnoremap <leader>rr "ryiw:%s/<C-r>r/<C-r>r
 nnoremap <leader>rR "ryiw:%s/<C-r>r/
 nnoremap <leader>c! "ryy:r !echo "scale=10; <C-r>r" \| bc<CR>
+
+" leader c: change directory
+nnoremap <leader>cc :cd ~/workspace-nvim/spring/eco-comum<CR>
+nnoremap <leader>cb :cd ~/workspace-nvim/eco/eco-batch<CR>
+nnoremap <leader>cs :cd ~/workspace-nvim/eco/eco-servico<CR>
+nnoremap <leader>ct :cd ~/workspace-nvim/eco-ttt/eco-testes<CR>
+nnoremap <leader>cT :cd ~/workspace-nvim/eco-ttt/eco-ws-testes<CR>
+nnoremap <leader>ce :cd ~/workspace-nvim/spring<CR>
+nnoremap <leader>cE :cd ~/workspace-nvim/eco<CR>
+nnoremap <leader>ca :cd ~/workspace-nvim/spring/eco-api<CR>
+nnoremap <leader>cg :cd ~/workspace-nvim/spring/eco-gestao-api<CR>
+nnoremap <leader>cW :cd ~/workspace-nvim/eco/eco-ws<CR>
+nnoremap <leader>cS :cd ~/workspace-nvim/eco/eco-inss-servico<CR>
+nnoremap <leader>cz :cd ~/workspace-nvim/eco/eco-inss-ws<CR>
+nnoremap <leader>ci :cd ~/workspace-nvim/eco/eco-sincronizacao<CR>
+nnoremap <leader>cD :cd ~/workspace-nvim/dec/dec-service<CR>
+nnoremap <leader>cN :cd ~/workspace-nvim/dec/dec-negocio<CR>
+
 
 ]]
