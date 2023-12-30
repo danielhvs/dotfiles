@@ -1,10 +1,1 @@
 nvim/plugin/dtp.vim
-nvim/lua/config
-nvim/lua/config/init.lua
-nvim/plugin/packer_compiled.lua
-nvim/lua/config/plugin/treesitter.lua
-nvim/lua/config/plugin/telescope.lua
-nvim/lua/config/plugin/conjure.lua
-nvim/lua/config/plugin/cmp.lua
-nvim/lua/config/plugin.lua
-nvim/lua/config/plugin/lspconfig.lua
