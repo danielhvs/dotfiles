@@ -249,14 +249,12 @@ llcp() {
 }
 
 
-# abre o ultimo arquivo no vim
-alias vvv='vim `ls -tr .| tail -n1`'
-alias 4linux='cd ~/curso/devsecops/527'
-alias vi=nvim
-alias vim=nvim
-alias nn="cd /home/danielhabib/.local/share/nvim/site/"
-alias o="cd /home/danielhabib/workspace/orcamento/"
-alias k="cd ~/workspace/karel"
+alias vi="nvim -u /home/danielhabib/.config/nvim/init.lua"
+alias vim="nvim -u /home/danielhabib/.config/nvim/init.lua"
+alias vd="nvim -u /home/danielhabib/.config/nvim/init.lua"
+alias vf="nvim -u /home/danielhabib/.config/nvim/init.lua"
+alias v="nvim -u /home/danielhabib/.config/nvim/init.lua"
+alias vv="nvim -u /home/danielhabib/.config/nvim/init.lua"
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin/go/bin:$PATH"
 fi
