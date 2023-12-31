@@ -5,7 +5,7 @@ return {
   opts = {},
   config = function()
     vim.cmd [[
-    colorscheme tokyonight-night
+    colorscheme tokyonight-moon
     " colorscheme tokyonight-night
     " colorscheme tokyonight-storm
     " colorscheme tokyonight-day
