@@ -4,7 +4,7 @@ return {
     vim.cmd [[
 " lighline plugin " colorscheme Tomorrow_Night
 let g:lightline = {
-      \ 'colorscheme': 'selenized_black',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'filename', 'gitbranch', 'session', 'modified' ] ]
