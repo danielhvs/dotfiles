@@ -1,7 +1,7 @@
+vim.o.background = "dark"
 vim.cmd [[
 set clipboard=unnamedplus
 set numberwidth=1 
-set background=dark
 set scrolloff=1
 set hidden
 set nohlsearch
