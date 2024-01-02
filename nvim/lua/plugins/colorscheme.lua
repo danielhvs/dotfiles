@@ -1,10 +1,8 @@
 return {
-  "gruvbox-community/gruvbox",
-  name = "gruvbox",
+  "sainnhe/gruvbox-material",
   priority = 1000,
   config = function()
-    vim.cmd.colorscheme "gruvbox"
-    vim.g.gruvbox_contrast_dark = "hard"
+    vim.g.gruvbox_material_background = 'hard'
+    vim.cmd.colorscheme "gruvbox-material"
   end
-
 }
