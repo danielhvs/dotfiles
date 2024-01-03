@@ -10,6 +10,7 @@ return
   dependencies = {
     'hrsh7th/cmp-path', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-cmdline',
     'L3MON4D3/LuaSnip',
+    "/hrsh7th/cmp-nvim-lsp-signature-help",
     'saadparwaiz1/cmp_luasnip',
     "rafamadriz/friendly-snippets"
   },
@@ -50,6 +51,7 @@ return
         -- documentation = cmp.config.window.bordered(),
       },
       mapping = {
+        ['<C-Space>'] = cmp.mapping.complete(),
         ["<S-Tab>"] = cmp.mapping.select_prev_item(),
         ["<Tab>"] = cmp.mapping.select_next_item(),
         ["<C-d>"] = cmp.mapping.scroll_docs((-4)),
@@ -60,6 +62,7 @@ return
       sources = cmp.config.sources(
         {
           { name = "nvim_lsp" },
+          { name = 'nvim_lsp_signature_help' },
           { name = "path" },
           { name = "buffer" },
           { name = 'luasnip' },
