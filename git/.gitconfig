@@ -1,0 +1,31 @@
+[user]
+	email = danielhvs70@gmail.com
+	name = Daniel Habib Vieira da Silva
+[core]
+	editor = nvim
+	pager = delta
+[alias]
+	co = checkout
+[http]
+	sslVerify = false
+[pull]
+	rebase = true
+[merge]
+	ff = no
+[mergetool]
+	keepBackup = false
+	prompt = false
+[credential]
+	helper = cache --timeout=36000
+[includeIf "gitdir:~/workspace-nvim/"] # job needs, like workspace/* so all included projects
+    path = ~/workspace-nvim/.gitconfig
+[fetch]
+  prune = true
+[diff]
+  tool = difftastic
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft --syntax-highlight=off --display=side-by-side-show-both "$LOCAL" "$REMOTE"
+[delta]
+	side-by-side = true
