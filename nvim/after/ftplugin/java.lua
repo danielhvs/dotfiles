@@ -36,10 +36,6 @@ local config = {
     '-data', '/home/danielhabib/workspace-nvim/spring/'
   },
 
-  -- root_dir = require('jdtls.setup').find_root({
-  -- '/home/danielhabib/workspace-nvim/eco/eco-comum/pom.xml',
-  -- '/home/danielhabib/workspace-nvim/eco/eco-batch/pom.xml'
-  -- }),
   root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
 
   settings = {
