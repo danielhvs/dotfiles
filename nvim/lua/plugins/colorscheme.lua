@@ -1,8 +1,7 @@
 return {
-  "sainnhe/gruvbox-material",
+  "Mofiqul/dracula.nvim",
   priority = 1000,
   config = function()
-    vim.g.gruvbox_material_background = 'hard'
-    vim.cmd.colorscheme "gruvbox-material"
+    vim.cmd.colorscheme "dracula" -- or dracula-soft
   end
 }
