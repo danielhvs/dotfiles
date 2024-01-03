@@ -196,9 +196,9 @@ bar {
         workspace_buttons yes
 }
 
-# daniel
-exec_always --no-startup-id title_align center
-exec_always --no-startup-id workspace_layout tabbed
+# danil
+# exec_always --no-startup-id title_align center
+# exec_always --no-startup-id workspace_layout tabbed
 exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always --no-startup-id xset r rate 250 25
 
@@ -215,7 +215,6 @@ bindsym $mod+F3 exec brave-browser
 # bindsym $mod+F3 exec "i3-msg 'workspace 3; exec eclipse'"
 bindsym $mod+F4 exec teams
 bindsym $mod+F5 exec dbeaver
-bindsym $mod+F12 exec lutris
 bindsym Control+Shift+Print exec "maim -s | xclip -selection clipboard -t image/png"
 bindsym $mod+ccedilla exec i3lock -c 000000
 bindsym $mod+Control+Shift+P exec poweroff
@@ -259,7 +258,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 #screencast
-bindsym $mod+Shift+g exec ~/bin/screencast
+bindsym $mod+Shift+g exec /home/danielhabib/dotfiles/bin/screencast
 bindsym $mod+Shift+y exec screenkey
 bindsym $mod+Shift+w exec /home/danielhabib/bin/reset-wifi.sh
 
