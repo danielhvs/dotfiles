@@ -7,6 +7,7 @@ map("n", "<leader>D", ":Bdelete other<CR>")
 map("n", "<localleader>t", ":e t<CR>")
 map("n", "<localleader>m", ":e Makefile<CR>")
 map("n", "<localleader>2", ":e ~/.m2/settings.xml<CR>")
+map("n", "<leader>ss", ":Switch<CR>")
 
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
@@ -99,9 +100,6 @@ inoremap <C-space> <C-x><C-f>
 " from json to edn
 nnoremap <leader>fe mm"yvap: :!jet --from json --to edn -k<CR>%o<ESC>`m
 nnoremap <leader>fE mm"yvap: :!jet --from edn --to json<CR>%o<ESC>`m
-
-" source
-nmap <leader>sv :source $MYVIMRC<CR>
 
 " section
 nnoremap <leader>- {I-<ESC>mm"yx80"ypO<ESC>j}<ESC>80"ypo<ESC>'m030lR
