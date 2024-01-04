@@ -50,9 +50,6 @@ nnoremap <leader>jl mmyiwoLOG.info(":debug <esc>pa = ", <esc>pa);<esc>=j`m
 nnoremap <leader>jL mmyiwoLOG.info(":debug <esc>pa ");<esc>F"i
 nnoremap <leader>jL mmyiwoLOG.info(":debug <esc>pa ");<esc>F"i
 nmap <leader>jk mm,fc"cyiw}aprivate static final LoggerFactory LOG = LoggerFactory.getInstance(<C-R>c.class.toString());<ESC>ggoimport br.gov.dataprev.infra.core.util.io.LoggerFactory;<ESC>`mzz
-
-" test
-nnoremap <localleader>rt mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
 ]]
   end
 }

@@ -173,4 +173,8 @@ nnoremap <leader>sm mm0f(b"wyiw<CR>G/public.*\(class\\|interface\\|enum\)<CR>z<C
 map <localleader>w csw)i
 map <localleader>> mmcsw>iList<ESC>`m
 map <leader>> mmcsw>`m
+
+" test
+nnoremap <localleader>rt mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
+
 ]]
