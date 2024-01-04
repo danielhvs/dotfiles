@@ -1,5 +1,5 @@
 return {
-  'https://gitlab.com/schrieveslaach/sonarlint.nvim',
+  url = 'https://gitlab.com/schrieveslaach/sonarlint.nvim',
   dependencies = { 'mfussenegger/nvim-jdtls' },
   config = function()
     require('sonarlint').setup({
