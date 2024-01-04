@@ -3,10 +3,10 @@ return {
   name = "oil",
   config = function()
     -- localleader `f` for files
-    vim.keymap.set("n", "<localleader>o", require("oil").open, { desc = "Open parent directory" })
-    vim.keymap.set("n", "<localleader>O", ':Oil .<CR>', { desc = "Open parent directory" })
-    vim.keymap.set("n", "<localleader>p", require("oil").open, { desc = "Open parent directory" })
-    vim.keymap.set("n", "<localleader>P", ':Oil .<CR>', { desc = "Open parent directory" })
+    vim.keymap.set("n", "<localleader>o", require("oil").open_float, { desc = "Open parent directory" })
+    vim.keymap.set("n", "<localleader>O", ':Oil --float .<CR>', { desc = "Open parent directory" })
+    vim.keymap.set("n", "<localleader>p", require("oil").open_float, { desc = "Open parent directory" })
+    vim.keymap.set("n", "<localleader>P", ':Oil --float .<CR>', { desc = "Open parent directory" })
     require("oil").setup({
       -- Id is automatically added at the beginning, and name at the end
       -- See :help oil-columns
