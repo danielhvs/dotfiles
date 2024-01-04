@@ -6,9 +6,8 @@ return {
   config = function()
     vim.cmd [[
 " custom stuff based upon tpope
-"if exists("g:loaded_sexp_mappings_for_regular_people") || &cp
-"  finish
-"endif
+if exists("g:loaded_sexp_mappings_for_regular_people") || &cp
+else
 let g:loaded_sexp_mappings_for_regular_people = 1
 
 function! s:map_sexp_wrap(type, target, left, right, pos)
@@ -75,6 +74,7 @@ if has('vim_starting') && !exists('g:sexp_loaded')
   au VimEnter * call s:setup()
 else
   call s:setup()
+endif
 endif
   ]]
   end
