@@ -33,6 +33,7 @@ return {
         -- executables or functions for formatting response body [optional]
         -- set them to false if you want to disable them
         formatters = {
+          json = false, -- i want to use jet or jq myself with `<localleader>e!`
           html = function(body)
             return vim.fn.system({ "tidy", "-i", "-q", "-" }, body)
           end
