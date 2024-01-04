@@ -3,7 +3,22 @@ return {
   dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
   config = function()
     require 'nvim-treesitter.configs'.setup {
-      ensure_installed = { "dockerfile", "make", "typescript", "javascript", "c", "lua", "vim", "vimdoc", "sql", "clojure", "java", "json", "json5", "make", "bash" },
+      ensure_installed = { "dockerfile",
+        "make",
+        "typescript",
+        "javascript",
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "sql",
+        "clojure",
+        "java",
+        "json",
+        "json5",
+        "http",
+        "make",
+        "bash" },
       sync_install = false,
       highlight = {
         enable = true,
