@@ -24,7 +24,7 @@ return {
         show_url = true,
         -- show the generated curl command in case you want to launch
         -- the same request via the terminal (can be verbose)
-        show_curl_command = false,
+        show_curl_command = true,
         show_http_info = true,
         show_headers = true,
         -- table of curl `--write-out` variables or false if disabled
@@ -33,7 +33,7 @@ return {
         -- executables or functions for formatting response body [optional]
         -- set them to false if you want to disable them
         formatters = {
-          json = "jq",
+          json = "jq .",
           html = function(body)
             return vim.fn.system({ "tidy", "-i", "-q", "-" }, body)
           end
