@@ -1,6 +1,18 @@
 return {
   'neovim/nvim-lspconfig',
   config = function()
+    local function clj_command(command_name)
+      local params = {
+        command = command_name,
+        arguments = {
+          "file://" .. (vim.fn.expand "%:p"),
+          vim.fn.line "." - 1,
+          vim.fn.col "." - 1 },
+      }
+      vim.lsp.buf.execute_command(params)
+    end
+
+
     local lsp = require('lspconfig')
     local cmplsp = require('cmp_nvim_lsp')
 
@@ -17,6 +29,12 @@ return {
       key_map("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { noremap = true })
       key_map("n", "<leader>lh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { noremap = true })
       key_map("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true })
+      vim.keymap.set("n", "<localleader>r.", function() clj_command("thread-first-all") end, { noremap = true })
+      vim.keymap.set("n", "<localleader>r>", function() clj_command("thread-last-all") end, { noremap = true })
+      vim.keymap.set("n", "<localleader>ri", function() clj_command("inline-symbol") end, { noremap = true })
+      vim.keymap.set("n", "<localleader>rn", function() clj_command("clean-ns") end, { noremap = true })
+      vim.keymap.set("n", "<localleader>ru", function() clj_command("unwind-thread") end, { noremap = true })
+      vim.keymap.set("n", "<localleader>rU", function() clj_command("unwind-all") end, { noremap = true })
       key_map("n", "<leader>lq", "<cmd>lua vim.diagnostic.set_loclist()<CR>", { noremap = true })
       key_map("n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", { noremap = true })
       key_map("n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { noremap = true })
@@ -43,8 +61,8 @@ return {
           underline = true,
           virtual_text = true
         }),
-      ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "solid" }),
-      ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "solid" })
+      ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" }),
+      ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
     }
 
     lsp.lua_ls.setup {
