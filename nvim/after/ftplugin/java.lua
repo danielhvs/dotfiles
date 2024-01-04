@@ -12,6 +12,8 @@ local bundles = {
 vim.list_extend(bundles, vim.split(vim.fn.glob("/home/danielhabib/workspace/vscode-java-test/server/*.jar", 1), "\n"))
 --
 -- function start_java()
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+local workspace_dir = '/home/danielhabib/workspace-nvim/lsp/' .. project_name
 local config = {
   -- The command that starts the language server
   -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
