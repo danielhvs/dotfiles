@@ -5,7 +5,6 @@ return {
 , 'tpope/vim-repeat'     -- melhora .
 , 'tpope/vim-unimpaired'
 , 'wellle/targets.vim'
-, 'kyazdani42/nvim-web-devicons'
 , 'romainl/vim-qf'
 , 'Asheq/close-buffers.vim'
 }

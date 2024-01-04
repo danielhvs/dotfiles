@@ -1,14 +1,10 @@
 return {
-  'preservim/nerdtree',
-  config = function()
-    vim.cmd [[
-let NERDTreeShowHidden=1
-let NERDTreeMinimalUI = 1
-nnoremap <expr> <leader>e g:NERDTree.IsOpen() ? ':NERDTreeClose<CR>' : @% == '' ? ':NERDTree<CR>' : ':NERDTreeFind<CR>'
-nnoremap <leader>E :NERDTree<CR>
-let g:NERDTreeMapHelp            = ''
-let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeAutoDeleteBuffer = 1
-]]
-  end
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
+    -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+  }
 }
