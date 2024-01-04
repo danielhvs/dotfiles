@@ -8,6 +8,8 @@ map("n", "<localleader>t", ":e t<CR>")
 map("n", "<localleader>m", ":e Makefile<CR>")
 map("n", "<localleader>2", ":e ~/.m2/settings.xml<CR>")
 map("n", "<leader>ss", ":Switch<CR>")
+map('n', '<localleader>xx', '<Plug>RestNvim<CR>')
+map('n', '<localleader>xr', '/#+RESPONSE<CR>j"ryy<C-W>hGo<ESC>"rp')
 
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!

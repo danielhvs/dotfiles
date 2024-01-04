@@ -33,10 +33,6 @@ nnoremap <localleader><localleader> :ConjureEvalMarkedForm<CR>
 nnoremap <localleader>B :silent !sh ~/workspace/flex-files/scripts/rebuild.sh<CR>
 nnoremap <leader>jk mm"yyiwgg2jo["@mui/material/<C-R>y" :default <C-R>y]<ESC>`m
 
-" exec http
-nnoremap <localleader>xx "yyiW:r!curl http://localhost:3000/<C-R>y<CR>
-nnoremap <localleader>xX "yyiW:r!curl http://localhost:3000/<C-R>y
-
 " cljstyle
 vnoremap <leader>ls mm:! cljstyle pipe<CR>`m
 nnoremap <leader>lS mm?^(<CR>va(:! cljstyle pipe<CR>`m
