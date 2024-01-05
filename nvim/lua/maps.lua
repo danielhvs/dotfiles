@@ -9,8 +9,8 @@ map("n", "<localleader>m", ":e Makefile<CR>")
 map("n", "<localleader>2", ":e ~/.m2/settings.xml<CR>")
 map("n", "<leader>ss", ":Switch<CR>")
 map("n", "<leader>e", ":Neotree toggle reveal=true<CR>")
-map("n", "<leader>tx", ":let @+=expand(\"%:t\")<CR>")
-map("n", "<leader>tX", ":let @+=expand(\"%\")<CR>")
+map("n", "<leader>tx", [[:let @+=expand('%')<CR>]])
+map("n", "<leader>tX", [[:let @+=expand('%:p')<CR>]])
 
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
