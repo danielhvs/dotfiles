@@ -16,6 +16,11 @@ return {
     local lsp = require('lspconfig')
     local cmplsp = require('cmp_nvim_lsp')
 
+    vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+    vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+    vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+    vim.fn.sign_define("DiagnosticSignHint", { text = "H", texthl = "DiagnosticSignHint" })
+
     local the_capabilities = cmplsp.default_capabilities();
 
     vim.keymap.set('n', '<leader>l?', ':LspInfo<CR>', { noremap = true });
