@@ -66,7 +66,7 @@ return
           { name = "path" },
           { name = "buffer" },
           { name = 'luasnip' },
-          { name = "codeium" },
+          -- { name = "codeium" },
         })
     })
   end
