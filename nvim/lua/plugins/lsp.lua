@@ -53,6 +53,12 @@ return {
       end, bufopts)
     end
 
+    local border = 'single'
+
+    vim.diagnostic.config {
+      float = { border = border }
+    }
+
     local the_handlers = {
       ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
         {
@@ -61,8 +67,8 @@ return {
           underline = true,
           virtual_text = true
         }),
-      ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single" }),
-      ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
+      ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+      ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border })
     }
 
     lsp.lua_ls.setup {
