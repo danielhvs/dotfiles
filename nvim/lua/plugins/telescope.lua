@@ -39,19 +39,11 @@ return {
     vim.keymap.set("n", "<leader>to", ":Telescope oldfiles only_cwd=true<CR>")
     vim.keymap.set("n", "<leader>tO", ":Telescope oldfiles<CR>")
     vim.keymap.set("n", "<leader>tY", "\"ty$:Telescope live_grep<CR>\"tpV:s/\\([(){}]\\)/\\\\\\1/g<CR>")
+    vim.keymap.set("n", "<leader>tg", function() builtin.grep_string({ search = vim.fn.expand("<cword>") }) end)
+    vim.keymap.set("n", "<leader>tG", function() builtin.grep_string({ search = vim.fn.expand("<cWORD>") }) end)
+    vim.keymap.set("n", "<leader>tf", function() builtin.find_files({ search_file = vim.fn.expand("<cword>") }) end)
+    vim.keymap.set("n", "<leader>tF", function() builtin.find_files({ search_file = vim.fn.expand("<cWORD>") }) end)
 
-    vim.keymap.set("n", "<leader>tG", function()
-      local word = vim.fn.expand("<cWORD>")
-      builtin.grep_string({ search = word })
-    end)
-
-    vim.keymap.set("n", "<leader>tg", function()
-      local word = vim.fn.expand("<cword>")
-      builtin.grep_string({ search = word })
-    end)
-
-    vim.keymap.set("n", "<leader>tf", "\"zyiw:Telescope find_files<CR>I<C-R>z<ESC>")
-    vim.keymap.set("n", "<leader>tF", "\"zyiW:Telescope find_files<CR>I<C-R>z<ESC>")
     vim.keymap.set("n", "<leader>tx", ":let @0=expand(\"%:t\")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>")
     vim.keymap.set("n", "<leader>tX", ":let @0=expand(\"%\")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>")
     vim.keymap.set("n", "<leader>tr", ":Telescope resume<CR>")
