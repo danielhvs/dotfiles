@@ -34,30 +34,41 @@ return {
         }
       })
 
-    vim.keymap.set("n", "<leader>tp", ":Telescope live_grep<CR>", {});
-    vim.keymap.set("n", "<leader>to", ":Telescope oldfiles only_cwd=true<CR>");
-    vim.keymap.set("n", "<leader>tO", ":Telescope oldfiles<CR>");
-    vim.keymap.set("n", "<leader>tY", "\"ty$:Telescope live_grep<CR>\"tpV:s/\\([(){}]\\)/\\\\\\1/g<CR>");
-    vim.keymap.set("n", "<leader>tg", "\"zyiw:Telescope live_grep<CR>\"zp");
-    vim.keymap.set("n", "<leader>tf", "\"zyiw:Telescope find_files<CR>I<C-R>z<ESC>");
-    vim.keymap.set("n", "<leader>tF", "\"zyiW:Telescope find_files<CR>I<C-R>z<ESC>");
-    vim.keymap.set("n", "<leader>tx", ":let @0=expand(\"%:t\")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>");
-    vim.keymap.set("n", "<leader>tX", ":let @0=expand(\"%\")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>");
-    vim.keymap.set("n", "<leader>tr", ":Telescope resume<CR>");
-    vim.keymap.set("n", "<leader>ts", ":Telescope git_status<CR>");
-    vim.keymap.set("n", "<leader>tS", ":Telescope git_commits<CR>");
-    vim.keymap.set("n", "<leader>p", ":Telescope find_files<CR>");
-    vim.keymap.set("n", "<leader>tb", ":Telescope git_branches<CR>");
-    vim.keymap.set("n", "<leader>T", ":Telescope ");
-    vim.keymap.set("n", "<leader>th", ":Telescope harpoon marks<CR>");
-    vim.keymap.set("n", "<leader>tc", ":Telescope current_buffer_fuzzy_find<CR>");
-    vim.keymap.set("n", "<leader>tE", ":Telescope diagnostics severity=E<CR>");
-    vim.keymap.set("n", "<leader>te", ":Telescope diagnostics bufnr=0 severity=E<CR>");
-    vim.keymap.set("n", "<leader>tW", ":Telescope diagnostics severity=W<CR>");
-    vim.keymap.set("n", "<leader>tw", ":Telescope diagnostics bufnr=0 severity=W<CR>");
-    vim.keymap.set("n", "<leader>lO", ":Telescope lsp_document_symbols<CR>");
-    vim.keymap.set("n", "<leader>ti", ":Telescope diagnostics bufnr=0 severity=I<CR>");
-    vim.keymap.set("n", "<leader>tI", ":Telescope diagnostics severity=I<CR>");
+    local builtin = require('telescope.builtin')
+    vim.keymap.set("n", "<leader>tp", ":Telescope live_grep<CR>", {})
+    vim.keymap.set("n", "<leader>to", ":Telescope oldfiles only_cwd=true<CR>")
+    vim.keymap.set("n", "<leader>tO", ":Telescope oldfiles<CR>")
+    vim.keymap.set("n", "<leader>tY", "\"ty$:Telescope live_grep<CR>\"tpV:s/\\([(){}]\\)/\\\\\\1/g<CR>")
+
+    vim.keymap.set("n", "<leader>tG", function()
+      local word = vim.fn.expand("<cWORD>")
+      builtin.grep_string({ search = word })
+    end)
+
+    vim.keymap.set("n", "<leader>tg", function()
+      local word = vim.fn.expand("<cword>")
+      builtin.grep_string({ search = word })
+    end)
+
+    vim.keymap.set("n", "<leader>tf", "\"zyiw:Telescope find_files<CR>I<C-R>z<ESC>")
+    vim.keymap.set("n", "<leader>tF", "\"zyiW:Telescope find_files<CR>I<C-R>z<ESC>")
+    vim.keymap.set("n", "<leader>tx", ":let @0=expand(\"%:t\")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>")
+    vim.keymap.set("n", "<leader>tX", ":let @0=expand(\"%\")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>")
+    vim.keymap.set("n", "<leader>tr", ":Telescope resume<CR>")
+    vim.keymap.set("n", "<leader>ts", ":Telescope git_status<CR>")
+    vim.keymap.set("n", "<leader>tS", ":Telescope git_commits<CR>")
+    vim.keymap.set("n", "<leader>p", ":Telescope find_files<CR>")
+    vim.keymap.set("n", "<leader>tb", ":Telescope git_branches<CR>")
+    vim.keymap.set("n", "<leader>T", ":Telescope ")
+    vim.keymap.set("n", "<leader>th", ":Telescope harpoon marks<CR>")
+    vim.keymap.set("n", "<leader>tc", ":Telescope current_buffer_fuzzy_find<CR>")
+    vim.keymap.set("n", "<leader>tE", ":Telescope diagnostics severity=E<CR>")
+    vim.keymap.set("n", "<leader>te", ":Telescope diagnostics bufnr=0 severity=E<CR>")
+    vim.keymap.set("n", "<leader>tW", ":Telescope diagnostics severity=W<CR>")
+    vim.keymap.set("n", "<leader>tw", ":Telescope diagnostics bufnr=0 severity=W<CR>")
+    vim.keymap.set("n", "<leader>lO", ":Telescope lsp_document_symbols<CR>")
+    vim.keymap.set("n", "<leader>ti", ":Telescope diagnostics bufnr=0 severity=I<CR>")
+    vim.keymap.set("n", "<leader>tI", ":Telescope diagnostics severity=I<CR>")
     telescope.load_extension("ui-select")
   end
 }
