@@ -228,7 +228,7 @@ export LD_LIBRARY_PATH=/home/danielhabib/jprofiler12/bin/linux-x64
 export SCRIPT_DIR=/home/danielhabib/.config/i3blocks
 
 # copy the last file to the clipboard 
-alias lldw="ls -tr ~/Downloads"
+alias lldw="ls -tlr ~/Downloads"
 
 # copy the full file to the clipboard
 catcp() {

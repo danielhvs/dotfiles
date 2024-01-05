@@ -75,8 +75,6 @@ bindsym --release button2 kill
 bindsym $mod+l focus right
 bindsym $mod+h focus left
 
-bindsym $mod+t split horizontal
-
 bindsym $mod+j focus left
 bindsym $mod+k focus right
 # bindsym $mod+l focus up
