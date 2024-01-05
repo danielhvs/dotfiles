@@ -35,7 +35,7 @@ local config = {
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
     '-jar', '/home/danielhabib/dev/eclipse-jdt-ls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
     '-configuration', '/home/danielhabib/dev/eclipse-jdt-ls/config_linux/',
-    '-data', '/home/danielhabib/workspace-nvim/spring/'
+    '-data', workspace_dir
   },
 
   root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
