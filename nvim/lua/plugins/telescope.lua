@@ -43,17 +43,16 @@ return {
     vim.keymap.set("n", "<leader>tG", function() builtin.grep_string({ search = vim.fn.expand("<cWORD>") }) end)
     vim.keymap.set("n", "<leader>tf", function() builtin.find_files({ search_file = vim.fn.expand("<cword>") }) end)
     vim.keymap.set("n", "<leader>tF", function() builtin.find_files({ search_file = vim.fn.expand("<cWORD>") }) end)
-
-    vim.keymap.set("n", "<leader>tx", ":let @0=expand(\"%:t\")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>")
-    vim.keymap.set("n", "<leader>tX", ":let @0=expand(\"%\")<CR>:Telescope live_grep<CR>I<C-R>0<ESC>")
     vim.keymap.set("n", "<leader>tr", ":Telescope resume<CR>")
     vim.keymap.set("n", "<leader>ts", ":Telescope git_status<CR>")
     vim.keymap.set("n", "<leader>tS", ":Telescope git_commits<CR>")
     vim.keymap.set("n", "<leader>p", ":Telescope find_files<CR>")
     vim.keymap.set("n", "<leader>tb", ":Telescope git_branches<CR>")
+    vim.keymap.set("n", "<leader>th", ":Telescope help_tags<CR>")
     vim.keymap.set("n", "<leader>T", ":Telescope ")
-    vim.keymap.set("n", "<leader>th", ":Telescope harpoon marks<CR>")
+
     vim.keymap.set("n", "<leader>tc", ":Telescope current_buffer_fuzzy_find<CR>")
+
     vim.keymap.set("n", "<leader>tE", ":Telescope diagnostics severity=E<CR>")
     vim.keymap.set("n", "<leader>te", ":Telescope diagnostics bufnr=0 severity=E<CR>")
     vim.keymap.set("n", "<leader>tW", ":Telescope diagnostics severity=W<CR>")
