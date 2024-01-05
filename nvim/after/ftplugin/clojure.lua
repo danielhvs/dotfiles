@@ -10,7 +10,6 @@ nnoremap <leader>cl :!clj-kondo --lint %<CR>
 nnoremap <leader>/ :terminal difft 1.clj 2.clj<CR>
 nnoremap <leader>? :!meld 1.clj 2.clj<CR>
 nnoremap <leader>g5 :!git cherry-pick instrument && git reset HEAD^<CR>
-nnoremap gs $F:l"nyeF.bgf:<C-R>n<CR>
 nnoremap gn Bf/l"myeb"nyt/gg/as <C-R>n]<CR>T["fye:Telescope find_files<CR>"fpV:s/\./\//g<CR>V:s/-/_/g<CR>
 nmap <leader>0 mm"yyiw-wlet[dbg_<ESC><S-M-l>a<CR>(def __<C-r>y__ dbg_)<CR>dbg_<ESC>`m=af
 nmap <leader>9 mm-wlet[dbg_<ESC><S-M-l>a<CR>(def _dbg dbg_)<CR>dbg_<ESC>`m=af
