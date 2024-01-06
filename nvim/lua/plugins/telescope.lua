@@ -20,10 +20,8 @@ return {
           initial_mode = "normal",
           prompt_prefix = "",
           file_ignore_patterns = { "node_modules", "DS_Store", "target" },
-          borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
           layout_config = {
             horizontal = { width = 0.95 },
-            --preview_width = 0.65,
             vertical = { width = 0.95 }
           },
           wrap_results = false
@@ -43,6 +41,7 @@ return {
     vim.keymap.set("n", "<leader>tG", function() builtin.grep_string({ search = vim.fn.expand("<cWORD>") }) end)
     vim.keymap.set("n", "<leader>tf", function() builtin.find_files({ search_file = vim.fn.expand("<cword>") }) end)
     vim.keymap.set("n", "<leader>tF", function() builtin.find_files({ search_file = vim.fn.expand("<cWORD>") }) end)
+    vim.keymap.set("n", "<leader>o", function() builtin.buffers({ sort_lastused = true }) end)
     vim.keymap.set("n", "<leader>tr", ":Telescope resume<CR>")
     vim.keymap.set("n", "<leader>ts", ":Telescope git_status<CR>")
     vim.keymap.set("n", "<leader>tS", ":Telescope git_commits<CR>")
