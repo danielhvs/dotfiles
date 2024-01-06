@@ -1,6 +1,11 @@
 return {
   'neovim/nvim-lspconfig',
+  dependencies = { "folke/neodev.nvim" },
+
   config = function()
+    -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
+    require("neodev").setup({})
+
     local function clj_command(command_name)
       local params = {
         command = command_name,
