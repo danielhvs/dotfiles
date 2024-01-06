@@ -139,14 +139,10 @@ nnoremap <leader>ld :lua vim.lsp.buf.declaration()<CR>
 nnoremap <leader>lt :lua require'jdtls'.test_nearest_method()<CR>
 nnoremap <leader>lh :lua vim.lsp.buf.signature_help()<CR>
 nnoremap <leader>ln :lua vim.lsp.buf.rename()<CR>
-nnoremap <leader>lc :lua require'jdtls'.extract_constant()<CR>
-vnoremap <leader>lc :lua require'jdtls'.extract_constant(true)<CR>
 nnoremap <leader>le :lua require'jdtls'.extract_method()<CR>
 vnoremap <leader>le :lua require'jdtls'.extract_method(true)<CR>
 nnoremap <leader>lv :lua require'jdtls'.extract_variable()<CR>
 vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
-vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
-nnoremap <leader>lq :lua vim.lsp.diagnostic.set_loclist()<CR>
 nmap <leader>ls mmvap,lf<ESC>'m
 nnoremap <leader>lf :lua vim.lsp.buf.format()<CR>
 nnoremap <leader>lj :lua vim.diagnostic.goto_next()<CR>
