@@ -53,13 +53,6 @@ return {
       key_map("n", "<leader>lK", ":lua vim.lsp.buf.outgoing_calls()<CR>", { noremap = true })
       key_map("n", "<leader>lC", ":lua vim.lsp.buf.incoming_calls()<CR>", { noremap = true })
 
-      -- java
-      vim.keymap.set("n", "<leader>lI",
-        function()
-          vim.lsp.buf.code_action({ context = { only = { "refactor.inline" } }, apply = true, filter = function(_action) return true end, })
-        end,
-        { noremap = true })
-
       vim.keymap.set('n', '<leader>lf', function()
         vim.lsp.buf.format { async = true }
       end, bufopts)

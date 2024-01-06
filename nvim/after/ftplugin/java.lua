@@ -180,3 +180,13 @@ map <leader>> mmcsw>`m
 nnoremap <localleader>rt mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
 
 ]]
+
+-- refactor inline
+vim.keymap.set('n', '<leader>lI', function()
+    vim.lsp.buf.code_action {
+        context = { only = { "refactor.inline" } },
+        filter = function(action) return true end,
+        apply = true,
+    }
+end, {})
+
