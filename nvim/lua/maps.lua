@@ -13,6 +13,10 @@ map("n", "<leader>tX", [[:let @+=expand('%:p')<CR>]])
 map("n", "<leader>lo", [[:TagbarOpenAutoClose<CR>]])
 map("n", "<leader>sd", [[vap:DB postgres://superuser:the_pwd@localhost:5432/customers<CR>]])
 map("v", "<leader>sd", [[:'<'>DB postgres://superuser:the_pwd@localhost:5432/customers<CR>]])
+-- overwrite leap defaults for S
+map({"n", "x", "o"}, "S", "S")
+map({"n", "x", "o"}, "<C-S>", "<Plug>(leap-backward)")
+-- leap gs is overriden later
 
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
