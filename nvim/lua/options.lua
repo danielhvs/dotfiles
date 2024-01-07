@@ -11,7 +11,8 @@ o.autoindent = true
 o.smartindent = true
 o.background = "dark"
 o.clipboard = "unnamedplus"
-o.scrolloff = 1
+o.scrolloff = 8
+o.sidescrolloff = 8
 o.hidden = true
 o.lazyredraw = true
 o.hlsearch = false
@@ -35,6 +36,7 @@ o.ignorecase = true
 o.autoread = true
 o.showmode = false
 o.cursorline = true
+o.confirm = true
 
 vim.cmd [[
 set iskeyword+=-
