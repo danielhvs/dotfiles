@@ -3,6 +3,9 @@ return {
   dependencies = { 'nvim-treesitter/nvim-treesitter-textobjects' },
   config = function()
     require 'nvim-treesitter.configs'.setup {
+      modules = {},
+      auto_install = false,
+      ignore_install = {},
       ensure_installed = { "dockerfile",
         "make",
         "typescript",

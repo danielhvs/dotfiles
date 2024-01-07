@@ -10,6 +10,9 @@ map("n", "<localleader>2", ":e ~/.m2/settings.xml<CR>")
 map("n", "<leader>ss", ":Switch<CR>")
 map("n", "<leader>tx", [[:let @+=expand('%')<CR>]])
 map("n", "<leader>tX", [[:let @+=expand('%:p')<CR>]])
+map("n", "<leader>lo", [[:TagbarOpenAutoClose<CR>]])
+map("n", "<leader>sd", [[vap:DB postgres://superuser:the_pwd@localhost:5432/customers<CR>]])
+map("v", "<leader>sd", [[:'<'>DB postgres://superuser:the_pwd@localhost:5432/customers<CR>]])
 
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
