@@ -74,7 +74,7 @@ local config = {
 
 require('jdtls').start_or_attach(config)
 
-require('lsp_mappings')(0,0)
+require('lsp_mappings')(0, 0)
 
 vim.cmd [[
 " api
