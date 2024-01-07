@@ -49,5 +49,4 @@ set wildignore+=**/node_modules/**,**/target/**
 filetype plugin indent on
 setglobal tags-=./tags tags-=./tags; tags^=./tags;
 let g:loaded_perl_provider = 0
-au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}
 ]]

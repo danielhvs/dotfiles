@@ -1,5 +1,15 @@
 local api = vim.api
 
+-- don't auto comment new line
+api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
+
+-- Highlight on yank
+api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 100 })
+  end,
+})
+
 -- go to last loc when opening a buffer
 api.nvim_create_autocmd("BufReadPost", {
   callback = function()
