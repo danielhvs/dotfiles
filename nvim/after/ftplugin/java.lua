@@ -159,6 +159,9 @@ nnoremap <localleader>rt mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interfac
 
 ]]
 
+
+vim.keymap.set('n', '<leader>lc', function () require'jdtls'.extract_constant() end)
+
 -- refactor inline
 vim.keymap.set('n', '<leader>lI', function()
   vim.lsp.buf.code_action {
