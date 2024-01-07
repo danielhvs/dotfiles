@@ -27,6 +27,9 @@ return {
           wrap_results = false
         },
         pickers = {
+          current_buffer_fuzzy_find = {
+            previewer = false,
+          },
           find_files = {
             find_command = { "rg", "--files", "--iglob", "!.git", "--hidden" } }
         }
