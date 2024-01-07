@@ -41,7 +41,12 @@ return {
     vim.keymap.set("n", "<leader>tG", function() builtin.grep_string({ search = vim.fn.expand("<cWORD>") }) end)
     vim.keymap.set("n", "<leader>tf", function() builtin.find_files({ search_file = vim.fn.expand("<cword>") }) end)
     vim.keymap.set("n", "<leader>tF", function() builtin.find_files({ search_file = vim.fn.expand("<cWORD>") }) end)
-    vim.keymap.set("n", "<leader>o", function() builtin.buffers({ sort_lastused = true }) end)
+    vim.keymap.set("n", "<leader>o", function()
+      telescope.setup({ defaults = { initial_mode = 'insert' } })
+      builtin.buffers({ sort_lastused = true })
+      telescope.setup({ defaults = { initial_mode = 'normal' } })
+    end)
+
     vim.keymap.set("n", "<leader>tr", ":Telescope resume<CR>")
     vim.keymap.set("n", "<leader>ts", ":Telescope git_status<CR>")
     vim.keymap.set("n", "<leader>tS", ":Telescope git_commits<CR>")
