@@ -1,4 +1,4 @@
-vim.cmd[[
+vim.cmd [[
 
 nnoremap <leader>jl mm"yyiw?deftest\\|defn\\|defmethod<CR>W"fyiW'mo(clojure.pprint/pprint {:debug "<esc>"fpa <ESC>"ypa" :data <esc>"ypa})<esc>`m
 nnoremap <leader>ld ggyG:silent! bwipeout! debug.clj<CR>:!rm debug.clj<CR>:e debug.clj<CR>P:w!<CR>
@@ -16,11 +16,6 @@ nmap <leader>9 mm-wlet[dbg_<ESC><S-M-l>a<CR>(def _dbg dbg_)<CR>dbg_<ESC>`m=af
 nmap <leader>) mm-wlet[pdb_<ESC><S-M-l>a<CR>(clojure.pprint/pprint {:debug pdb_})<CR>pdb_<ESC>`m=af
 nmap <leader>( mmwwww-o-o=af
 nnoremap <leader>lÇ :e mg.txt<CR>
-" snippets (role)
-" nnoremap <leader>rp oset schema 'piedpiper';<CR>select from<ESC>^ea 
-nnoremap <leader>rp oset schema 'lol';<CR>select from ;<ESC>^ea 
-" honey
-nnoremap <leader>sh mmI(-> (hh/select :e._id :e.name)<ESC>o(hh/from :e)<ESC>o(hh/where [:= 1 1]))<ESC>`m=af
 nmap <leader>c1 yaf:e1.clj<CR>gggrG:w<CR>:e diff.clj<CR>
 nmap <leader>c2 yaf:e2.clj<CR>gggrG:w<CR>:e diff.clj<CR>
 nmap <leader>cc :wa<CR>,/
@@ -41,3 +36,22 @@ nnoremap <localleader>q yapGo(execute! @ds (queries/select-raw ""))<ESC>F"i<CR><
 nnoremap <localleader>Q Go(execute! @ds (queries/select-raw ""))<ESC>F"i<CR><CR><CR><CR><ESC>2kp:ConjureEvalRootForm<CR>:update<CR>
 
 ]]
+
+
+local function clj_command(command_name)
+  local params = {
+    command = command_name,
+    arguments = {
+      "file://" .. (vim.fn.expand "%:p"),
+      vim.fn.line "." - 1,
+      vim.fn.col "." - 1 },
+  }
+  vim.lsp.buf.execute_command(params)
+end
+
+vim.keymap.set("n", "<localleader>r.", function() clj_command("thread-first-all") end, { noremap = true })
+vim.keymap.set("n", "<localleader>r>", function() clj_command("thread-last-all") end, { noremap = true })
+vim.keymap.set("n", "<localleader>ri", function() clj_command("inline-symbol") end, { noremap = true })
+vim.keymap.set("n", "<localleader>rn", function() clj_command("clean-ns") end, { noremap = true })
+vim.keymap.set("n", "<localleader>ru", function() clj_command("unwind-thread") end, { noremap = true })
+vim.keymap.set("n", "<localleader>rU", function() clj_command("unwind-all") end, { noremap = true })

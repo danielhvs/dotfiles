@@ -33,7 +33,6 @@ vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 vnoremap <leader>lv :lua require'jdtls'.extract_variable(true)<CR>
 nnoremap <leader>lq :lua vim.lsp.diagnostic.set_loclist()<CR>
 nmap <leader>ls mmvap,lf<ESC>'m
-nnoremap <leader>lf :lua vim.lsp.buf.format()<CR>
 nnoremap <leader>lj :lua vim.diagnostic.goto_next()<CR>
 nnoremap <leader>lk :lua vim.diagnostic.goto_prev()<CR>
 nnoremap <leader>lw :lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>
