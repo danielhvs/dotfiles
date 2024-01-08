@@ -14,9 +14,21 @@ map("n", "<leader>lo", [[:TagbarOpenAutoClose<CR>]])
 map("n", "<leader>sd", [[vap:DB postgres://superuser:the_pwd@localhost:5432/customers<CR>]])
 map("v", "<leader>sd", [[:'<'>DB postgres://superuser:the_pwd@localhost:5432/customers<CR>]])
 -- overwrite leap defaults for S
-map({"n", "x", "o"}, "S", "S")
-map({"n", "x", "o"}, "<C-S>", "<Plug>(leap-backward)")
+map({ "n", "x", "o" }, "S", "S")
+map({ "n", "x", "o" }, "<C-S>", "<Plug>(leap-backward)")
 -- leap gs is overriden later
+
+-- format surround
+map("n", "<leader>,", [[mmcsW``mf`]], { remap = true })
+map("n", '<leader>"', [[mmcsw"`mf"]], { remap = true })
+map("n", '<leader>)', [[mmcsw)<ESC>`m]], { remap = true })
+map("n", '<leader>(', [[mmcsw)<ESC>`m]], { remap = true })
+map("n", '<leader>]', [[mmcsw]<ESC>`m]], { remap = true })
+map("n", '<leader>[', [[mmcsw]<ESC>`m]], { remap = true })
+map("n", '<leader>}', [[mmcsw}<ESC>`m]], { remap = true })
+map("n", '<leader>}', [[mmcsw}<ESC>`m]], { remap = true })
+map("n", '<leader>>', [[mmcsw><ESC>`m]], { remap = true })
+map("n", '<leader><', [[mmcsw><ESC>`m]], { remap = true })
 
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
@@ -89,16 +101,6 @@ nnoremap <leader>fo vap:s/; (out) //ge<CR>
 
 " similar to format
 nnoremap <leader>` mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
-
-" format around
-nmap <leader>, mmcsW``mf`
-nmap <leader>" mmcsw"`mf"
-nmap <leader>) mmcsw)<ESC>`m
-nmap <leader>( mmcsW)<ESC>`m
-nmap <leader>] mmcsw]<ESC>`m
-nmap <leader>[ mmcsW]<ESC>`m
-nmap <leader>} mmcsw}<ESC>`m
-nmap <leader>} mmcsW}<ESC>`m
 
 " moving lines
 vnoremap J :m '>+1<CR>gv
