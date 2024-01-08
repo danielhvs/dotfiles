@@ -284,3 +284,5 @@ alias tt="nvim ~/dotfiles/.tmux.conf"
 alias tn="tmux -u -f ~/dotfiles/.tmux.conf new"
 alias ta="tmux -u -f ~/dotfiles/.tmux.conf attach"
 alias tls="tmux ls"
+
+eval "$(direnv hook bash)"
