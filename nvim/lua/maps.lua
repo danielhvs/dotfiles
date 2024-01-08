@@ -2,7 +2,7 @@ local map = vim.keymap.set
 
 -- Deleting buffers
 map("n", "<localleader>d", ":bd!<CR>")
-map("n", "<leader>d", ":Bdelete this<CR>")
+map("n", "<leader>d", ":bd!<CR>")
 map("n", "<leader>D", ":Bdelete other<CR>")
 map("n", "<localleader>t", ":e t<CR>")
 map("n", "<localleader>m", ":e Makefile<CR>")
