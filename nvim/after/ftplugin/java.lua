@@ -139,10 +139,9 @@ nmap <leader>ls mmvap,lf<ESC>'m
 nnoremap <leader>l! :lua vim.lsp.stop_client(vim.lsp.get_active_clients())<CR>
 
 " java
-nnoremap <leader>jl mmyiwoLOG.info(":debug <esc>pa = ", <esc>pa);<esc>=j`m
+nnoremap <leader>jl mmyiwoLOG.info(":debug <esc>pa = "+ <esc>pa);<esc>=j`m
 nnoremap <leader>jL mmyiwoLOG.info(":debug <esc>pa ");<esc>F"i
-nnoremap <leader>jL mmyiwoLOG.info(":debug <esc>pa ");<esc>F"i
-nmap <leader>jk mm,fc"cyiw}aprivate static final LoggerFactory LOG = LoggerFactory.getInstance(<C-R>c.class.toString());<ESC>ggoimport br.gov.dataprev.infra.core.util.io.LoggerFactory;<ESC>`mzz
+nmap <leader>jk mm,fc"cyiw}aprivate static final Logger LOG = LoggerFactory.getLogger(<C-R>c.class.toString());<ESC>ggoimport org.slf4j.Logger;import org.slf4j.LoggerFactory;<ESC>`mzz
 
 " jumps
 nnoremap <leader>fc /^public.*\(class\\|interface\\|enum\)<CR>z<CR>/[A-Z]<CR>
