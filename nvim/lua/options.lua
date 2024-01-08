@@ -37,7 +37,8 @@ o.autoread = true
 o.showmode = false
 o.cursorline = true
 o.confirm = true
-o.winbar = "%=%F"
+o.winbar = "%t%=%F"
+
 vim.cmd [[
 set iskeyword+=-
 set path+=**
