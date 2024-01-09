@@ -55,3 +55,4 @@ vim.keymap.set("n", "<localleader>ri", function() clj_command("inline-symbol") e
 vim.keymap.set("n", "<localleader>rn", function() clj_command("clean-ns") end, { noremap = true })
 vim.keymap.set("n", "<localleader>ru", function() clj_command("unwind-thread") end, { noremap = true })
 vim.keymap.set("n", "<localleader>rU", function() clj_command("unwind-all") end, { noremap = true })
+vim.keymap.set("n", "<localleader>rm", function() clj_command("move-to-let") end, { noremap = true })
