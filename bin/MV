@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# move from Downloads to .
+if [ -z "$1" ]; then
+  ls ~/Downloads/ -ltr 
+  echo "Pass an argument"
+  exit 1
+fi
+
+ls ~/Downloads/ -ltr && mv -v /home/danielhabib/Downloads/*$1* . 
