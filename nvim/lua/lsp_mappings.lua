@@ -4,7 +4,6 @@ return function(_, bufnr)
 
   key_map("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true })
   key_map("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true })
-  key_map("n", "<leader>lt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { noremap = true })
   key_map("n", "<leader>lh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { noremap = true })
   key_map("n", "<leader>ln", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true })
   key_map("n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next()<CR>", { noremap = true })

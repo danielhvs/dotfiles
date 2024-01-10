@@ -165,7 +165,4 @@ nnoremap <leader>ci :cd ~/workspace-nvim/eco/eco-sincronizacao<CR>
 nnoremap <leader>cD :cd ~/workspace-nvim/dec/dec-service<CR>
 nnoremap <leader>cN :cd ~/workspace-nvim/dec/dec-negocio<CR>
 nnoremap gs $F:l"nyeF.bgf:<C-R>n<CR>
-
-
-
 ]]

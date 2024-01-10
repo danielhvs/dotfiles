@@ -19,10 +19,6 @@ nnoremap <leader>lÇ :e mg.txt<CR>
 nmap <leader>c1 yaf:e1.clj<CR>gggrG:w<CR>:e diff.clj<CR>
 nmap <leader>c2 yaf:e2.clj<CR>gggrG:w<CR>:e diff.clj<CR>
 nmap <leader>cc :wa<CR>,/
-nmap <localleader>xi <I
-nmap <localleader>xI <I<ESC>lmma<CR><ESC>`m
-nmap <localleader>xa >I 
-nmap <localleader>xA >I<CR><ESC>
 nnoremap <localleader><localleader> :ConjureEvalMarkedForm<CR>
 nnoremap <localleader>B :silent !sh ~/workspace/flex-files/scripts/rebuild.sh<CR>
 nnoremap <leader>jk mm"yyiwgg2jo["@mui/material/<C-R>y" :default <C-R>y]<ESC>`m
@@ -60,3 +56,8 @@ vim.keymap.set("n", "<leader>ll", function() clj_command("move-to-let") end, { n
 -- FIXME not working
 vim.keymap.set("n", "<leader>lL", function() clj_command("introduce-let") end, { noremap = true })
 
+-- advanced edits mnemonic "add code..."
+vim.keymap.set("n", "<leader>ai", [[<I]], { remap = true })
+vim.keymap.set("n", "<leader>aI", [[<I<ESC>lmma<CR><ESC>`m]], { remap = true })
+vim.keymap.set("n", "<leader>aa", [[>I<CR>]], { remap = true })
+vim.keymap.set("n", "<leader>aA", [[>I<CR><ESC>P]], { remap = true })
