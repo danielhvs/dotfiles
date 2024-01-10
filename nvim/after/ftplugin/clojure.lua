@@ -49,10 +49,14 @@ local function clj_command(command_name)
   vim.lsp.buf.execute_command(params)
 end
 
-vim.keymap.set("n", "<localleader>r.", function() clj_command("thread-first-all") end, { noremap = true })
-vim.keymap.set("n", "<localleader>r>", function() clj_command("thread-last-all") end, { noremap = true })
-vim.keymap.set("n", "<localleader>ri", function() clj_command("inline-symbol") end, { noremap = true })
-vim.keymap.set("n", "<localleader>rn", function() clj_command("clean-ns") end, { noremap = true })
-vim.keymap.set("n", "<localleader>ru", function() clj_command("unwind-thread") end, { noremap = true })
-vim.keymap.set("n", "<localleader>rU", function() clj_command("unwind-all") end, { noremap = true })
-vim.keymap.set("n", "<localleader>rm", function() clj_command("move-to-let") end, { noremap = true })
+vim.keymap.set("n", "<leader>lt", function() clj_command("thread-first-all") end, { noremap = true })
+vim.keymap.set("n", "<leader>lT", function() clj_command("thread-last-all") end, { noremap = true })
+vim.keymap.set("n", "<leader>lI", function() clj_command("inline-symbol") end, { noremap = true })
+vim.keymap.set("n", "<leader>lm", function() clj_command("clean-ns") end, { noremap = true })
+vim.keymap.set("n", "<leader>lu", function() clj_command("unwind-thread") end, { noremap = true })
+vim.keymap.set("n", "<leader>lU", function() clj_command("unwind-all") end, { noremap = true })
+-- FIXME not working
+vim.keymap.set("n", "<leader>ll", function() clj_command("move-to-let") end, { noremap = true })
+-- FIXME not working
+vim.keymap.set("n", "<leader>lL", function() clj_command("introduce-let") end, { noremap = true })
+
