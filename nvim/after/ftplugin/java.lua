@@ -145,6 +145,8 @@ nmap <leader>jk mm,fc"cyiw}aprivate static final Logger LOG = LoggerFactory.getL
 
 " jumps
 nnoremap <leader>fc /^public.*\(class\\|interface\\|enum\)<CR>z<CR>/[A-Z]<CR>
+let @a='yiwA pb~A;Iprivate O@Autowired'
+let @b='yiw,fcopb~@a,lm'
 
 " copia metodo
 nnoremap <leader>sm mm0f(b"wyiw<CR>G/public.*\(class\\|interface\\|enum\)<CR>z<CR>/[A-Z]<CR>yiwo<ESC>P0~A.<ESC>"wp0<ESC>dd`m:update<CR>
