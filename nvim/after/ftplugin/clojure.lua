@@ -23,7 +23,6 @@ nnoremap <localleader><localleader> :ConjureEvalMarkedForm<CR>
 nnoremap <localleader>B :silent !sh ~/workspace/flex-files/scripts/rebuild.sh<CR>
 nnoremap <leader>jk mm"yyiwgg2jo["@mui/material/<C-R>y" :default <C-R>y]<ESC>`m
 nnoremap <localleader>rt :ConjureEvalBuf<CR>?deftest<CR>$B"yyiw<ESC>Go<CR>(comment (clojure.test/run-test <C-R>y))<ESC>:redraw<CR>F(lmTmt:ConjureEvalCurrentForm<CR>:update<CR><C-o><C-o>zz
-nnoremap <localleader>u :e dev/user.clj<CR>
 " cljstyle
 vnoremap <leader>ls mm:! cljstyle pipe<CR>`m
 nnoremap <leader>lS mm?^(<CR>va(:! cljstyle pipe<CR>`m
