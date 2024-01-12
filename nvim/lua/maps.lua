@@ -51,6 +51,8 @@ nnoremap Q mm0"yy$:r! <C-R>y<CR>`m
 vnoremap Q mm"yy:r! <C-R>y<CR>`m
 nnoremap gQ mm0!!sh<CR>`m
 
+nnoremap <leader>sm vap:%DB mongodb://@localhost:27017/mongodb_1<CR>
+
 " custom display
 nnoremap '' ``
 nnoremap z<CR> zt
