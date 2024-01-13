@@ -1,8 +1,15 @@
 return {
-  'ap/vim-buftabline',
+  'akinsho/bufferline.nvim',
+  version = "*",
+  dependencies = 'nvim-tree/nvim-web-devicons',
+
   config = function()
-    vim.g.buftabline_numbers    = 0
-    vim.g.buftabline_indicators = 1
-    vim.g.buftabline_separators = 1
+    require("bufferline").setup {
+      options = {
+        show_buffer_close_icons = false,
+        show_close_icon = false,
+      },
+    }
   end
+  ,
 }
