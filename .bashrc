@@ -291,3 +291,6 @@ alias cat="bat"
 
 . "$HOME/.asdf/asdf.sh"
 . "$HOME/.asdf/completions/asdf.bash"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+alias cdf='cd `find  ~/dotfiles ~/dev ~/workspace ~/workspace-nvim  -maxdepth 1 -type d | fzf`'
