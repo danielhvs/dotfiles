@@ -286,3 +286,8 @@ alias ta="tmux -u -f ~/dotfiles/.tmux.conf attach"
 alias tls="tmux ls"
 
 eval "$(direnv hook bash)"
+
+alias cat="bat"
+
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
