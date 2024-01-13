@@ -33,7 +33,7 @@ map("n", '<leader><', [[mmcsw><ESC>`m]], { remap = true })
 
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
-nmap gx :silent execute "!xdg-open " . shellescape("<cWORD>")<CR>
+nmap gx :silent execute "!xdg-open " . shellescape("<cWORD>") . "&"<CR>
 " bug? fix for vim-fugitive rhubarb :GBrowse
 command! -nargs=1 Browse silent execute '!xdg-open' shellescape(<q-args>,1)
 "
