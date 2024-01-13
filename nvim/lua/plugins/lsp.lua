@@ -61,5 +61,14 @@ return {
       on_attach = setup_mappings,
       capabilities = the_capabilities,
     }
+
+    -- setting up the elixir language server
+    -- you have to manually specify the entrypoint cmd for elixir-ls
+    lsp.elixirls.setup {
+      cmd = { "elixir-ls" }, -- from mason
+      on_attach = setup_mappings,
+      capabilities = the_capabilities,
+      handlers = the_handlers,
+    }
   end
 }
