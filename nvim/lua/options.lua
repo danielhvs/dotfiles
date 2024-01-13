@@ -3,6 +3,7 @@ g.maplocalleader = "-"
 g.mapleader = ","
 
 local o = vim.opt
+o.swapfile = false
 o.title = true
 o.termguicolors = true
 o.shiftwidth = 2
