@@ -24,7 +24,9 @@
   '(
     evil
 
-    smex
+    ; smex
+
+    ; org-mode ; M-x package-install RET org-contrib RET
 
     evil-surround
     ;; key bindings and code colorization for Clojure
@@ -44,9 +46,9 @@
     ;; smex
 
     ;; project navigation
-    projectile
+    ; projectile
 
-    helm-projectile
+    ; helm-projectile
 
     ;; git integration
     magit))
@@ -69,22 +71,22 @@
   :config (evil-mode 1))
 (global-evil-surround-mode 1)
 
-;; SMEX
-(require 'smex)
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+; ;; SMEX
+; (require 'smex)
+; (smex-initialize)
+; (global-set-key (kbd "M-x") 'smex)
+; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
-;; PROJECTILE
-(use-package projectile
-  :ensure t
-  :config
-  (define-key projectile-mode-map (kbd "C-x p") 'projectile-command-map)
-  (projectile-mode +1))
+; ;; PROJECTILE
+; (use-package projectile
+;   :ensure t
+;   :config
+;   (define-key projectile-mode-map (kbd "C-x p") 'projectile-command-map)
+;   (projectile-mode +1))
 
-(use-package helm-projectile
-  :ensure t
-  :config (helm-projectile-on))
+; (use-package helm-projectile
+;   :ensure t
+;   :config (helm-projectile-on))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -93,7 +95,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(deeper-blue))
  '(package-selected-packages
-   '(helm-projectile projectile clojure-mode use-package magit evil-surround)))
+   '(org-contrib helm-projectile projectile clojure-mode use-package magit evil-surround)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -124,7 +126,6 @@
 (setq display-line-numbers-type 'relative)
 
 ;; ui
-
 
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
