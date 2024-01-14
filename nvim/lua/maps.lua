@@ -52,6 +52,7 @@ vnoremap Q mm"yy:r! <C-R>y<CR>`m
 nnoremap gQ mm0!!sh<CR>`m
 
 nnoremap <leader>sm vap:%DB mongodb://@localhost:27017/mongodb_1<CR>
+nnoremap <leader>sd vap:DB postgres://postgres:postgres@localhost:5432/forum_dev<CR>
 
 " custom display
 nnoremap '' ``
