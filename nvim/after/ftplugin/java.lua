@@ -155,6 +155,9 @@ map <localleader>w csw)i
 map <localleader>> mmcsw>iList<ESC>`m
 map <leader>> mmcsw>`m
 
+" in insert mode... set bla
+inoremap <C-d> <ESC>?\.set<CR>4l"yye$a(<C-r>y<ESC>b~A);<ESC>F(l
+
 " test
 nnoremap <localleader>rt mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
 
