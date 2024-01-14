@@ -13,6 +13,7 @@ local init = function()
   vim.cmd.terminal()
   vim.cmd [[redir! > /tmp/nvim_terminal_job_id | echo b:terminal_job_id | redir END]]
   vim.api.nvim_chan_send(vim.bo.channel, "iex\r")
+  vim.cmd [[wincmd h]]
 end
 
 -- eval init
@@ -31,4 +32,13 @@ vim.keymap.set('n', '<localleader>ee', function()
     false)
   print(vim.inspect(line))
   send_iex(line[1])
+end, {})
+
+-- eval buf
+vim.keymap.set('n', '<localleader>eb', function()
+  local lines = vim.api.nvim_buf_get_lines(vim.api.nvim_get_current_buf(), 0, -1, false)
+  print(vim.inspect(lines))
+  for _, line in pairs(lines) do
+    send_iex(line)
+  end
 end, {})
