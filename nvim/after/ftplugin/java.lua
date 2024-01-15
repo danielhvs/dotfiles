@@ -96,7 +96,7 @@ nnoremap <localleader>L :silent !limpa-lsp.sh<CR>:JdtUpdateConfig<CR>:JdtRestart
 
 nnoremap <localleader>rt mm?@Test<CR>/void<CR>W"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c\#<C-R>y<CR><CR><C-O>
 nnoremap <localleader>rT mm?@Test<CR>jWW"yyiw/^public.*\(class\\|interface\\|enum\)<CR>WW"cyiw`m:terminal mvn surefire:test -Dtest=<C-R>c<CR>
-nnoremap <localleader>T :silent !sh /home/danielhabib/dtp/nvim/test.sh<CR>
+nnoremap <localleader>T :silent !sh /home/danielhabib/workspace-nvim/dtp/nvim/test.sh<CR>
 
 " typescript
 nnoremap <leader>jt mm"yyiwoconsole.log(":debug <C-R>y = ", <C-R>y);<esc>=j`m
