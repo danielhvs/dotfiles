@@ -8,12 +8,10 @@ map("n", "<localleader>t", ":e t<CR>")
 map("n", "<localleader>m", ":e Makefile<CR>")
 map("n", "<localleader>u", ":find user.clj<CR>")
 map("n", "<localleader>2", ":e ~/.m2/settings.xml<CR>")
-map("n", "<leader>ss", ":Switch<CR>")
+map("n", "<leader>ss", ":ToggleAlternate<CR>")
 map("n", "<leader>tx", [[:let @+=expand('%')<CR>]])
 map("n", "<leader>tX", [[:let @+=expand('%:p')<CR>]])
 map("n", "<leader>lo", [[:TagbarOpenAutoClose<CR>]])
-map("n", "<leader>sd", [[vap:DB postgres://superuser:the_pwd@localhost:5432/customers<CR>]])
-map("v", "<leader>sd", [[:'<'>DB postgres://superuser:the_pwd@localhost:5432/customers<CR>]])
 -- overwrite leap defaults for S
 map({ "n", "x", "o" }, "S", "S")
 map({ "n", "x", "o" }, "<C-S>", "<Plug>(leap-backward)")
@@ -52,7 +50,7 @@ vnoremap Q mm"yy:r! <C-R>y<CR>`m
 nnoremap gQ mm0!!sh<CR>`m
 
 nnoremap <leader>sm vap:%DB mongodb://@localhost:27017/mongodb_1<CR>
-nnoremap <leader>sd vap:DB postgres://postgres:postgres@localhost:5432/forum_dev<CR>
+nnoremap <leader>sd vap:DB postgres://postgres:postgres@localhost:5432/postgres<CR>
 
 " custom display
 nnoremap '' ``

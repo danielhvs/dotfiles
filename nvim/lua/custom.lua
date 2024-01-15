@@ -1,4 +1,4 @@
--- FIXME call custom
+-- send stuff to terminal
 local send_to_termina = function(content)
   local f = assert(io.open("/tmp/nvim_terminal_job_id", "rb"))
   local job_id = tonumber(f:read("*all"))
@@ -19,12 +19,6 @@ end
 -- eval init terminal
 vim.keymap.set('n', '<localleader>et', function()
   open_terminal()
-end, {})
-
--- eval init
-vim.keymap.set('n', '<localleader>ei', function()
-  open_terminal()
-  send_to_termina("iex\r")
 end, {})
 
 -- eval word

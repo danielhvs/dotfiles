@@ -21,3 +21,4 @@ require("lazy").setup("plugins", {
 })
 
 require("maps")
+require("custom")
