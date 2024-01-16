@@ -7,6 +7,8 @@ return {
       auto_install = false,
       ignore_install = {},
       ensure_installed = { "dockerfile",
+        "html",
+        "css",
         "make",
         "typescript",
         "javascript",

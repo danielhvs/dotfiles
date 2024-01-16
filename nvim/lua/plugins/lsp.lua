@@ -6,6 +6,9 @@ return {
     -- IMPORTANT: make sure to setup neodev BEFORE lspconfig
     require("neodev").setup({})
 
+    -- Enable rounded borders in :LspInfo window.
+    require("lspconfig.ui.windows").default_options.border = "rounded"
+
     local lsp = require('lspconfig')
     local cmplsp = require('cmp_nvim_lsp')
 
