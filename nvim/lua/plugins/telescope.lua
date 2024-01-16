@@ -19,7 +19,7 @@ return {
           path_display = { "smart" },
           initial_mode = "normal",
           prompt_prefix = "",
-          file_ignore_patterns = { "node_modules", "DS_Store", "target",  "^deps/" },
+          file_ignore_patterns = { "node_modules", "DS_Store", "target", "^deps/" },
           layout_config = {
             horizontal = { width = 0.95 },
             vertical = { width = 0.95 }
@@ -46,7 +46,7 @@ return {
     vim.keymap.set("n", "<leader>tF", function() builtin.find_files({ search_file = vim.fn.expand("<cWORD>") }) end)
     vim.keymap.set("n", "<leader>o", function()
       telescope.setup({ defaults = { initial_mode = 'insert' } })
-      builtin.buffers({ sort_lastused = true })
+      builtin.buffers({ sort_lastused = true, previewer = false, })
       telescope.setup({ defaults = { initial_mode = 'normal' } })
     end)
 
