@@ -4,6 +4,7 @@ return {
     require("alternate-toggler").setup({
       alternates = {
         ["private"] = "public",
+        ["DONE"] = "TODO",
       }
     })
     -- ,ss
