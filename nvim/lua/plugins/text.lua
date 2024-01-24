@@ -5,6 +5,7 @@ return {
       alternates = {
         ["private"] = "public",
         ["DONE"] = "TODO",
+        ["DEBUG"] = "INFO",
       }
     })
     -- ,ss
