@@ -6,7 +6,7 @@ api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
 -- Highlight on yank
 api.nvim_create_autocmd("TextYankPost", {
   callback = function()
-    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 100 })
+    vim.highlight.on_yank({ higroup = "Search", timeout = 100 })
   end,
 })
 
