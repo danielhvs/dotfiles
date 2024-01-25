@@ -16,6 +16,7 @@ map("n", "<leader>lo", [[:TagbarOpenAutoClose<CR>]])
 map({ "n", "x", "o" }, "S", "S")
 map({ "n", "x", "o" }, "<C-S>", "<Plug>(leap-backward)")
 -- leap gs is overriden later
+map("n", 'gf', [[gF]])
 
 -- format surround
 map("n", "<leader>,", [[mmcsW``mf`]], { remap = true })
@@ -28,6 +29,7 @@ map("n", '<leader>}', [[mmcsw}<ESC>`m]], { remap = true })
 map("n", '<leader>}', [[mmcsw}<ESC>`m]], { remap = true })
 map("n", '<leader>>', [[mmcsw><ESC>`m]], { remap = true })
 map("n", '<leader><', [[mmcsw><ESC>`m]], { remap = true })
+
 
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
