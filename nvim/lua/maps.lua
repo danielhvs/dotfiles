@@ -106,9 +106,6 @@ nnoremap <leader>fo vap:s/; (out) //ge<CR>
 " similar to format
 nnoremap <leader>` mm{I```<ESC>O<ESC>}I```<ESC>o<ESC>`m
 
-" moving lines
-vnoremap J :m '>+1<CR>gv
-vnoremap K :m '<-2<CR>gv
 " path autocomplete
 inoremap <C-space> <C-x><C-f>
 
