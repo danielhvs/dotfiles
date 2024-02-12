@@ -26,8 +26,6 @@
 
     ; smex
 
-    ; org-mode ; M-x package-install RET org-contrib RET
-
     evil-surround
     ;; key bindings and code colorization for Clojure
     ;; https://github.com/clojure-emacs/clojure-mode
@@ -135,3 +133,9 @@
 ;; Don't show native OS scroll bars for buffers because they're redundant
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
+
+;; y or n
+(fset 'yes-or-no-p 'y-or-n-p)
+;; No need for ~ files when editing
+(setq create-lockfiles nil)
+
