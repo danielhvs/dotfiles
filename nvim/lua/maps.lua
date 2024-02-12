@@ -31,6 +31,8 @@ map("n", '<leader>>', [[mmcsw><ESC>`m]], { remap = true })
 map("n", '<leader><', [[mmcsw><ESC>`m]], { remap = true })
 
 
+
+
 vim.cmd [[
 " bug? so me fix telescope has removed netrw gx?!
 nmap gx :silent execute "!xdg-open " . shellescape("<cWORD>") . "&"<CR>
