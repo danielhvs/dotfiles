@@ -142,5 +142,7 @@
 
 ; evil integration fixes
 (evil-set-undo-system 'undo-redo)
+
+; https://evil.readthedocs.io/en/latest/keymaps.html#elispobj-evil-set-leader
 (evil-global-set-key 'normal ",w" 'save-buffer)
 (evil-global-set-key 'normal ",d" 'kill-this-buffer)
