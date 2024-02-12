@@ -146,3 +146,6 @@
 ; https://evil.readthedocs.io/en/latest/keymaps.html#elispobj-evil-set-leader
 (evil-global-set-key 'normal ",w" 'save-buffer)
 (evil-global-set-key 'normal ",d" 'kill-this-buffer)
+(evil-global-set-key 'normal ",o" 'buffer-menu)
+(evil-global-set-key 'normal ",p" 'find-file)
+(evil-global-set-key 'normal ",x" 'save-buffers-kill-terminal)
