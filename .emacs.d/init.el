@@ -139,3 +139,8 @@
 ;; No need for ~ files when editing
 (setq create-lockfiles nil)
 
+
+; evil integration fixes
+(evil-set-undo-system 'undo-redo)
+(evil-global-set-key 'normal ",w" 'save-buffer)
+(evil-global-set-key 'normal ",d" 'kill-this-buffer)
