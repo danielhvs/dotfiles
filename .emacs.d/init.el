@@ -147,5 +147,9 @@
 (evil-global-set-key 'normal ",w" 'save-buffer)
 (evil-global-set-key 'normal ",d" 'kill-this-buffer)
 (evil-global-set-key 'normal ",o" 'buffer-menu)
+;; (evil-global-set-key 'normal "go" 'Buffer-menu-this-window) FIXME
 (evil-global-set-key 'normal ",p" 'find-file)
 (evil-global-set-key 'normal ",x" 'save-buffers-kill-terminal)
+
+; wrap text
+(add-hook 'text-mode-hook 'visual-line-mode)
