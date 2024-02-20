@@ -101,6 +101,14 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; org-mode langauages
+(require 'org)
+(require 'ob)
+(require 'ob-shell)
+(require 'ob-sql)
+(require 'ob-sqlite)
+(require 'ob-python)
+
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode 0)
 
