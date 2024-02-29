@@ -19,6 +19,7 @@ return {
       filetypes_denylist = {
         'dirbuf',
         'markdown',
+        'git',
         'dirvish',
         'TelescopePrompt',
         'fugitive',
