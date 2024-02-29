@@ -20,6 +20,7 @@ return {
         'dirbuf',
         'markdown',
         'git',
+        'gitcommit',
         'dirvish',
         'TelescopePrompt',
         'fugitive',
