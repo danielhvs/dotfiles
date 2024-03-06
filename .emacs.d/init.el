@@ -158,6 +158,8 @@
 ;; (evil-global-set-key 'normal "go" 'Buffer-menu-this-window) FIXME
 (evil-global-set-key 'normal ",p" 'find-file)
 (evil-global-set-key 'normal ",x" 'save-buffers-kill-terminal)
+(evil-global-set-key 'normal "s" 'evil-search-forward)
 
 ; wrap text
 (add-hook 'text-mode-hook 'visual-line-mode)
+
