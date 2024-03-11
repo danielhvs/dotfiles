@@ -33,7 +33,7 @@ nnoremap <leader>gT :terminal git difftool <cword>^ <cword><CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gC "yyiw:G cherry-pick <C-R>y<CR>
 " WUT get file from other branch
-nnoremap <leader>gW :G co master -- %
+nnoremap <leader>gW :G co main -- %
 nnoremap <leader>gr "yyiw:G revert <C-R>y<CR>
 nnoremap <leader>g! :G push --force-with-lease
 nnoremap <leader>gu :G reset HEAD -- %<CR>
