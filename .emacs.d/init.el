@@ -4,7 +4,23 @@
 (setq inhibit-startup-message t
       initial-scratch-message nil
       ring-bell-function 'ignore ; no bell
+      history-length 25
       recentf-menu-open-all-flag t) 
+
+;; M-n and M-p in command mode
+(savehist-mode 1)
+
+;; Open file at the same place it was previously in
+(save-place-mode 1)
+
+;; custom vars in custom file
+(locate-user-emacs-file "custom-vars.el")
+(load custom-file 'noerror 'nomessage)
+
+(setq use-dialog-box nil) ;; no GUI
+
+(global-auto-revert-mode 1) ;; re-reload files
+(setq global-auto-revert-non-file-buffers t) ;; auto-reload dired for example
 
 ;; 1. install https://github.com/jwiegley/use-package
 ;; Define package repositories
@@ -172,7 +188,7 @@
 (evil-global-set-key 'normal "s" 'evil-search-forward)
 (evil-global-set-key 'normal (kbd "C-s") 'evil-search-backward)
 (evil-global-set-key 'normal ",R" 'recentf-open-files)
-; (evil-global-set-key 'normal ",gg" 'magit-status)
+(evil-global-set-key 'normal ",gg" 'magit-status)
 
 ; wrap text
 (add-hook 'text-mode-hook 'visual-line-mode)
@@ -185,3 +201,7 @@
 ; (load-theme 'modus-vivendi t)
 ; (load-theme 'deeper-blue t)
 (recentf-mode 1)
+
+
+
+(global-hl-line-mode)
