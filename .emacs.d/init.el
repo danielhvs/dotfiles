@@ -1,8 +1,10 @@
 ;; -*- lexical-binding:t -*-
 
 ;;disable splash screen and startup message
-(setq inhibit-startup-message t) 
-(setq initial-scratch-message nil)
+(setq inhibit-startup-message t
+      initial-scratch-message nil
+      ring-bell-function 'ignore ; no bell
+      recentf-menu-open-all-flag t) 
 
 ;; 1. install https://github.com/jwiegley/use-package
 ;; Define package repositories
@@ -25,6 +27,8 @@
 (defvar my-packages
   '(
     evil
+
+    ;; evil-collection version 9  ??? installed manually
 
     ; smex
 
@@ -67,9 +71,17 @@
 ;; EVIL
 (use-package evil
   :ensure t
-  :init (setq evil-want-C-u-scroll t)
+  :init
+  (setq evil-want-keybinding nil)
+  (setq evil-want-C-u-scroll t)
   :config (evil-mode 1))
 (global-evil-surround-mode 1)
+
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
 
 ; ;; SMEX
 ; (require 'smex)
@@ -95,7 +107,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(deeper-blue))
  '(package-selected-packages
-   '(org-contrib helm-projectile projectile clojure-mode use-package magit evil-surround)))
+   '(evil-collection org-contrib helm-projectile projectile clojure-mode use-package magit evil-surround)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -116,9 +128,6 @@
 
 ;; full path in title bar
 (setq-default frame-title-format "%b (%f)")
-
-;; no bell
-(setq ring-bell-function 'ignore)
 
 (global-set-key [(control x) (k)] 'kill-this-buffer)
 
@@ -162,7 +171,17 @@
 (evil-global-set-key 'normal ",x" 'save-buffers-kill-terminal)
 (evil-global-set-key 'normal "s" 'evil-search-forward)
 (evil-global-set-key 'normal (kbd "C-s") 'evil-search-backward)
+(evil-global-set-key 'normal ",R" 'recentf-open-files)
+; (evil-global-set-key 'normal ",gg" 'magit-status)
 
 ; wrap text
 (add-hook 'text-mode-hook 'visual-line-mode)
 
+
+; init setup
+; (add-hook 'emacs-startup-hook 'recentf 0)
+
+
+; (load-theme 'modus-vivendi t)
+; (load-theme 'deeper-blue t)
+(recentf-mode 1)
