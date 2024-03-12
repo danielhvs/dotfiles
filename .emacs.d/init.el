@@ -7,21 +7,6 @@
       history-length 25
       recentf-menu-open-all-flag t) 
 
-;; M-n and M-p in command mode
-(savehist-mode 1)
-
-;; Open file at the same place it was previously in
-(save-place-mode 1)
-
-;; custom vars in custom file
-(locate-user-emacs-file "custom-vars.el")
-(load custom-file 'noerror 'nomessage)
-
-(setq use-dialog-box nil) ;; no GUI
-
-(global-auto-revert-mode 1) ;; re-reload files
-(setq global-auto-revert-non-file-buffers t) ;; auto-reload dired for example
-
 ;; 1. install https://github.com/jwiegley/use-package
 ;; Define package repositories
 (require 'package)
@@ -205,3 +190,24 @@
 
 
 (global-hl-line-mode)
+
+;(require 'color)
+;(set-face-attribute 'org-block nil :background
+;                    (color-darken-name
+;                    (face-attribute 'default :background) 3))
+
+
+;; M-n and M-p in command mode
+(savehist-mode 1)
+
+;; Open file at the same place it was previously in
+(save-place-mode 1)
+
+;; custom vars in custom file
+(locate-user-emacs-file "custom-vars.el")
+; (load custom-file 'noerror 'nomessage)
+
+(setq use-dialog-box nil) ;; no GUI
+
+(global-auto-revert-mode 1) ;; re-reload files
+(setq global-auto-revert-non-file-buffers t) ;; auto-reload dired for example
