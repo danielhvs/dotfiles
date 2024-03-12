@@ -159,6 +159,7 @@
 (evil-global-set-key 'normal ",p" 'find-file)
 (evil-global-set-key 'normal ",x" 'save-buffers-kill-terminal)
 (evil-global-set-key 'normal "s" 'evil-search-forward)
+(evil-global-set-key 'normal (kbd "C-s") 'evil-search-backward)
 
 ; wrap text
 (add-hook 'text-mode-hook 'visual-line-mode)
