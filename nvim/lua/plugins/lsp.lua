@@ -60,6 +60,13 @@ return {
       capabilities = the_capabilities,
     })
 
+    lsp.pyright.setup({
+      on_attach = setup_mappings,
+      handlers = the_handlers,
+      capabilities = the_capabilities,
+    })
+
+
     lsp.tsserver.setup {
       on_attach = setup_mappings,
       capabilities = the_capabilities,
