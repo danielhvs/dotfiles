@@ -13,6 +13,7 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
@@ -116,6 +117,20 @@
  ;; If there is more than one, they won't work right.
  )
 
+(defface org-block-begin-line
+  '((t (:underline "#A7A6AA" :foreground "#000000" :background "#AAAAAA")))
+  "Face used for the line delimiting the begin of source blocks.")
+
+(defface org-block-background
+  '((t (:background "#FFFFEA")))
+  "Face used for the source block background.")
+
+(defface org-block-end-line
+  '((t (:overline "#A7A6AA" :foreground "#000000" :background "#AAAAAA")))
+  "Face used for the line delimiting the end of source blocks.")
+
+(setq org-src-fontify-natively t)
+
 ;; org-mode langauages
 (require 'org)
 (require 'ob)
@@ -123,6 +138,8 @@
 (require 'ob-sql)
 (require 'ob-sqlite)
 (require 'ob-python)
+(setq org-babel-python-command "python3")
+
 
 ;; No cursor blinking, it's distracting
 (blink-cursor-mode 0)
@@ -174,6 +191,14 @@
 (evil-global-set-key 'normal (kbd "C-s") 'evil-search-backward)
 (evil-global-set-key 'normal ",R" 'recentf-open-files)
 (evil-global-set-key 'normal ",gg" 'magit-status)
+(evil-global-set-key 'normal "[t" 'org-previous-visible-heading)
+(evil-global-set-key 'normal "]t" 'org-next-visible-heading)
+(evil-global-set-key 'normal "[T" 'org-backward-heading-same-level)
+(evil-global-set-key 'normal "]T" 'org-forward-heading-same-level)
+
+;not working:
+;(evil-global-set-key 'normal (kbd "M-l")'next-buffer)
+;(evil-global-set-key 'normal (kbd "M-h")'previous-buffer)
 
 ; wrap text
 (add-hook 'text-mode-hook 'visual-line-mode)
@@ -211,3 +236,12 @@
 
 (global-auto-revert-mode 1) ;; re-reload files
 (setq global-auto-revert-non-file-buffers t) ;; auto-reload dired for example
+
+
+
+
+(setq org-confirm-babel-evaluate nil)
+(setq make-backup-files nil)
+
+
+(setq org-src-python-indent-offset 4)
