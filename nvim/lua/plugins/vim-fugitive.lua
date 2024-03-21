@@ -1,8 +1,12 @@
 return {
   'tpope/vim-fugitive',
-  dependencies = { 'tpope/vim-rhubarb' },
+  dependencies = {
+    'tpope/vim-rhubarb',
+    'shumphrey/fugitive-gitlab.vim'
+  },
   config = function()
     vim.cmd [[
+let g:fugitive_gitlab_domains = ['http://gitlab.sig-gis.com/']
 nnoremap <leader>gc :G commit -v<CR>
 nnoremap <leader>cva :G commit --amend -v<CR>
 nnoremap <leader>cvc :G commit -v<CR>
